@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>IM Automation Project</td>
+                          <td>1</td>
+<<<<<<< HEAD
+                        <td>07 Apr 2020, 13:51</td>
+=======
+                        <td>07 abr 2020, 15:21</td>
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">SharedDriver.afterScenario(Scenario)</td>
+                <td>8</td>
+<<<<<<< HEAD
+                <td class="duration" data-value="887343208">887ms</td>
+                <td class="duration" data-value="110917901">110ms</td>
+=======
+                <td class="duration" data-value="5355811400">5s 355ms</td>
+                <td class="duration" data-value="669476425">669ms</td>
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SharedDriver.setUp()</td>
+                <td>8</td>
+<<<<<<< HEAD
+                <td class="duration" data-value="10811909766">10s 811ms</td>
+                <td class="duration" data-value="1351488720">1s 351ms</td>
+=======
+                <td class="duration" data-value="75440290500">1m 15s 440ms</td>
+                <td class="duration" data-value="9430036312">9s 430ms</td>
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.accountDetailsAreLoaded()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.changeLanguageSuccessfully()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.clickAccountDetailsTab()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.clickOnBanner()</td>
+                <td>1</td>
+<<<<<<< HEAD
+                <td class="duration" data-value="307827">000ms</td>
+                <td class="duration" data-value="307827">000ms</td>
+=======
+                <td class="duration" data-value="209800">000ms</td>
+                <td class="duration" data-value="209800">000ms</td>
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.dashboardIsLoaded()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.foundBranchesSuccessfully()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.redirectSuccessfully()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.selectCurrentAccountFromDashboard()</td>
+                <td>1</td>
+<<<<<<< HEAD
+                <td class="duration" data-value="223405">000ms</td>
+                <td class="duration" data-value="223405">000ms</td>
+=======
+                <td class="duration" data-value="271500">000ms</td>
+                <td class="duration" data-value="271500">000ms</td>
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.selectLoanAccountFromAccountSelector()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.want_to_change_language()</td>
+                <td>1</td>
+<<<<<<< HEAD
+                <td class="duration" data-value="776604">000ms</td>
+                <td class="duration" data-value="776604">000ms</td>
+=======
+                <td class="duration" data-value="479100">000ms</td>
+                <td class="duration" data-value="479100">000ms</td>
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps.want_to_find_nearest_branches()</td>
+                <td>1</td>
+<<<<<<< HEAD
+                <td class="duration" data-value="361433">000ms</td>
+                <td class="duration" data-value="361433">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_ToSee_UserProfile.i_click_on_user_profile()</td>
+=======
+                <td class="duration" data-value="356300">000ms</td>
+                <td class="duration" data-value="356300">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_ToSee_UserProfile.i_click_on_user_profile()</td>
+                <td>1</td>
+                <td class="duration" data-value="12160736100">12s 160ms</td>
+                <td class="duration" data-value="12160736100">12s 160ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_login.iLoggedInSuccessfully()</td>
+                <td>5</td>
+                <td class="duration" data-value="50157511500">50s 157ms</td>
+                <td class="duration" data-value="10031502300">10s 031ms</td>
+                <td class="failed">60.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_login.i_am_in_login_page()</td>
+                <td>8</td>
+                <td class="duration" data-value="9194987600">9s 194ms</td>
+                <td class="duration" data-value="1149373450">1s 149ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_login.i_want_to_login_with_and(String,String)</td>
+                <td>6</td>
+                <td class="duration" data-value="34620752600">34s 620ms</td>
+                <td class="duration" data-value="5770125433">5s 770ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_logout.logoutSuccessfully()</td>
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+<<<<<<< HEAD
+                <td class="location">steps_login.iLoggedInSuccessfully()</td>
+                <td>4</td>
+                <td class="duration" data-value="40086036658">40s 086ms</td>
+                <td class="duration" data-value="10021509164">10s 021ms</td>
+                <td class="failed">25.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_login.i_am_in_login_page()</td>
+                <td>8</td>
+                <td class="duration" data-value="111089602610">1m 51s 089ms</td>
+                <td class="duration" data-value="13886200326">13s 886ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_login.i_want_to_login_with_and(String,String)</td>
+                <td>6</td>
+                <td class="duration" data-value="25564833405">25s 564ms</td>
+                <td class="duration" data-value="4260805567">4s 260ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_logout.logoutSuccessfully()</td>
+                <td>1</td>
+                <td class="duration" data-value="3047736519">3s 047ms</td>
+                <td class="duration" data-value="3047736519">3s 047ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">steps_logout.want_to_logout()</td>
+                <td>1</td>
+                <td class="duration" data-value="12439587022">12s 439ms</td>
+                <td class="duration" data-value="12439587022">12s 439ms</td>
+                <td class="passed">100.00%</td>
+=======
+                <td class="location">steps_logout.want_to_logout()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>19</td>
+<<<<<<< HEAD
+              <td>48</td>
+              <td class="duration">3m 23s 928ms</td>
+              <td class="duration">4s 248ms</td>
+=======
+              <td>49</td>
+              <td class="duration">3m 6s 931ms</td>
+              <td class="duration">3s 814ms</td>
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

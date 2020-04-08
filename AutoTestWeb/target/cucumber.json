@@ -1,0 +1,942 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 2730632400,
+=======
+              "duration": 10237122000,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.setUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "I want to see the User Profile of login Client",
+        "description": "",
+        "id": "see-user-profile;i-want-to-see-the-user-profile-of-login-client",
+        "after": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 124977823,
+=======
+              "duration": 677170000,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 17943187297,
+=======
+              "duration": 1402738800,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i am in login page",
+            "match": {
+              "location": "steps_login.i_am_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 12702218917,
+=======
+              "duration": 5807446200,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "i want to login with \"real1\" and \"Password1*\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "real1",
+                  "offset": 22
+                },
+                {
+                  "val": "Password1*",
+                  "offset": 34
+                }
+              ],
+              "location": "steps_login.i_want_to_login_with_and(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 10035873525,
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[1]/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-column-container/div/bb-column[2]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-context-menu-widget-extended/bb-user-context-menu-widget/bb-user-context-menu-container/div/bb-dropdown-menu-ui/div/button/div/div/div/bb-icon-ui\"}\n  (Session info: chrome\u003d80.0.3987.163)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.7.1\u0027, revision: \u00278a0099a\u0027, time: \u00272017-11-06T21:01:39.354Z\u0027\nSystem info: host: \u0027MAC-JOSECORREIA.lan\u0027, ip: \u00272001:8a0:7a40:fa01:d1b7:60b5:8e75:e7c1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.4\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/ql/k_m543955m3...}, goog:chromeOptions: {debuggerAddress: localhost:59142}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 4a8ee2992bd1b518bc67652f81977603\n*** Element info: {Using\u003dxpath, value\u003d/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[1]/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-column-container/div/bb-column[2]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-context-menu-widget-extended/bb-user-context-menu-widget/bb-user-context-menu-container/div/bb-dropdown-menu-ui/div/button/div/div/div/bb-icon-ui}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\n\tat Steps.steps_login.iLoggedInSuccessfully(steps_login.java:41)\n\tat ✽.And i logged in successfully(UserProfile.feature:7)\n",
+              "status": "failed"
+=======
+              "duration": 10064389700,
+              "status": "passed"
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+            },
+            "line": 7,
+            "name": "i logged in successfully",
+            "match": {
+              "location": "steps_login.iLoggedInSuccessfully()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "status": "skipped"
+=======
+              "duration": 12160736100,
+              "status": "passed"
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+            },
+            "line": 8,
+            "name": "i click on user profile",
+            "match": {
+              "location": "steps_ToSee_UserProfile.i_click_on_user_profile()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "See user profile",
+    "description": "",
+    "id": "see-user-profile",
+    "keyword": "Feature",
+    "uri": "UserProfile.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@testAll"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "comments": [
+          {
+            "line": 5,
+            "value": "#  Scenario: First time login"
+          },
+          {
+            "line": 6,
+            "value": "#    Given i have created a new user"
+          },
+          {
+            "line": 7,
+            "value": "#    And i am in login page"
+          },
+          {
+            "line": 8,
+            "value": "##    Then i want to login with \"Rita\" and \"1qazZAQ!\""
+          }
+        ],
+        "before": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 1300866714,
+=======
+              "duration": 9355396200,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.setUp()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Do the login",
+        "description": "",
+        "id": "login-page;do-the-login",
+        "after": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 110308884,
+=======
+              "duration": 670478400,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 9015273377,
+=======
+              "duration": 1205943200,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "i am in login page",
+            "match": {
+              "location": "steps_login.i_am_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 1136081137,
+=======
+              "duration": 5771976600,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "i want to login with \"real1\" and \"Password1*\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "real1",
+                  "offset": 22
+                },
+                {
+                  "val": "Password1*",
+                  "offset": 34
+                }
+              ],
+              "location": "steps_login.i_want_to_login_with_and(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 10018342000,
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[1]/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-column-container/div/bb-column[2]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-context-menu-widget-extended/bb-user-context-menu-widget/bb-user-context-menu-container/div/bb-dropdown-menu-ui/div/button/div/div/div/bb-icon-ui\"}\n  (Session info: chrome\u003d80.0.3987.163)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.7.1\u0027, revision: \u00278a0099a\u0027, time: \u00272017-11-06T21:01:39.354Z\u0027\nSystem info: host: \u0027MAC-JOSECORREIA.lan\u0027, ip: \u00272001:8a0:7a40:fa01:d1b7:60b5:8e75:e7c1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.4\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/ql/k_m543955m3...}, goog:chromeOptions: {debuggerAddress: localhost:59179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 27150c011696d3efa48bf13d1e997b67\n*** Element info: {Using\u003dxpath, value\u003d/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[1]/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-column-container/div/bb-column[2]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-context-menu-widget-extended/bb-user-context-menu-widget/bb-user-context-menu-container/div/bb-dropdown-menu-ui/div/button/div/div/div/bb-icon-ui}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\n\tat Steps.steps_login.iLoggedInSuccessfully(steps_login.java:41)\n\tat ✽.And i logged in successfully(test.feature:13)\n",
+              "status": "failed"
+=======
+              "duration": 10020131700,
+              "status": "passed"
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+            },
+            "line": 13,
+            "name": "i logged in successfully",
+            "match": {
+              "location": "steps_login.iLoggedInSuccessfully()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 1119248407,
+=======
+              "duration": 9320536300,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.setUp()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Do logout",
+        "description": "",
+        "id": "login-page;do-logout",
+        "after": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 111193760,
+=======
+              "duration": 658052000,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 7834445959,
+=======
+              "duration": 1219704300,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "i am in login page",
+            "match": {
+              "location": "steps_login.i_am_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 829416943,
+=======
+              "duration": 5742028600,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "i want to login with \"real1\" and \"Password1*\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "real1",
+                  "offset": 22
+                },
+                {
+                  "val": "Password1*",
+                  "offset": 34
+                }
+              ],
+              "location": "steps_login.i_want_to_login_with_and(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 12439587022,
+              "status": "passed"
+=======
+              "duration": 10035168500,
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#banner\\-url\"}\n  (Session info: chrome\u003d80.0.3987.149)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.7.1\u0027, revision: \u00278a0099a\u0027, time: \u00272017-11-06T21:01:39.354Z\u0027\nSystem info: host: \u0027PC-ANARITACAMAR\u0027, ip: \u0027192.168.1.83\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\\Users\\ANARIT~1.CAM\\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56987}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 7d048893127b419d5fe23f1864052836\n*** Element info: {Using\u003did, value\u003dbanner-url}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:218)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\r\n\tat Steps.steps_login.iLoggedInSuccessfully(steps_login.java:35)\r\n\tat ✽.And i logged in successfully(test.feature:18)\r\n",
+              "status": "failed"
+            },
+            "line": 18,
+            "name": "i logged in successfully",
+            "match": {
+              "location": "steps_login.iLoggedInSuccessfully()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+            },
+            "comments": [
+              {
+                "line": 18,
+                "value": "#    And i logged in successfully"
+              }
+            ],
+            "line": 19,
+            "name": "want to logout",
+            "match": {
+              "location": "steps_logout.want_to_logout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 3047736519,
+              "status": "passed"
+=======
+              "status": "skipped"
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+            },
+            "line": 20,
+            "name": "logout successfully",
+            "match": {
+              "location": "steps_logout.logoutSuccessfully()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 1066401759,
+=======
+              "duration": 9327197800,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.setUp()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Change Language",
+        "description": "",
+        "id": "login-page;change-language",
+        "after": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 101887533,
+=======
+              "duration": 669188700,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 8561606519,
+=======
+              "duration": 1084618800,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "i am in login page",
+            "match": {
+              "location": "steps_login.i_am_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 776604,
+              "error_message": "java.lang.NullPointerException\n\tat com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)\n\tat org.openqa.selenium.support.ui.FluentWait.\u003cinit\u003e(FluentWait.java:96)\n\tat org.openqa.selenium.support.ui.WebDriverWait.\u003cinit\u003e(WebDriverWait.java:72)\n\tat org.openqa.selenium.support.ui.WebDriverWait.\u003cinit\u003e(WebDriverWait.java:46)\n\tat Actions.Login.\u003cinit\u003e(Login.java:24)\n\tat Steps.steps.want_to_change_language(steps.java:86)\n\tat ✽.Then want to change language(test.feature:24)\n",
+=======
+              "duration": 479100,
+              "error_message": "java.lang.NullPointerException\r\n\tat com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)\r\n\tat org.openqa.selenium.support.ui.FluentWait.\u003cinit\u003e(FluentWait.java:96)\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.\u003cinit\u003e(WebDriverWait.java:72)\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.\u003cinit\u003e(WebDriverWait.java:46)\r\n\tat Actions.Login.\u003cinit\u003e(Login.java:24)\r\n\tat Steps.steps.want_to_change_language(steps.java:86)\r\n\tat ✽.Then want to change language(test.feature:24)\r\n",
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "failed"
+            },
+            "line": 24,
+            "name": "want to change language",
+            "match": {
+              "location": "steps.want_to_change_language()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "change language successfully",
+            "match": {
+              "location": "steps.changeLanguageSuccessfully()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 1080832887,
+=======
+              "duration": 9275710000,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.setUp()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Find Branches",
+        "description": "",
+        "id": "login-page;find-branches",
+        "after": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 98673305,
+=======
+              "duration": 656918100,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 31647635208,
+=======
+              "duration": 1033373500,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "i am in login page",
+            "match": {
+              "location": "steps_login.i_am_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 361433,
+              "error_message": "java.lang.NullPointerException\n\tat Steps.steps.want_to_find_nearest_branches(steps.java:105)\n\tat ✽.Then want to find nearest branches(test.feature:29)\n",
+=======
+              "duration": 356300,
+              "error_message": "java.lang.NullPointerException\r\n\tat Steps.steps.want_to_find_nearest_branches(steps.java:105)\r\n\tat ✽.Then want to find nearest branches(test.feature:29)\r\n",
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "failed"
+            },
+            "line": 29,
+            "name": "want to find nearest branches",
+            "match": {
+              "location": "steps.want_to_find_nearest_branches()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "found branches successfully",
+            "match": {
+              "location": "steps.foundBranchesSuccessfully()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 1096727541,
+=======
+              "duration": 9318435600,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.setUp()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Marketing banner",
+        "description": "",
+        "id": "login-page;marketing-banner",
+        "after": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 106754223,
+=======
+              "duration": 668797500,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 18863534926,
+=======
+              "duration": 1064322600,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "i am in login page",
+            "match": {
+              "location": "steps_login.i_am_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 8436881296,
+=======
+              "duration": 5764423100,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "i want to login with \"real1\" and \"Password1*\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "real1",
+                  "offset": 22
+                },
+                {
+                  "val": "Password1*",
+                  "offset": 34
+                }
+              ],
+              "location": "steps_login.i_want_to_login_with_and(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 307827,
+              "error_message": "java.lang.NullPointerException\n\tat Steps.steps.clickOnBanner(steps.java:129)\n\tat ✽.And click on banner(test.feature:35)\n",
+=======
+              "duration": 209800,
+              "error_message": "java.lang.NullPointerException\r\n\tat Steps.steps.clickOnBanner(steps.java:129)\r\n\tat ✽.And click on banner(test.feature:35)\r\n",
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "failed"
+            },
+            "line": 35,
+            "name": "click on banner",
+            "match": {
+              "location": "steps.clickOnBanner()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "redirect successfully",
+            "match": {
+              "location": "steps.redirectSuccessfully()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 1222808385,
+=======
+              "duration": 9331490200,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.setUp()"
+            }
+          }
+        ],
+        "line": 38,
+        "name": "Load Dashboard",
+        "description": "",
+        "id": "login-page;load-dashboard",
+        "after": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 111521654,
+=======
+              "duration": 676751200,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 9807390140,
+=======
+              "duration": 1112295200,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "i am in login page",
+            "match": {
+              "location": "steps_login.i_am_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 1614334806,
+=======
+              "duration": 5780370600,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "i want to login with \"real1\" and \"Password1*\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "real1",
+                  "offset": 22
+                },
+                {
+                  "val": "Password1*",
+                  "offset": 34
+                }
+              ],
+              "location": "steps_login.i_want_to_login_with_and(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 10016884977,
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[1]/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-column-container/div/bb-column[2]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-context-menu-widget-extended/bb-user-context-menu-widget/bb-user-context-menu-container/div/bb-dropdown-menu-ui/div/button/div/div/div/bb-icon-ui\"}\n  (Session info: chrome\u003d80.0.3987.163)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.7.1\u0027, revision: \u00278a0099a\u0027, time: \u00272017-11-06T21:01:39.354Z\u0027\nSystem info: host: \u0027MAC-JOSECORREIA.lan\u0027, ip: \u00272001:8a0:7a40:fa01:d1b7:60b5:8e75:e7c1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.4\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/ql/k_m543955m3...}, goog:chromeOptions: {debuggerAddress: localhost:59364}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: c930e145546b77c1ffa551caec909ec4\n*** Element info: {Using\u003dxpath, value\u003d/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[1]/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-column-container/div/bb-column[2]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-context-menu-widget-extended/bb-user-context-menu-widget/bb-user-context-menu-container/div/bb-dropdown-menu-ui/div/button/div/div/div/bb-icon-ui}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\n\tat Steps.steps_login.iLoggedInSuccessfully(steps_login.java:41)\n\tat ✽.And i logged in successfully(test.feature:41)\n",
+=======
+              "duration": 10019221500,
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#banner\\-url\"}\n  (Session info: chrome\u003d80.0.3987.149)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.7.1\u0027, revision: \u00278a0099a\u0027, time: \u00272017-11-06T21:01:39.354Z\u0027\nSystem info: host: \u0027PC-ANARITACAMAR\u0027, ip: \u0027192.168.1.83\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\\Users\\ANARIT~1.CAM\\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:57136}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 7f67271724980cb3a26e00e65f9676b2\n*** Element info: {Using\u003did, value\u003dbanner-url}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:416)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:218)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\r\n\tat Steps.steps_login.iLoggedInSuccessfully(steps_login.java:35)\r\n\tat ✽.And i logged in successfully(test.feature:41)\r\n",
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "failed"
+            },
+            "line": 41,
+            "name": "i logged in successfully",
+            "match": {
+              "location": "steps_login.iLoggedInSuccessfully()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 42,
+            "name": "Dashboard is loaded",
+            "match": {
+              "location": "steps.dashboardIsLoaded()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 1194391673,
+=======
+              "duration": 9274402400,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.setUp()"
+            }
+          }
+        ],
+        "line": 44,
+        "name": "Account Selector \u0026 Details",
+        "description": "",
+        "id": "login-page;account-selector-\u0026-details",
+        "after": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 122026026,
+=======
+              "duration": 678455500,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedDriver.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 7416529184,
+=======
+              "duration": 1071991200,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "i am in login page",
+            "match": {
+              "location": "steps_login.i_am_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 845900306,
+=======
+              "duration": 5754507500,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "i want to login with \"real1\" and \"Password1*\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "real1",
+                  "offset": 22
+                },
+                {
+                  "val": "Password1*",
+                  "offset": 34
+                }
+              ],
+              "location": "steps_login.i_want_to_login_with_and(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 10014936156,
+=======
+              "duration": 10018600100,
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "i logged in successfully",
+            "match": {
+              "location": "steps_login.iLoggedInSuccessfully()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+<<<<<<< HEAD
+              "duration": 223405,
+              "error_message": "java.lang.NullPointerException\n\tat Steps.steps.selectCurrentAccountFromDashboard(steps.java:164)\n\tat ✽.Then select current account from dashboard(test.feature:48)\n",
+=======
+              "duration": 271500,
+              "error_message": "java.lang.NullPointerException\r\n\tat Steps.steps.selectCurrentAccountFromDashboard(steps.java:165)\r\n\tat ✽.Then select current account from dashboard(test.feature:48)\r\n",
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
+              "status": "failed"
+            },
+            "line": 48,
+            "name": "select current account from dashboard",
+            "match": {
+              "location": "steps.selectCurrentAccountFromDashboard()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 49,
+            "name": "select loan account from account selector",
+            "match": {
+              "location": "steps.selectLoanAccountFromAccountSelector()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 50,
+            "name": "click account details tab",
+            "match": {
+              "location": "steps.clickAccountDetailsTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 51,
+            "name": "account details are loaded",
+            "match": {
+              "location": "steps.accountDetailsAreLoaded()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Login Page",
+    "description": "As a user i want to be able to login",
+    "id": "login-page",
+    "keyword": "Feature",
+    "uri": "test.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@testAll"
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: Steps.TestRunner
+-------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 204.532 s - in Steps.TestRunner
+=======
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 188.153 s - in Steps.TestRunner
+>>>>>>> 4d0b595dddce8991e331d865ad560cb8a24dd16e
