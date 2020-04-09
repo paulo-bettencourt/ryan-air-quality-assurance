@@ -33,7 +33,7 @@ public class steps_login {
     public void iLoggedInSuccessfully() throws InterruptedException {
         Thread.sleep(10000);
         driver.findElement(By.id("banner-url"));
-     //   driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[1]/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-column-container/div/bb-column[2]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-context-menu-widget-extended/bb-user-context-menu-widget/bb-user-context-menu-container/div/bb-dropdown-menu-ui/div/button/div/div/div/bb-icon-ui"));
-  Thread.sleep(3000);
+        //   driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[1]/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-column-container/div/bb-column[2]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-context-menu-widget-extended/bb-user-context-menu-widget/bb-user-context-menu-container/div/bb-dropdown-menu-ui/div/button/div/div/div/bb-icon-ui"));
+        Thread.sleep(3000);
     }
 }
