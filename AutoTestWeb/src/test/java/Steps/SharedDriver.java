@@ -25,16 +25,19 @@ public class SharedDriver {
             String headLess = ReadPropFile.ReadConfig("headless.active");
 
             if (browser.equalsIgnoreCase("chrome") && headLess.equalsIgnoreCase("true")) {
-/*
+
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--headless");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-gpu");
                 options.addArguments("--window-size=1366,768");
+
+
+
                 System.setProperty("webdriver.chrome.driver", ReadPropFile.ReadConfig("chrome.driver"));
                 driver = new ChromeDriver(options);
-                System.out.println("driver:"  + driver);
-                */
+               // System.out.println("driver:"  + driver);
+
 
             } else if (browser.equalsIgnoreCase("chrome") && headLess.equalsIgnoreCase("false")) {
 
