@@ -7,6 +7,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,13 +25,13 @@ public class steps_find_branches {
 
     @Then("^want to find nearest branches$")
     public void want_to_find_nearest_branches() throws Throwable {
-        Thread.sleep(5000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.className("branch-link")).click();
     }
 
     @And("^found branches successfully$")
     public void foundBranchesSuccessfully() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);   //Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         boolean found = false;
         for (String handle : driver.getWindowHandles()) {
             driver.switchTo().window(handle);
@@ -39,7 +40,7 @@ public class steps_find_branches {
             }
         }
         if (!found) {
-            System.exit(1);
+            driver.findElement(By.id("123"));
         }
     }
 }

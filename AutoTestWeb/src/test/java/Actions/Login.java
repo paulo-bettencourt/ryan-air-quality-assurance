@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
@@ -15,13 +16,13 @@ import java.util.concurrent.TimeUnit;
 
 public class Login {
     private static WebDriver driver;
-    //  private static WebDriverWait wait;
+    private WebDriverWait wait;
 
     public Login(WebDriver driver) {
 
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        //  wait = new WebDriverWait(driver, 1000);
+        // wait = new WebDriverWait(driver, 1000);
     }
 
 
@@ -39,18 +40,14 @@ public class Login {
         String url = null;
         url = ReadPropFile.ReadConfig("urlTest");
         driver.get(url);
-        System.out.println(driver.getCurrentUrl()+"*******************************************");
 
     }
 
     public void FillIn(String user, String pass) throws InterruptedException {
-        Thread.sleep(5000);
-        System.out.println(driver.getCurrentUrl()+"*******************************************");
-        driver.findElement(By.id("username")).sendKeys(user);
-//        txtBoxUsername.sendKeys(user);
-//        txtBoxPassword.sendKeys(pass);
-        driver.findElement(By.id("password")).sendKeys(pass);
-        driver.findElement(By.id("kc-login")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        txtBoxUsername.sendKeys(user);
+        txtBoxPassword.sendKeys(pass);
+        LoginButton.click();
 
     }
 }

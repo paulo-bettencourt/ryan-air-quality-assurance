@@ -6,4 +6,4 @@ Feature: Dashboard - Summary of Current Account
     Given i am in login page
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
-    Then Dashboard is loaded
+    And i can see the current account amount
