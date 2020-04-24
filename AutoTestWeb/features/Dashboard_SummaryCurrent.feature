@@ -6,4 +6,5 @@ Feature: Dashboard - Summary of Current Account
     Given i am in login page
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
-    And i can see the current account amount
+    Then i can click on a current account
+    And i am redirected to the transactions page

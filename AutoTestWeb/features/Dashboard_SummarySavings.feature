@@ -6,4 +6,5 @@ Feature: Dashboard - Summary of Savings Account
     Given i am in login page
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
-    And i can see the savings account amount
+    Then i can click on a savings account
+    And i am redirected to the transactions page

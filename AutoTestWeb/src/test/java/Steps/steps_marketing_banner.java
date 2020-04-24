@@ -2,6 +2,7 @@ package Steps;
 
 import Actions.LanguageSwitcher;
 import cucumber.api.java.en.And;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -28,16 +29,21 @@ public class steps_marketing_banner {
 
     @And("^redirect successfully$")
     public void redirectSuccessfully() {
+        String url = "http://uazi.net/heroisdeazul/";
         boolean found = false;
+
         for (String handle : driver.getWindowHandles()) {
             driver.switchTo().window(handle);
-            if (driver.getCurrentUrl().contains("http://uazi.net/heroisdeazul/")) {
+
+            if (driver.getCurrentUrl().contains(url)) {
+                //Makes the test pass if the drivers url contains the variable url
+                Assert.assertTrue(driver.getCurrentUrl().contains(url));
                 found = true;
             }
         }
-        if (!found) {
-            driver.findElement(By.id("123"));
-        }
+
+        //Makes the test fail if the drivers url doesn't contains the variable url
+        Assert.assertTrue(found);
     }
 
 }

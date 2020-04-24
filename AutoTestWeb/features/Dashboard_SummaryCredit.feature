@@ -6,4 +6,5 @@ Feature: Dashboard - Summary of Credit Account
     Given i am in login page
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
-    And i can see the Credit account amount
+    Then i can click on a Credit account
+    And i am redirected to the transactions page

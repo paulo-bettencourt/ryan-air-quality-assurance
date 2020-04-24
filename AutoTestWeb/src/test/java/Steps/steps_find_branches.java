@@ -5,6 +5,7 @@ import Actions.Login;
 import Actions.Logout;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,15 +33,22 @@ public class steps_find_branches {
     @And("^found branches successfully$")
     public void foundBranchesSuccessfully() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        String url = "https://www.google.com/maps/search/standard+bank+angola";
         boolean found = false;
+
         for (String handle : driver.getWindowHandles()) {
             driver.switchTo().window(handle);
-            if (driver.getCurrentUrl().contains("https://www.google.com/maps/search/standard+bank+angola")) {
+
+            if (driver.getCurrentUrl().contains(url)) {
+                //Makes the test pass if the drivers url contains the variable url
+                Assert.assertTrue(driver.getCurrentUrl().contains(url));
                 found = true;
             }
         }
-        if (!found) {
-            driver.findElement(By.id("123"));
-        }
+
+        //Makes the test fail if the drivers url doesn't contains the variable url
+        Assert.assertTrue(found);
     }
+
+
 }
