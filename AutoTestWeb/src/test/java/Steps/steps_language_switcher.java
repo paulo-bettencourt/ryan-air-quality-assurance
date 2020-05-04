@@ -5,6 +5,7 @@ import Actions.Login;
 import Actions.Logout;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class steps_language_switcher {
@@ -34,8 +35,7 @@ public class steps_language_switcher {
     @And("^change language successfully$")
     public void changeLanguageSuccessfully() throws InterruptedException {
         boolean x = languageSwitcher.isEN();
-        if (x == false) {
-            logout.findDropdownLogout();
-        }
+
+        Assert.assertTrue(x);
     }
 }
