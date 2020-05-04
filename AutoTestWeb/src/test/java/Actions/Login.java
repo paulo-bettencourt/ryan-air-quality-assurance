@@ -35,7 +35,7 @@ public class Login {
     @FindBy(how = How.ID, using = "kc-login")
     WebElement LoginButton;
 
-    public void openBrowser() throws InterruptedException, IOException {
+    public void openBrowser() throws IOException {
 
         String url = null;
         url = ReadPropFile.ReadConfig("urlTest");
@@ -44,16 +44,9 @@ public class Login {
     }
 
     public void FillIn(String user, String pass) {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        //fill username input field
-        driver.findElement(By.id("username")).sendKeys(user);
-        //fill password input field
-        driver.findElement(By.id("password")).sendKeys(pass);
-        //click login button
-        driver.findElement(By.id("kc-login")).click();
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        txtBoxUsername.sendKeys(user);
+        txtBoxPassword.sendKeys(pass);
+        LoginButton.click();
     }
-//        txtBoxUsername.sendKeys(user);
-//        txtBoxPassword.sendKeys(pass);
-//        LoginButton.click();
-//    }
 }

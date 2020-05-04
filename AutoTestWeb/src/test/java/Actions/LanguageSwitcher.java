@@ -17,15 +17,14 @@ public class LanguageSwitcher {
         PageFactory.initElements(driver, this);
     }
 
-    public void ChangeLang() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    public void ChangeLang() {
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("dropdownMenuButton")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[3]/div/div/div[4]/div/div/a")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    public boolean isEN() throws InterruptedException {
+    public boolean isEN(){
         if (driver.findElement(By.id("dropdownMenuButton")).getText().equalsIgnoreCase("English (UK)")) {
             System.out.println(driver.findElement(By.id("dropdownMenuButton")).getText());
             return true;
