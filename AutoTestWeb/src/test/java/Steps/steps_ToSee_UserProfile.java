@@ -15,21 +15,20 @@ public class steps_ToSee_UserProfile {
 
     public steps_ToSee_UserProfile(SharedDriver sharedDriver) {
         this.sharedDriver = sharedDriver;
-        PageFactory.initElements(driver, this);
         driver = sharedDriver.getDriver();
+        PageFactory.initElements(driver, this);
         profile = new UserProfile(driver);
     }
 
     @Then("^i click on user profile$")
     public void i_click_on_user_profile() throws Throwable {
-        // Thread.sleep(2000);
         profile.clickonUS();
 
     }
 
     @Then("^i see the User Profile details$")
     public void i_see_the_User_Profile_details() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
+        //throw new PendingException();
     }
 }

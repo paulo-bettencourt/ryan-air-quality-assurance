@@ -16,7 +16,7 @@ import java.io.FileReader;
         monochrome = true,
         glue = {"Steps"},
         plugin = {"json:target/cucumber.json"},
-        tags = { "@testAll" }
+        tags = {"@testAll"}
 )
 
 

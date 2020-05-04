@@ -27,8 +27,6 @@ public class steps_language_switcher {
 
     @Then("^want to change language$")
     public void want_to_change_language() throws Throwable {
-       // login.openBrowser();
-        // languageSwitcher = new LanguageSwitcher(driver);
         languageSwitcher.ChangeLang();
 
     }

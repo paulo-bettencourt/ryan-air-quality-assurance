@@ -19,7 +19,6 @@ public class Identity {
 
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        //wait = new WebDriverWait(driver, 1000);
     }
 
 
@@ -50,7 +49,6 @@ public class Identity {
         userInput.sendKeys("admin");
         passInput.sendKeys("admin");
         loginButton.click();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
 }
