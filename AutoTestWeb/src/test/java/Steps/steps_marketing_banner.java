@@ -10,19 +10,17 @@ import java.util.concurrent.TimeUnit;
 
 public class steps_marketing_banner {
     WebDriver driver;
-    LanguageSwitcher languageSwitcher;
     SharedDriver sharedDriver;
 
     public steps_marketing_banner(SharedDriver sharedDriver) {
         this.sharedDriver = sharedDriver;
         driver = sharedDriver.getDriver();
-        languageSwitcher = new LanguageSwitcher(driver);
 
     }
 
     @And("^click on banner$")
     public void clickOnBanner() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("banner-url")).click();
     }
 
@@ -36,8 +34,6 @@ public class steps_marketing_banner {
             driver.switchTo().window(handle);
 
             if (driver.getCurrentUrl().contains(url)) {
-                //Makes the test pass if the drivers url contains the variable url
-                Assert.assertTrue(driver.getCurrentUrl().contains(url));
                 found = true;
             }
         }

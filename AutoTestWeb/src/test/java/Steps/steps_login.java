@@ -15,7 +15,6 @@ public class steps_login {
     WebDriver driver;
     Login login;
     SharedDriver sharedDriver;
-    private WebDriverWait wait = SharedDriver.getWait();
 
     public steps_login(SharedDriver sharedDriver) {
         this.sharedDriver = sharedDriver;

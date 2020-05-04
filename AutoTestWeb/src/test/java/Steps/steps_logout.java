@@ -22,13 +22,13 @@ public class steps_logout {
 
     @And("^want to logout$")
     public void want_to_logout() throws Throwable {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         logout.findDropdownLogout();
     }
 
     @And("^logout successfully$")
     public void logoutSuccessfully() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("username")).click();
     }
 

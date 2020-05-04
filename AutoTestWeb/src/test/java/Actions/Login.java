@@ -43,11 +43,17 @@ public class Login {
 
     }
 
-    public void FillIn(String user, String pass) throws InterruptedException {
+    public void FillIn(String user, String pass) {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        txtBoxUsername.sendKeys(user);
-        txtBoxPassword.sendKeys(pass);
-        LoginButton.click();
-
+        //fill username input field
+        driver.findElement(By.id("username")).sendKeys(user);
+        //fill password input field
+        driver.findElement(By.id("password")).sendKeys(pass);
+        //click login button
+        driver.findElement(By.id("kc-login")).click();
     }
+//        txtBoxUsername.sendKeys(user);
+//        txtBoxPassword.sendKeys(pass);
+//        LoginButton.click();
+//    }
 }

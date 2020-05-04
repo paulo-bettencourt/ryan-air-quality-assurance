@@ -7,4 +7,4 @@ Feature: Dashboard - Summary of Debit Account
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i can click on a debit account
-    And i am redirected to the transactions page
+    And i am redirected to the Debit transactions page
