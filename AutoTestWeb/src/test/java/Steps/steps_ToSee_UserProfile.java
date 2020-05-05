@@ -25,13 +25,13 @@ public class steps_ToSee_UserProfile {
     }
 
     @Then("^i click on user profile$")
-    public void i_click_on_user_profile() throws Throwable {
+    public void i_click_on_user_profile() {
         profile.clickonUS();
 
     }
 
     @Then("^i see the User Profile details$")
-    public void i_see_the_User_Profile_details() throws InterruptedException {
+    public void i_see_the_User_Profile_details()  {
         String s = "Customer Details";
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 

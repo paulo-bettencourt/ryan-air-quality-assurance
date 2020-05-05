@@ -33,7 +33,7 @@ public class steps_login {
     }
 
     @And("^i logged in successfully$")
-    public void iLoggedInSuccessfully() throws InterruptedException {
+    public void iLoggedInSuccessfully()  {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("banner-url"));
     }

@@ -1,5 +1,6 @@
 @testAll
-  Feature: As a user i want to see my credit account details
+  Feature: Account Details - Credit Account
+    As a user i want to see my credit account details
 
     Scenario: Credit Account details
       Given i am in login page

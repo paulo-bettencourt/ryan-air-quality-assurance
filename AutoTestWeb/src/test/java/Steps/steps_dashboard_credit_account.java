@@ -51,7 +51,7 @@ public class steps_dashboard_credit_account {
 
         String details = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/sba-heading-widget-extended/div/div[2]/bb-header-ui/h3")).getText();
 
-       Assert.assertTrue(name.contains(details));
+        Assert.assertTrue(name.contains(details));
 
     }
 

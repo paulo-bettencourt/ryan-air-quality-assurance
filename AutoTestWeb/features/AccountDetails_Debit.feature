@@ -1,5 +1,6 @@
 @testAll
-  Feature: as a user i want to see my debit account details
+  Feature: Account details - Debit Account
+    As a user i want to see my debit account details
 
     Scenario: Debit account details
       Given i am in login page
