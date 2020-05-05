@@ -4,8 +4,12 @@ import Actions.Login;
 import Actions.UserProfile;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.concurrent.TimeUnit;
 
 public class steps_ToSee_UserProfile {
 
@@ -27,8 +31,13 @@ public class steps_ToSee_UserProfile {
     }
 
     @Then("^i see the User Profile details$")
-    public void i_see_the_User_Profile_details() throws Throwable {
+    public void i_see_the_User_Profile_details() throws InterruptedException {
+        String s = "Customer Details";
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-        //throw new PendingException();
+        String path = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-manage-profile-widget-extended/bb-user-manage-profile-widget/section/div/div/sba-customer-details-ui/div/div[1]/bb-header-ui/h6")).getText();
+
+        Assert.assertTrue(s.contains(path));
+
     }
 }

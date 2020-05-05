@@ -41,4 +41,16 @@ public class steps_dashboard_debit_account {
         //Makes the test pass if the drivers url contains the variable url
         Assert.assertTrue(s.contains(account));
     }
+
+
+    @Then("^Debit card details are loaded$")
+    public void debit_card_details_are_loaded()  {
+        String s = "Account Info";
+
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+
+        String name =  driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[1]/div[2]/a")).getText();
+        Assert.assertTrue(s.contains(name));
+    }
 }

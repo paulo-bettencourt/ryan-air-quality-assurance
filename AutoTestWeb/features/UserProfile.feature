@@ -7,4 +7,4 @@ Feature: See user profile
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i click on user profile
-#    And i see the User Profile details
+    And i see the User Profile details
