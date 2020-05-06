@@ -29,15 +29,15 @@ public class SharedDriver {
             if (browser.equalsIgnoreCase("chrome") && headLess.equalsIgnoreCase("true")) {
 
                 ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless");
                 options.addArguments("--no-sandbox");
+                options.addArguments("--headless");
                 options.addArguments("--disable-gpu");
                 options.addArguments("--window-size=1366,768");
 
 
+
                 System.setProperty("webdriver.chrome.driver", ReadPropFile.ReadConfig("chrome.driver"));
                 driver = new ChromeDriver(options);
-                // System.out.println("driver:"  + driver);
 
 
             } else if (browser.equalsIgnoreCase("chrome") && headLess.equalsIgnoreCase("false")) {
@@ -45,16 +45,7 @@ public class SharedDriver {
                 System.setProperty("webdriver.chrome.driver", ReadPropFile.ReadConfig("chrome.driver"));
                 driver = new ChromeDriver();
 
-//            } else if (browser.equalsIgnoreCase("firefox")) {
-//
-//                System.setProperty("webdriver.gecko.driver", ReadPropFile.ReadConfig("firefox.driver"));
-//                driver = new FirefoxDriver();
-
-            }/* else if (browser.equalsIgnoreCase("iexplorer")) {
-
-                System.setProperty("webdriver.ie.driver", ReadPropertyFile.readConfigProperties("iexplorer.driver"));
-                driver = new InternetExplorerDriver();
-            }*/
+            }
 
             initialized = true;
             wait = new WebDriverWait(driver, 60);
