@@ -27,7 +27,7 @@ public class steps_logout {
     }
 
     @And("^logout successfully$")
-    public void logoutSuccessfully() throws InterruptedException {
+    public void logoutSuccessfully() {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("username")).click();
     }

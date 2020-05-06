@@ -1,13 +1,10 @@
 package Steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import gherkin.lexer.Th;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.util.concurrent.TimeUnit;
 
 public class steps_transfer_own {

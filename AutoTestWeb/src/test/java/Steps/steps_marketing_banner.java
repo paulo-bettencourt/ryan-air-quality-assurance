@@ -1,11 +1,10 @@
 package Steps;
 
-import Actions.LanguageSwitcher;
+
 import cucumber.api.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.util.concurrent.TimeUnit;
 
 public class steps_marketing_banner {
@@ -19,7 +18,7 @@ public class steps_marketing_banner {
     }
 
     @And("^click on banner$")
-    public void clickOnBanner() throws InterruptedException {
+    public void clickOnBanner(){
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("banner-url")).click();
     }

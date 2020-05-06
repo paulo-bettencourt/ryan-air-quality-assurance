@@ -1,13 +1,10 @@
 package Steps;
 
-import Actions.LanguageSwitcher;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
 import java.util.concurrent.TimeUnit;
 
 public class steps_dashboard_savings_account {
