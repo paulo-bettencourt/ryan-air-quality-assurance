@@ -45,8 +45,11 @@ public class Login {
 
     public void FillIn(String user, String pass) {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        txtBoxUsername.sendKeys(user);
-        txtBoxPassword.sendKeys(pass);
-        LoginButton.click();
+        driver.findElement(By.id("username")).sendKeys(user);
+        driver.findElement(By.id("password")).sendKeys(pass);
+        driver.findElement(By.id("kc-login")).click();
+//        txtBoxUsername.sendKeys(user);
+//        txtBoxPassword.sendKeys(pass);
+//        LoginButton.click();
     }
 }
