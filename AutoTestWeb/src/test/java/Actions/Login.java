@@ -36,20 +36,16 @@ public class Login {
     WebElement LoginButton;
 
     public void openBrowser() throws IOException {
-
         String url = null;
         url = ReadPropFile.ReadConfig("urlTest");
         driver.get(url);
-
     }
 
     public void FillIn(String user, String pass) {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.findElement(By.id("username")).sendKeys(user);
-        driver.findElement(By.id("password")).sendKeys(pass);
-        driver.findElement(By.id("kc-login")).click();
-//        txtBoxUsername.sendKeys(user);
-//        txtBoxPassword.sendKeys(pass);
-//        LoginButton.click();
+
+        txtBoxUsername.sendKeys(user);
+        txtBoxPassword.sendKeys(pass);
+        LoginButton.click();
     }
 }
