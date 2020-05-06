@@ -1,13 +1,10 @@
 package Steps;
 
-import Actions.LanguageSwitcher;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,7 +21,7 @@ public class steps_dashboard_credit_account {
 
 
     @Then("^i can click on a Credit account$")
-    public void iCanClickOnACreditAccount() throws InterruptedException {
+    public void iCanClickOnACreditAccount() {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         //Credit Account
         driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-sba-product-summary-list-widget-extended/bb-product-summary-list-widget/div[4]/div[2]/div/button/bb-product-kind/div/div[1]/div[1]")).click();
@@ -44,11 +41,9 @@ public class steps_dashboard_credit_account {
     }
 
     @Then("^Credit card details are loaded$")
-    public void credit_card_details_are_loaded() throws InterruptedException {
+    public void credit_card_details_are_loaded() {
         String name = "My Accounts Details";
-
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
         String details = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/sba-heading-widget-extended/div/div[2]/bb-header-ui/h3")).getText();
 
         Assert.assertTrue(name.contains(details));

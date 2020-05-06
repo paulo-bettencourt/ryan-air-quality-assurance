@@ -7,8 +7,6 @@ import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SharedDriver {
@@ -32,24 +30,20 @@ public class SharedDriver {
                 options.addArguments("--no-sandbox");
                 options.addArguments("--headless");
                 options.addArguments("--disable-gpu");
-                options.addArguments("--window-size=1366,768");
-
-
 
                 System.setProperty("webdriver.chrome.driver", ReadPropFile.ReadConfig("chrome.driver"));
                 driver = new ChromeDriver(options);
-
 
             } else if (browser.equalsIgnoreCase("chrome") && headLess.equalsIgnoreCase("false")) {
 
                 System.setProperty("webdriver.chrome.driver", ReadPropFile.ReadConfig("chrome.driver"));
                 driver = new ChromeDriver();
+                driver.manage().window().maximize();
 
             }
 
             initialized = true;
             wait = new WebDriverWait(driver, 60);
-            driver.manage().window().maximize();
         }
     }
 
@@ -64,7 +58,6 @@ public class SharedDriver {
 
     @After
     public void afterScenario(Scenario scenario) {
-        // Thread.sleep(5000);
         initialized = false;
         driver.quit();
     }

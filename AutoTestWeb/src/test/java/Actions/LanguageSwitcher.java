@@ -2,10 +2,7 @@ package Actions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,12 +21,10 @@ public class LanguageSwitcher {
         driver.findElement(By.xpath("/html/body/div[3]/div/div/div[4]/div/div/a")).click();
     }
 
-    public boolean isEN(){
+    public boolean isEN() {
         if (driver.findElement(By.id("dropdownMenuButton")).getText().equalsIgnoreCase("English (UK)")) {
-            System.out.println(driver.findElement(By.id("dropdownMenuButton")).getText());
             return true;
         } else {
-            System.out.println(driver.findElement(By.id("dropdownMenuButton")).getText());
             return false;
         }
     }
