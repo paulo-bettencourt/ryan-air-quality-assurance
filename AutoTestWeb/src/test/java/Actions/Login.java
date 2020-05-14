@@ -6,7 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.io.IOException;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class Login {
@@ -28,10 +30,18 @@ public class Login {
     @FindBy(how = How.ID, using = "kc-login")
     WebElement LoginButton;
 
-    public void openBrowser() throws IOException {
+    public void openBrowser() throws IOException, InterruptedException {
         String url = null;
         url = ReadPropFile.ReadConfig("urlTest");
         driver.get(url);
+        //change locale cookie to EN
+        driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
+        Thread.sleep(2000);
+        driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE", "en", "identity-test.sbados.com", "/auth/realms/sbapb/", new Date(2020, 12, 30)));
+
+        // Thread.sleep(4000);
+        // System.out.println(driver.manage().getCookies().toString());
+
     }
 
     public void FillIn(String user, String pass) {

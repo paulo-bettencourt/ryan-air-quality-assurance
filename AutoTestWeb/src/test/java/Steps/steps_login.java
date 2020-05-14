@@ -5,8 +5,10 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class steps_login {
@@ -22,7 +24,7 @@ public class steps_login {
     }
 
     @Then("^i want to login with \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void i_want_to_login_with_and(String user, String pass) throws Throwable {
+    public void i_want_to_login_with_and(String user, String pass) {
         login.FillIn(user, pass);
     }
 
@@ -32,7 +34,7 @@ public class steps_login {
     }
 
     @And("^i logged in successfully$")
-    public void iLoggedInSuccessfully()  {
+    public void iLoggedInSuccessfully() {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("banner-url"));
     }
