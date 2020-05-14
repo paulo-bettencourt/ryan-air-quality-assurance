@@ -30,7 +30,7 @@ public class steps_transactions_details {
     @And("^i can see the transaction details$")
     public void iCanSeeTheTransactionDetails() {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        String ref = "Referência";
+        String ref = "Transaction";
 
         String s = driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/div[2]/div/div[2]/bb-transaction-details/div[1]/div[1]/div")).getText();
 
