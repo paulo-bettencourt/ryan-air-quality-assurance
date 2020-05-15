@@ -31,6 +31,7 @@ public class SharedDriver {
                 options.addArguments("--headless");
                 options.addArguments("--disable-gpu");
                 options.setBinary("/usr/bin/google-chrome");
+
                 System.setProperty("webdriver.chrome.driver", ReadPropFile.ReadConfig("chrome.driver"));
                 driver = new ChromeDriver(options);
 
