@@ -27,14 +27,14 @@ public class steps_transfers_SBA {
     }
 
     @And("^i fill the OTP modal$")
-    public void iFillTheOTPModal() throws InterruptedException {
+    public void iFillTheOTPModal() {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"code0\"]")).sendKeys("1");
         driver.findElement(By.xpath("//*[@id=\"code1\"]")).sendKeys("2");
         driver.findElement(By.xpath("//*[@id=\"code2\"]")).sendKeys("3");
         driver.findElement(By.xpath("//*[@id=\"code3\"]")).sendKeys("4");
         driver.findElement(By.xpath("//*[@id=\"code4\"]")).sendKeys("5");
-        Thread.sleep(3000);
+
     }
 
     @Then("^click on the transfer button$")
