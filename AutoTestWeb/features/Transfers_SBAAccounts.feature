@@ -10,7 +10,7 @@ Feature: Transfer - SBA Accounts
     And i am redirected to the new transfer page
     Then i select a savings account on the from selector
     And i select Jane Doe on the to selector
-    And i insert "6" on the amount input
+    And i insert "73" on the amount input
     Then i click on next button
     And i am redirected to the review page
 #  Next 4 lines are implemented, but commented because of the duplicated transfer error

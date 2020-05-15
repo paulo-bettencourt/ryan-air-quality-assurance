@@ -65,8 +65,8 @@ public class steps_transfer_own {
     }
 
     @Then("^i click on next button$")
-    public void iClickOnNextButton() throws InterruptedException {
-        Thread.sleep(3000);
+    public void iClickOnNextButton()  {
+      //  Thread.sleep(3000);
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         //find next button and click on it
         driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-form-container/bb-payment-form/div/div/form/bb-fieldset-ui/fieldset/div/div[3]/bb-button-ui/button")).click();
@@ -90,11 +90,11 @@ public class steps_transfer_own {
 
 
     @And("^transfers was successfully made$")
-    public void transfersWasSuccessfullyMade() throws InterruptedException {
+    public void transfersWasSuccessfullyMade() {
         String s = "submitted successfully";
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         String msg = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-status-container/bb-payment-status/div[1]/div[1]/bb-alert-ui/ngb-alert/div/div")).getText();
-        Thread.sleep(3000);
+      // Thread.sleep(3000);
         Assert.assertTrue(msg.contains(s));
     }
 
