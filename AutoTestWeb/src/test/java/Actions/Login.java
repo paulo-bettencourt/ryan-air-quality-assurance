@@ -37,7 +37,11 @@ public class Login {
         //change locale cookie to EN
         driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
         Thread.sleep(2000);
-        driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE", "en", "identity-test.sbados.com", "/auth/realms/sbapb/", new Date(2020, 12, 30)));
+        driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE",
+                "en",
+                "identity-test.sbados.com",
+                "/auth/realms/sbapb/",
+                new Date(2020, 12, 30)));
 
         // Thread.sleep(4000);
         // System.out.println(driver.manage().getCookies().toString());
@@ -51,4 +55,5 @@ public class Login {
         txtBoxPassword.sendKeys(pass);
         LoginButton.click();
     }
+
 }
