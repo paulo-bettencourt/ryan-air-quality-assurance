@@ -40,4 +40,9 @@ public class steps_login {
     }
 
 
+    @And("^my login failed$")
+    public void myLoginFailed() {
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//*[@id=\"error-container\"]/span[2]"));
+    }
 }

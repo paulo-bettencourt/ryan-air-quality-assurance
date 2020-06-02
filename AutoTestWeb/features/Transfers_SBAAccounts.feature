@@ -18,3 +18,17 @@ Feature: Transfer - SBA Accounts
 #    And i fill the OTP modal
 #    Then click on the transfer button
 #    And transfers was successfully made
+
+  Scenario: Transfer Savings account to wrong BBAN
+    Given i am in login page
+    Then i want to login with "real1" and "Password1*"
+    And i logged in successfully
+    Then i can click on new transfer on the quick action button
+    And i am redirected to the new transfer page
+    Then i select a savings account on the from selector
+    And i insert a recipients name "abc"
+    Then i insert a wrong BBAN "5555555555"
+    And i insert "73" on the amount input
+    Then i click on next button
+    And i am redirected to the review page
+    And a error message appears
