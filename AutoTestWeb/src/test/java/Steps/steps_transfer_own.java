@@ -37,12 +37,13 @@ public class steps_transfer_own {
 
 
     @Then("^i select a savings account on the from selector$")
-    public void iSelectASavingsAccountOnTheFromSelector() {
+    public void iSelectASavingsAccountOnTheFromSelector() throws InterruptedException {
+        Thread.sleep(2000); //makes sure the acc selector is fully loaded
         //select the acc selector
         driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-form-container/bb-payment-form/div/div/form/div[1]/bb-fieldset-ui/fieldset/bb-product-selector-ui/div/div/button/div[1]")).click();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         //select savings account
-        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-form-container/bb-payment-form/div/div/form/div[1]/bb-fieldset-ui/fieldset/bb-product-selector-ui/div/div/div/button[1]/bb-product-item-basic-account-ui/div/div/div[2]/div/div[1]")).click();
+        driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[2]/div/div/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-form-container/bb-payment-form/div/div/form/div[1]/bb-fieldset-ui/fieldset/bb-product-selector-ui/div/div/div/button[1]")).click();
 
     }
 
@@ -65,20 +66,22 @@ public class steps_transfer_own {
     }
 
     @Then("^i click on next button$")
-    public void iClickOnNextButton()  {
-      //  Thread.sleep(3000);
+    public void iClickOnNextButton() {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         //find next button and click on it
-        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-form-container/bb-payment-form/div/div/form/bb-fieldset-ui/fieldset/div/div[3]/bb-button-ui/button")).click();
+        driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[2]/div/div/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-form-container/bb-payment-form/div/div/form/bb-fieldset-ui/fieldset/div/div[3]/bb-button-ui/button")).click();
     }
 
     @And("^i am redirected to the review page$")
-    public void iAmRedirectedToTheReviewPage()  {
+    public void iAmRedirectedToTheReviewPage() throws InterruptedException {
+        Thread.sleep(3000); // makes sure there is time to redirect
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         String url = "review";
         String s = driver.getCurrentUrl();
         //returns true if we are on the review page
         Assert.assertTrue(s.contains(url));
+
+
     }
 
 
@@ -94,10 +97,9 @@ public class steps_transfer_own {
         String s = "submitted successfully";
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         String msg = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-status-container/bb-payment-status/div[1]/div[1]/bb-alert-ui/ngb-alert/div/div")).getText();
-      // Thread.sleep(3000);
+
         Assert.assertTrue(msg.contains(s));
     }
-
 
 
 }
