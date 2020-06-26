@@ -13,6 +13,3 @@ Feature: Transfer - Own Accounts
     And i insert "1" on the amount input
     Then i click on next button
     And i am redirected to the review page
-    #  Next 2 lines are implemented, but commented because of the duplicated transfer error
-#    Then i click on the authorize button
-#    And transfers was successfully made

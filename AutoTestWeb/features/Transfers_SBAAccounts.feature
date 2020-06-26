@@ -13,11 +13,6 @@ Feature: Transfer - SBA Accounts
     And i insert "73" on the amount input
     Then i click on next button
     And i am redirected to the review page
-#  Next 4 lines are implemented, but commented because of the duplicated transfer error
-#    Then i click on the authorize button
-#    And i fill the OTP modal
-#    Then click on the transfer button
-#    And transfers was successfully made
 
   Scenario: Transfer Savings account to wrong BBAN
     Given i am in login page
