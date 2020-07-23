@@ -4,7 +4,7 @@ Feature: Account Details - Loan Account
 
   Scenario: Loan Account Details
     Given i am in login page
-    Then i want to login with "real1" and "Password1*"
+    Then i want to login with "luis.amorim" and "Password1*"
     And i logged in successfully
     Then i can click on a loans account
     And click account details tab

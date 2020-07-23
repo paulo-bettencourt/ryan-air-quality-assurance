@@ -1,4 +1,4 @@
-@testAll
+ @testAll
 Feature: Debit Card Details
   As a user i want to be able to see the details of my debit card
 
