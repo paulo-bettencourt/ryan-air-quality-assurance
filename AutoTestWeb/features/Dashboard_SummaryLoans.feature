@@ -4,7 +4,7 @@ Feature: Dashboard - Summary of Loans Account
 
   Scenario: Load Dashboard - Summary of Loans Account
     Given i am in login page
-    Then i want to login with "real1" and "Password1*"
+    Then i want to login with "luis.amorim" and "Password1*"
     And i logged in successfully
     Then i can click on a loans account
     And i am redirected to the Loans transactions page
