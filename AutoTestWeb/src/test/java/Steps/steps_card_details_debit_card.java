@@ -20,7 +20,7 @@ public class steps_card_details_debit_card {
 
     @Then("^i click on cards on the nav bar$")
     public void iClickOnCardsOnTheNavBar() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         //click on cards on the nav bar
         driver.findElement(By.xpath("//*[@id=\"bb-page-layout-sidebar\"]/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul/li[1]/nav/ul/li[4]/a")).click();
