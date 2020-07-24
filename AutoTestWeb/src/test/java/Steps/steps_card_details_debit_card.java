@@ -19,10 +19,11 @@ public class steps_card_details_debit_card {
     }
 
     @Then("^i click on cards on the nav bar$")
-    public void iClickOnCardsOnTheNavBar() {
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    public void iClickOnCardsOnTheNavBar() throws InterruptedException {
+        Thread.sleep(3000);
+        //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         //click on cards on the nav bar
-        driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[2]/div/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul/li[1]/nav/ul/li[4]/a/span")).click();
+        driver.findElement(By.xpath("//*[@id=\"bb-page-layout-sidebar\"]/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul/li[1]/nav/ul/li[4]/a")).click();
 
     }
 
@@ -30,13 +31,14 @@ public class steps_card_details_debit_card {
     public void iSelectOneDebitCard() {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         //click on the first debit card
-        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-sba-cards-list-widget-extended/bb-cards-list-widget/bb-payment-cards-container/bb-payment-card-group/div/bb-payment-card[1]/div/bb-payment-card-state-wrapper-ui/div/div[1]")).click();
+        driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[2]/div/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul/li[1]/nav/ul/li[4]/a")).click();
     }
 
 
     @And("^i can see the debit card details$")
-    public void iCanSeeTheDebitCardDetails() {
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    public void iCanSeeTheDebitCardDetails() throws InterruptedException {
+        Thread.sleep(4000);
+        //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         String name = "Card Details";
         String text = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/sba-heading-widget-extended/div/div[2]/bb-header-ui/h3")).getText();
 

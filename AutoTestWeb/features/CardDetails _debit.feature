@@ -8,4 +8,5 @@ Feature: Debit Card Details
     And i logged in successfully
     Then i click on cards on the nav bar
     Then i select one debit card
-    And i can see the debit card details
+
+#     And i can see the debit card details
