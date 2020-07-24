@@ -4,7 +4,7 @@ Feature: Credit Card Details
 
   Scenario: Credit Card Details
     Given i am in login page
-    Then i want to login with "real1" and "Password1*"
+    Then i want to login with "luis.amorim" and "Password1*"
     And i logged in successfully
     Then i click on cards on the nav bar
     Then i select one credit card
