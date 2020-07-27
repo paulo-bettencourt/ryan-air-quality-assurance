@@ -30,8 +30,8 @@ public class steps_transactions_details {
     @And("^i can see the transaction details$")
     public void iCanSeeTheTransactionDetails() throws InterruptedException {
         //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        Thread.sleep(2000);
-        String ref = "Transaction";
+        Thread.sleep(3000);
+        String ref = "Transaction ID";
 
         String s = driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/div[2]/div/div[2]/bb-transaction-details/div[1]/div[1]/div")).getText();
 

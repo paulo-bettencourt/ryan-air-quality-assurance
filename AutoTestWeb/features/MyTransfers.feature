@@ -1,5 +1,5 @@
-@testALL
-  Feature: Transfer - My Transfers Details
+@testAll
+Feature: Transfer - My Transfers Details
  As a user i want to see My Transfers Details
 
   Scenario: See My Transfers Details
