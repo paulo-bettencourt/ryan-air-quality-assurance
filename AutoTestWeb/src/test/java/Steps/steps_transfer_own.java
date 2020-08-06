@@ -34,7 +34,6 @@ public class steps_transfer_own {
         String s = driver.getCurrentUrl();
 
         Assert.assertTrue(s.contains(url));
-        System.out.println(s);
     }
 
 
@@ -70,7 +69,6 @@ public class steps_transfer_own {
 
     @Then("^i click on next button$")
     public void iClickOnNextButton() throws InterruptedException {
-        //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         Thread.sleep(3000);
         //find next button and click on it
         driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-form-container/bb-payment-form/div/div/form/bb-fieldset-ui/fieldset/div/div[2]/bb-button-ui/button")).click();
@@ -79,7 +77,7 @@ public class steps_transfer_own {
     @And("^i am redirected to the review page$")
     public void iAmRedirectedToTheReviewPage() throws InterruptedException {
         Thread.sleep(3000); // makes sure there is time to redirect
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
         String url = "review";
         String s = driver.getCurrentUrl();
         //returns true if we are on the review page

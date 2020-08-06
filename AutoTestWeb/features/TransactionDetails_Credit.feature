@@ -4,7 +4,7 @@ Feature: Transaction Details - Credit Account
 
   Scenario: Credit Transaction Details
     Given i am in login page
-    Then i want to login with "real1" and "Password1*"
+    Then i want to login with "angelo" and "Password1*"
     And i logged in successfully
     Then i can click on a Credit account
     And i am redirected to the Credit transactions page
