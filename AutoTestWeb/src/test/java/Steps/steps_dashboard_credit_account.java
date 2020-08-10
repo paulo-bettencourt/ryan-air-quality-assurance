@@ -44,7 +44,7 @@ public class steps_dashboard_credit_account {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
         String details = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/sba-heading-widget-extended/div/div[2]/bb-header-ui/h3")).getText();
-
+System.out.println(details);
         Assert.assertTrue(name.contains(details));
 
     }

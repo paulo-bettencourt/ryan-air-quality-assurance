@@ -9,7 +9,6 @@ Feature: Transfer - SBA Accounts
     Then i can click on new transfer on the quick action button
     And i am redirected to the new transfer page
     Then i select a savings account on the from selector
-#    And i select Jane Doe on the to selector
     And i select "Test123" on the selector
     And i insert "73" on the amount input
     Then i click on next button

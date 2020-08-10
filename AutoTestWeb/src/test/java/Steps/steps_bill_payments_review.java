@@ -7,6 +7,7 @@ import gherkin.lexer.Th;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class steps_bill_payments_review {
     WebDriver driver;
@@ -72,5 +73,38 @@ public class steps_bill_payments_review {
         String s = driver.getCurrentUrl();
         //returns true if we are on the review page
         Assert.assertTrue(s.contains(url));
+    }
+
+    @Then("^I select an account for Reference$")
+    public void iSelectAnAccountForReference() {
+
+        driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[2]/div/div/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-reference-payment/form/div[1]/bb-fieldset-ui/fieldset/sba-billpay-account-selector-ui/bb-product-selector-ui/div/div/button")).click();
+        driver.findElement(By.xpath("/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[2]/div/div/div/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-reference-payment/form/div[1]/bb-fieldset-ui/fieldset/sba-billpay-account-selector-ui/bb-product-selector-ui/div/div/div/button[1]")).click();
+
+    }
+
+    @Then("^i select an amount for Reference$")
+    public void iSelectAnAmountForReference() {
+        //insert the amount
+        driver.findElement(By.xpath("//*[@id=\"bb_element_8\"]")).sendKeys("123");
+    }
+
+    @And("^i am able to click on Next button for Reference$")
+    public void iAmAbleToClickOnNextButtonForReference() {
+        WebElement btn = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-reference-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button"));
+        if (btn.isEnabled())
+            btn.click();
+    }
+
+    @Then("^i select an amount \\(standard\\)$")
+    public void iSelectAnAmountStandard() throws InterruptedException {
+        //select the amount dropdown
+        driver.findElement(By.xpath("//*[@id=\"bb_element_9\"]")).sendKeys("100");
+    }
+
+    @And("^i am able to click on Next button \\(standard\\)$")
+    public void iAmAbleToClickOnNextButtonStandard() throws InterruptedException {
+        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-state-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button")).click();
+        Thread.sleep(2000);
     }
 }
