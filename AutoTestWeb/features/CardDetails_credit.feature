@@ -8,4 +8,4 @@ Feature: Credit Card Details
     And i logged in successfully
     Then i click on cards on the nav bar
     Then i select one credit card
-#    And i can see the credit card details  ---not implemented
+#    And i can see the credit card details ---not implemented because there are no users with credit cards

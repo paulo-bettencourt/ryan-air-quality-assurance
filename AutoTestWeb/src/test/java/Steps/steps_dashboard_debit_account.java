@@ -31,8 +31,10 @@ public class steps_dashboard_debit_account {
 
     @And("^i am redirected to the Debit transactions page$")
     public void iAmRedirectedToTheDebitTransactionsPage() throws InterruptedException {
-        String account = "24 MARCH 2020";
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+       //String account = "3 APRIL 2020";
+        String account = "2020";
+       // driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        Thread.sleep(2000);
         String s = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-transactions-widget-extended/bb-transactions-list-widget/bb-transactions-container/bb-transactions-list/div[1]/bb-transactions-list-item-group/strong")).getText();
 
         //Makes the test pass if the drivers url contains the variable url

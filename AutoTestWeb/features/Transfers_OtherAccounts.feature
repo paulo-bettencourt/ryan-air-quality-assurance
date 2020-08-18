@@ -9,7 +9,7 @@ Feature: Transfer - Other Accounts
     Then i can click on new transfer on the quick action button
     And i am redirected to the new transfer page
     Then i select a savings account on the from selector
-    And i select John Doe on the to selector
+    And i select "Auto Tests" on the recipient name selector
     And i insert "3" on the amount input
     Then i click on next button
     And i am redirected to the review page
