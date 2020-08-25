@@ -2,7 +2,7 @@
 Feature: Bill Payments - Filter
   As a user i want to be able to filter my bill payments successfully made
 
-  Scenario: Review Page with entity 808
+  Scenario: Bill Payments - Filter for State Payments
     Given i am in login page
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
