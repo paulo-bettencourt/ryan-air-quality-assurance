@@ -20,7 +20,7 @@ Feature: Bill Payments - Review State Payment
     And i logged in successfully
     Then i click on bill payments on the nav bar
     And search for the "623" entity on the search bar
-    Then I select an account
+    Then I select an account for state
     And i insert a reference
     Then i select an amount (standard)
     And i am able to click on Next button (standard)

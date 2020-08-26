@@ -8,7 +8,7 @@ Feature: Bill Payments - Review Rechargeable Payment
     And i logged in successfully
     Then i click on bill payments on the nav bar
     And search for the "103" entity on the search bar
-    Then I select an account for Reference
+    Then I select an account for Rechargeable
     And i insert a reference
     Then i select an amount
     And i am able to click on Next button for Reference
