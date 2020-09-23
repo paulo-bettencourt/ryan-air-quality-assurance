@@ -18,7 +18,6 @@ public class LanguageSwitcher {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("dropdownMenuButton")).click();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-       // driver.findElement(By.xpath("/html/body/div[3]/div/div/div[4]/div/div/a")).click();
         driver.findElement(By.linkText("English (UK)")).click();
     }
 

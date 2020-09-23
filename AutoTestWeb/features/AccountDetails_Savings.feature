@@ -4,6 +4,8 @@ Feature: Account Details - Savings Account
 
   Scenario: Savings Account Details
     Given i am in login page
+    Then want to change language
+    And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i can click on a savings account

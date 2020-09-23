@@ -1,7 +1,10 @@
 package Steps;
 
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,7 +29,7 @@ public class steps_marketing_banner {
 
     @And("^redirect successfully$")
     public void redirectSuccessfully() {
-        String url = "http://uazi.net/heroisdeazul/";
+        String url = "heroisdeazul";
         boolean found = false;
 
         for (String handle : driver.getWindowHandles()) {
@@ -40,5 +43,7 @@ public class steps_marketing_banner {
         //Makes the test fail if the drivers url doesn't contains the variable url
         Assert.assertTrue(found);
     }
+
+
 
 }

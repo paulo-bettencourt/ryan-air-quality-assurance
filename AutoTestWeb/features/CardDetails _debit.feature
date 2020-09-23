@@ -4,6 +4,8 @@ Feature: Card Details - Debit
 
   Scenario: Card Details - Debit
     Given i am in login page
+    Then want to change language
+    And change language successfully
     Then i want to login with "ana.camara" and "Password1*"
     And i logged in successfully
     Then i click on cards on the nav bar

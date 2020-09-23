@@ -33,18 +33,18 @@ public class steps_card_details_debit_card {
     public void iSelectOneDebitCard() throws InterruptedException {
         Thread.sleep(3000);
         //click on the first debit card
-        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-sba-cards-list-widget-extended/bb-cards-list-widget/bb-payment-cards-container/bb-payment-card-group/div/bb-payment-card[1]/div/bb-payment-card-state-wrapper-ui/div/div[1]")).click();
+        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-sba-cards-list-widget-extended/bb-cards-list-widget/bb-payment-cards-container/bb-payment-card-group/div/bb-payment-card[1]/div/bb-payment-card-state-wrapper-ui/div/div[1]")).click();
     }
 
 
     @And("^i can see the debit card details$")
     public void iCanSeeTheDebitCardDetails() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         String name = "Card Details";
-        String text = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/sba-heading-widget-extended/div/div[2]/bb-header-ui/h3")).getText();
+        String text = driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[1]/sba-heading-widget-extended/div/div[2]/bb-header-ui/h3")).getText();
 
         //returns true if all string are contained in the string retrieved from the driver
-        Assert.assertTrue(text.contains(name) );
+        Assert.assertTrue(text.contains(name));
 
     }
 }

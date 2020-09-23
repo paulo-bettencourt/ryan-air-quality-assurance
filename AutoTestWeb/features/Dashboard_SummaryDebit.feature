@@ -4,6 +4,8 @@ Feature: Dashboard - Summary of Debit Account
 
   Scenario: Load Dashboard - Summary of Debit Account
     Given i am in login page
+    Then want to change language
+    And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i can click on a debit account

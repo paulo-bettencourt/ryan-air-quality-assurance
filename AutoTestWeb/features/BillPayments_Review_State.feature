@@ -4,6 +4,8 @@ Feature: Bill Payments - Review State Payment
 
   Scenario: Review Page with Configurable State Payment
     Given i am in login page
+    Then want to change language
+    And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i click on bill payments on the nav bar
@@ -16,6 +18,8 @@ Feature: Bill Payments - Review State Payment
 
   Scenario: Review Page with Standard State Payment
     Given i am in login page
+    Then want to change language
+    And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i click on bill payments on the nav bar
