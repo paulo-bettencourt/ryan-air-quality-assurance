@@ -4,6 +4,8 @@ Feature: Transfer - Other Accounts
 
   Scenario: Transfer Savings account to John Doe
     Given i am in login page
+    Then want to change language
+    And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i can click on new transfer on the quick action button
@@ -16,6 +18,8 @@ Feature: Transfer - Other Accounts
 
   Scenario: Transfer Savings account to invalid IBAN
     Given i am in login page
+    Then want to change language
+    And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i can click on new transfer on the quick action button

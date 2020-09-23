@@ -20,14 +20,15 @@ public class steps_language_switcher {
     }
 
     @Then("^want to change language$")
-    public void want_to_change_language()  {
+    public void want_to_change_language() {
         languageSwitcher.ChangeLang();
 
     }
 
     @And("^change language successfully$")
-    public void changeLanguageSuccessfully()  {
+    public void changeLanguageSuccessfully() throws InterruptedException {
         boolean x = languageSwitcher.isEN();
         Assert.assertTrue(x);
+
     }
 }

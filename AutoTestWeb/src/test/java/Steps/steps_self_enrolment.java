@@ -29,7 +29,8 @@ public class steps_self_enrolment {
 
     @And("^i choose a client number from the dropdown$")
     public void iChooseAClientNumberFromTheDropdown() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
+//        driver.findElement(By.xpath("//*[@id=\"bb_input_0\"]")).click();
         driver.findElement(By.xpath("//*[@id=\"bb_input_0\"]/option[3]")).click();
     }
 
@@ -62,7 +63,7 @@ public class steps_self_enrolment {
 
     @And("^i am in the verification page$")
     public void iAmInTheVerificationPage() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 
         driver.findElement(By.xpath("//*[@id=\"code0\"]")).sendKeys("0");
     }

@@ -29,8 +29,7 @@ public class steps_transfer_own {
     @And("^i am redirected to the new transfer page$")
     public void iAmRedirectedToTheNewTransferPage() throws InterruptedException {
         String url = "create-transfer/form";
-        //driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         String s = driver.getCurrentUrl();
 
         Assert.assertTrue(s.contains(url));

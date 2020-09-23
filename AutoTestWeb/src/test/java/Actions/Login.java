@@ -43,8 +43,20 @@ public class Login {
                 "/auth/realms/sbapb/",
                 new Date(2020, 12, 30)));
 
-        // Thread.sleep(4000);
-        // System.out.println(driver.manage().getCookies().toString());
+    }
+
+    public void openBrowser_BEP() throws IOException, InterruptedException {
+        String url = null;
+        url = ReadPropFile.ReadConfig("urlTestBEP");
+        driver.get(url);
+        //change locale cookie to EN
+        driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
+        Thread.sleep(2000);
+        driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE",
+                "en",
+                "identity-test.sbados.com",
+                "/auth/realms/sbapb/",
+                new Date(2020, 12, 30)));
 
     }
 

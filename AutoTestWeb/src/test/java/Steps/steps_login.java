@@ -36,7 +36,6 @@ public class steps_login {
     @And("^i logged in successfully$")
     public void iLoggedInSuccessfully() throws InterruptedException {
         Thread.sleep(3000);
-        //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("banner-url"));
     }
 
@@ -45,5 +44,12 @@ public class steps_login {
     public void myLoginFailed() {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"error-container\"]/span[2]"));
+    }
+
+    @And("^i change the language to english$")
+    public void iChangeTheLanguageToEnglish() throws InterruptedException {
+        driver.findElement(By.xpath("//*[@id=\"dropdownMenuButton\"]")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/div/div/div[4]/div/div/a")).click();
+        Thread.sleep(3000);
     }
 }

@@ -4,7 +4,9 @@ Feature: Dashboard - Summary of Credit Account
 
   Scenario: Load Dashboard - Summary of Credit Account
     Given i am in login page
-    Then i want to login with "angelo" and "Password1*"
+    Then want to change language
+    And change language successfully
+    Then i want to login with "luis.amorim" and "Password1*"
     And i logged in successfully
     Then i can click on a Credit account
     And i am redirected to the Credit transactions page
