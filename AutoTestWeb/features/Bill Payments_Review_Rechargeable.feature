@@ -13,5 +13,5 @@ Feature: Bill Payments - Review Rechargeable Payment
     Then I select an account for Rechargeable
     And i insert a reference
     Then i select an amount
-    And i am able to click on Next button for Reference
+    And i am able to click on Next button for Rechargeable
     Then i am on the review page
