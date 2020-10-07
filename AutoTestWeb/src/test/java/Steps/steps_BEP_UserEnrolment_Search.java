@@ -57,7 +57,7 @@ public class steps_BEP_UserEnrolment_Search {
     @And("^i click on the cancel button$")
     public void iClickOnTheCancelButton() throws InterruptedException {
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-user-enrollment-customer-details-widget/bb-user-enrollment-customer-details-layout/bb-user-enrollment-customer-details-action-buttons/button[2]")).click();
+        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-enrollment-customer-details-widget-extended/bb-user-enrollment-customer-details-widget/bb-user-enrollment-customer-details-layout/bb-user-enrollment-customer-details-action-buttons/div/button[2]")).click();
     }
 
 
