@@ -12,6 +12,6 @@ Feature: Bill Payments - Review Rechargeable Payment
     And search for the "103" entity on the search bar
     Then I select an account for Rechargeable
     And i insert a reference
-    Then i select an amount
+    Then i select an amount rechargeable
     And i am able to click on Next button for Rechargeable
     Then i am on the review page
