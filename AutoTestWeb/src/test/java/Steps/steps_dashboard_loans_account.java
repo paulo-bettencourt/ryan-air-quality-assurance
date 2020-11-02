@@ -23,7 +23,7 @@ public class steps_dashboard_loans_account {
     public void iCanClickOnALoansAccount() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         //Loans Account
-        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-sba-product-summary-list-widget-extended/bb-product-summary-list-widget/div[3]/div[2]/div/button/bb-product-kind/div")).click();
+        driver.findElement(By.xpath("//div [@class = 'product-item-group rounded loans']")).click();
 
     }
 

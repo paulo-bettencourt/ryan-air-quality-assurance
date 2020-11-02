@@ -22,7 +22,7 @@ public class steps_dashboard_current_account {
     public void iCanClickOnACurrentAccount() {
        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         //Current Account
-        driver.findElement(By.xpath("//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-sba-product-summary-list-widget-extended/bb-product-summary-list-widget/div[1]/div[2]/div/button/bb-product-kind/div/div[1]/div[1]")).click();
+        driver.findElement(By.xpath("//div[@class='product-item-group rounded current-account']")).click();
 
     }
 
