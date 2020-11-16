@@ -60,6 +60,21 @@ public class Login {
 
     }
 
+    public void openBrowser_business() throws IOException, InterruptedException {
+        String url = null;
+        url = ReadPropFile.ReadConfig("urlTestBusiness");
+        driver.get(url);
+        //change locale cookie to EN
+        driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
+        Thread.sleep(2000);
+        driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE",
+                "en",
+                "identity-test.sbados.com",
+                "/auth/realms/sbapb/",
+                new Date(2020, 12, 30)));
+
+    }
+
     public void FillIn(String user, String pass) {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
