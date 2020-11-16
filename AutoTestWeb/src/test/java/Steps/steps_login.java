@@ -33,6 +33,11 @@ public class steps_login {
         login.openBrowser();
     }
 
+    @Given("^i am in the business login page$")
+    public void i_am_in_business_login_page() throws Throwable {
+        login.openBrowser_business();
+    }
+
     @And("^i logged in successfully$")
     public void iLoggedInSuccessfully() throws InterruptedException {
         Thread.sleep(3000);
