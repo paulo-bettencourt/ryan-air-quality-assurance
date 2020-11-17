@@ -6,6 +6,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 public class steps_language_switcher {
 
@@ -16,7 +17,8 @@ public class steps_language_switcher {
     public steps_language_switcher(SharedDriver sharedDriver) {
         this.sharedDriver = sharedDriver;
         driver = sharedDriver.getDriver();
-        languageSwitcher = new LanguageSwitcher(driver);
+        PageFactory.initElements(driver, this);
+        languageSwitcher = new LanguageSwitcher(sharedDriver);
 
     }
 
@@ -27,7 +29,7 @@ public class steps_language_switcher {
     }
 
     @And("^change language successfully$")
-    public void changeLanguageSuccessfully() throws InterruptedException {
+    public void changeLanguageSuccessfully() {
         boolean x = languageSwitcher.isEN();
         Assert.assertTrue(x);
 

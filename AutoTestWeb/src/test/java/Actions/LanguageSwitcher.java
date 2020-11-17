@@ -1,28 +1,37 @@
 package Actions;
 
+import Steps.SharedDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.concurrent.TimeUnit;
 
 public class LanguageSwitcher {
-    private static WebDriver driver;
+    private static SharedDriver sharedDriver;
 
-    public LanguageSwitcher(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    public LanguageSwitcher(SharedDriver sharedDriver) {
+        this.sharedDriver = sharedDriver;
+        PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
+    @FindBy(how = How.ID, using = "dropdownMenuButton")
+    WebElement langSwitcher;
+
+    @FindBy(how = How.LINK_TEXT, using = "English (UK)")
+    WebElement english;
+
     public void ChangeLang() {
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.findElement(By.id("dropdownMenuButton")).click();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.findElement(By.linkText("English (UK)")).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(langSwitcher)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(english)).click();
     }
 
     public boolean isEN() {
-        if (driver.findElement(By.id("dropdownMenuButton")).getText().equalsIgnoreCase("English (UK)")) {
+        if (sharedDriver.getDriver().findElement((By) langSwitcher).getText().equalsIgnoreCase("English (UK)")) {
             return true;
         } else {
             return false;
