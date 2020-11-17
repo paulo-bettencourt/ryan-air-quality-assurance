@@ -35,5 +35,10 @@ public class steps_language_switcher {
 
     }
 
+    @And("^i press to change language in dashboard$")
+    public void iChangeLanguageDashboard() {
+        languageSwitcher.changeLanguageDashboard();
+    }
+
 
 }

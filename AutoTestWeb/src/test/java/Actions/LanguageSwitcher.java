@@ -25,6 +25,12 @@ public class LanguageSwitcher {
     @FindBy(how = How.LINK_TEXT, using = "English (UK)")
     WebElement english;
 
+    @FindBy(how = How.ID, using = "dropdownManual")
+    WebElement langSwitcherDashboard;
+
+    @FindBy(how = How.CLASS_NAME, using = "pt-AO")
+    WebElement langSwitcherDashboardPT;
+
     public void ChangeLang() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(langSwitcher)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(english)).click();
@@ -36,6 +42,11 @@ public class LanguageSwitcher {
         } else {
             return false;
         }
+    }
+
+    public void changeLanguageDashboard() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(langSwitcherDashboard)).click();
+        langSwitcherDashboardPT.click();
     }
 
 }
