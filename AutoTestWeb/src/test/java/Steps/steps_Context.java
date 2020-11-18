@@ -23,9 +23,10 @@ public class steps_Context {
         public void i_am_in_select_context_page() {
                 selectContext.iAmInSelectContextPage();
         }
-
+        
         @Then("i select the context \"([^\"]*)\"$")
         public void i_select_context(String serviceAgreement) {
+                 this.i_am_in_select_context_page();
                 selectContext.iSelectContext(serviceAgreement);
         }
 

@@ -7,6 +7,7 @@ import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -43,7 +44,6 @@ public class steps_login {
         Thread.sleep(3000);
         driver.findElement(By.id("banner-url"));
     }
-
 
     @And("^my login failed$")
     public void myLoginFailed() {

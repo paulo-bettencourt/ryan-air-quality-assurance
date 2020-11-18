@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SelectContext {
 
@@ -28,7 +29,7 @@ public class SelectContext {
     public void iAmInSelectContextPage() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(selectContextTitle));
     }
-
+    
     public void iSelectContext(String serviceAgreementName) {
         sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '" + serviceAgreementName + "')]")).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
