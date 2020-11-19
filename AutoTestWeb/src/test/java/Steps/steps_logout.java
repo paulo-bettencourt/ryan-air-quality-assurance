@@ -19,7 +19,6 @@ public class steps_logout {
         logout = new Logout(driver);
     }
 
-
     @And("^want to logout$")
     public void want_to_logout() throws Throwable {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -31,5 +30,4 @@ public class steps_logout {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.id("username")).click();
     }
-
 }

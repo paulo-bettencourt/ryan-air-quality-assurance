@@ -12,6 +12,6 @@ Feature: Business Language Switcher
     Then i want to login with "companyb1" and "Password1*"
     And i confirm i am in select context page
     Then i select the context "sa_companyB1"
-    And i confirm i am the business dashboard
+    And i am on the business dashboard
     And i press to change language in dashboard
-    And i confirm i am the business dashboard in portuguese
+    And i confirm i am on the business dashboard in portuguese

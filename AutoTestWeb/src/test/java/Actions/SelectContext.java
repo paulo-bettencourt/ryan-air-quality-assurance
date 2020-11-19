@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SelectContext {
 
@@ -21,18 +22,40 @@ public class SelectContext {
     @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Select context ')]")
     WebElement selectContextTitle;
 
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Select context ')]")
+    WebElement changeContextTitle;
+
     @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Hi CompanyB User1 ')]")
     WebElement helloMessage;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/button/div/div")
+    WebElement contextDropdownButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/div/div/bb-user-context-menu-dropdown/button[1]")
+    WebElement changeContextButton;
+
+    //bb-service-agreement-item/div/div/div[text() = 'sa_companyB1']
+    //div[contains(text(), '" + serviceAgreementName + "')]"
+
 
 
     public void iAmInSelectContextPage() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(selectContextTitle));
     }
-
+    
     public void iSelectContext(String serviceAgreementName) {
-        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '" + serviceAgreementName + "')]")).click();
+        sharedDriver.getDriver().findElement(By.xpath("//bb-service-agreement-item/div/div/div[text() = '"+serviceAgreementName+"']")).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
     }
 
+    public void selectContextDropdown(){
+        contextDropdownButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(changeContextButton));
+        changeContextButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(changeContextTitle));
+    }
 
+    public void verifySelectedContext(String loggedInUser){
+        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), 'Hi CompanyB "+ loggedInUser +"')]"));
+    }
 }

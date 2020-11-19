@@ -23,10 +23,20 @@ public class steps_Context {
         public void i_am_in_select_context_page() {
                 selectContext.iAmInSelectContextPage();
         }
-
+        
         @Then("i select the context \"([^\"]*)\"$")
         public void i_select_context(String serviceAgreement) {
                 selectContext.iSelectContext(serviceAgreement);
         }
+        @And("^i want to change context$")
+        public void i_want_to_change_context() {
+                selectContext.selectContextDropdown();
+        }
+        @And("^i change context successfully \"([^\"]*)\"$")
+        public void i_change_context_successfully(String contextUser) {
+                selectContext.verifySelectedContext(contextUser);
+        }
+
+
 
 }
