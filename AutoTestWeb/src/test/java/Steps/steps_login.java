@@ -21,7 +21,7 @@ public class steps_login {
     public steps_login(SharedDriver sharedDriver) {
         this.sharedDriver = sharedDriver;
         driver = sharedDriver.getDriver();
-        login = new Login(driver);
+        login = new Login(driver, sharedDriver);
     }
 
     @Then("^i want to login with \"([^\"]*)\" and \"([^\"]*)\"$")
@@ -56,5 +56,10 @@ public class steps_login {
         driver.findElement(By.xpath("//*[@id=\"dropdownMenuButton\"]")).click();
         driver.findElement(By.xpath("/html/body/div[2]/div/div/div[4]/div/div/a")).click();
         Thread.sleep(3000);
+    }
+
+    @And("^i see the error message of right password, but account still blocked$")
+    public void iSeeErrorMessageOfRightInfoButAccountBlocked() {
+        login.seeToManyWrongTriesErrorMessage();
     }
 }

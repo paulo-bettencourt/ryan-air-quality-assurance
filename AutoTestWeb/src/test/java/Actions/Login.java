@@ -1,10 +1,12 @@
 package Actions;
 
+import Steps.SharedDriver;
 import config.ReadPropFile;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
@@ -14,9 +16,11 @@ import java.util.concurrent.TimeUnit;
 public class Login {
     private static WebDriver driver;
     private WebDriverWait wait;
+    private SharedDriver sharedDriver;
 
-    public Login(WebDriver driver) {
+    public Login(WebDriver driver, SharedDriver sharedDriver) {
         this.driver = driver;
+        this.sharedDriver = sharedDriver;
         PageFactory.initElements(driver, this);
     }
 
@@ -29,6 +33,10 @@ public class Login {
 
     @FindBy(how = How.ID, using = "kc-login")
     WebElement LoginButton;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Acesso encontra-se bloqueado por ter excedido o número máximo de tentativas de login. Por favor contacte-nos através dos números ')]")
+    WebElement toManyWrongTriesErrorMessage;
+
 
     public void openBrowser() throws IOException, InterruptedException {
         String url = null;
@@ -81,6 +89,10 @@ public class Login {
         txtBoxUsername.sendKeys(user);
         txtBoxPassword.sendKeys(pass);
         LoginButton.click();
+    }
+
+    public void seeToManyWrongTriesErrorMessage() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(toManyWrongTriesErrorMessage));
     }
 
 }
