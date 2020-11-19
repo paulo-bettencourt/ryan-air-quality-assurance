@@ -19,7 +19,7 @@ public class steps_BEP_search_user {
     public steps_BEP_search_user(SharedDriver sharedDriver) {
         this.sharedDriver = sharedDriver;
         driver = sharedDriver.getDriver();
-        login = new Login(driver);
+        login = new Login(driver, sharedDriver);
     }
 
     @Given("^i am in the BEP login page$")
