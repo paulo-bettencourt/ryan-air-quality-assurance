@@ -23,12 +23,20 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Olá CompanyB User1 ')]")
     WebElement helloMessagePortuguese;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-page-layout-sidebar\"]/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul")
+    WebElement sideNavigationBar;
+
+
+
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
     }
 
     public void iAmInBusinessDashboardPortuguese() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessagePortuguese));
+    }
+    public void viewNavigationBar(){
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sideNavigationBar));
     }
 
 

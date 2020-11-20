@@ -1,4 +1,4 @@
-@testAll @ARD-11464
+@testAll @ARD-11466
 Feature: Business - Dashboard Change Context
 
   Scenario: Business - Change Context
@@ -8,4 +8,4 @@ Feature: Business - Dashboard Change Context
     And i am on the business dashboard
     And i want to change context
     And i select the context "sa_companyB1_2"
-    And i change context successfully "User1"
+    And i am on the business dashboard

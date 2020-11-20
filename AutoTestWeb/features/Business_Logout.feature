@@ -1,4 +1,4 @@
-@testAll
+@testAll @ARD-11465
 Feature: Logout
   As a user i want to be able to logout
 
