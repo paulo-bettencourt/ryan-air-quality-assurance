@@ -26,6 +26,17 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-page-layout-sidebar\"]/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul")
     WebElement sideNavigationBar;
 
+    @FindBy(how = How.XPATH, using = " //*[@id=\"bb-main-content\"]/bb-panel-container//bb-accounts-overview-cards/div")
+    WebElement accountsCardsView;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-accounts-overview-container/bb-accounts-overview-table/table/tbody")
+    WebElement accountsListView;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-accounts-overview-container/bb-accounts-overview-header/div/div[2]/div/div/button[1]/bb-icon-ui")
+    WebElement accountsListViewButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome//bb-accounts-overview-container/bb-accounts-overview-header/div/div[2]/div/div/button[2]/bb-icon-ui")
+    WebElement accountsCardViewButton;
 
 
     public void iAmInBusinessDashboard() {
@@ -39,5 +50,13 @@ public class Business_Dashboard {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sideNavigationBar));
     }
 
+    public void viewAccountsListView(){
+        accountsListViewButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsListView));
+    }
 
+    public void viewAccountsCardsView(){
+        accountsCardViewButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsCardsView));
+    }
 }
