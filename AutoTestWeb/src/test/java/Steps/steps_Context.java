@@ -33,9 +33,14 @@ public class steps_Context {
                 selectContext.selectContextDropdown();
         }
         @And("^i change context successfully \"([^\"]*)\"$")
-        public void i_change_context_successfully(String contextUser) {
-                selectContext.verifySelectedContext(contextUser);
+        public void i_change_context_successfully(String context) {
+                selectContext.verifySelectedContext(context);
         }
+        @And("^i can view username \"([^\"]*)\" and context \"([^\"]*)\"$")
+        public void i_can_view_username_and_context(String loggedInUser, String context) {
+                selectContext.verifyContextAndName(loggedInUser,context );
+        }
+
 
 
 

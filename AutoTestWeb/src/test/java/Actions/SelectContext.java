@@ -34,8 +34,8 @@ public class SelectContext {
     @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/div/div/bb-user-context-menu-dropdown/button[1]")
     WebElement changeContextButton;
 
-    //bb-service-agreement-item/div/div/div[text() = 'sa_companyB1']
-    //div[contains(text(), '" + serviceAgreementName + "')]"
+    @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]//bb-user-context-menu-dropdown/button[1]/div[2]/div[2]")
+    WebElement currentContext;
 
 
 
@@ -55,7 +55,14 @@ public class SelectContext {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(changeContextTitle));
     }
 
-    public void verifySelectedContext(String loggedInUser){
+    public void verifySelectedContext(String context){
+        contextDropdownButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(currentContext));
+        sharedDriver.getDriver().findElement(By.xpath("//*[@id=\"context-menu-dropdown\"]//bb-user-context-menu-dropdown/button[1]/div[2]/div[contains(text(),'"+ context +"')]"));
+    }
+
+    public void verifyContextAndName(String loggedInUser, String context){
         sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), 'Hi CompanyB "+ loggedInUser +"')]"));
+        this.verifySelectedContext(context);
     }
 }

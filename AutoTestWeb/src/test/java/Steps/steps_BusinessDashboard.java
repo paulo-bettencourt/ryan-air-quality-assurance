@@ -27,6 +27,21 @@ public class steps_BusinessDashboard {
         dashboard.iAmInBusinessDashboard();
     }
 
+    @And("^i can see the navigation bar$")
+    public void i_can_see_the_navigation_bar() {
+        dashboard.viewNavigationBar();
+    }
+
+    @And("^i can view the accounts list view$")
+    public void i_can_see_the_accounts_list_view() {
+        dashboard.viewAccountsListView();
+    }
+
+    @And("^i can view the accounts cards view$")
+    public void i_can_see_the_accounts_cards_view() {
+        dashboard.viewAccountsCardsView();
+    }
+
     @And("^i confirm i am on the business dashboard in portuguese$")
     public void i_am_in_business_dashboard_pt() {
         dashboard.iAmInBusinessDashboardPortuguese();

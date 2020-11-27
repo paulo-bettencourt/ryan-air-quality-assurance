@@ -23,6 +23,22 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Olá CompanyB User1 ')]")
     WebElement helloMessagePortuguese;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-page-layout-sidebar\"]/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul")
+    WebElement sideNavigationBar;
+
+    @FindBy(how = How.XPATH, using = " //*[@id=\"bb-main-content\"]/bb-panel-container//bb-accounts-overview-cards/div")
+    WebElement accountsCardsView;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-accounts-overview-container/bb-accounts-overview-table/table/tbody")
+    WebElement accountsListView;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-accounts-overview-container/bb-accounts-overview-header/div/div[2]/div/div/button[1]/bb-icon-ui")
+    WebElement accountsListViewButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome//bb-accounts-overview-container/bb-accounts-overview-header/div/div[2]/div/div/button[2]/bb-icon-ui")
+    WebElement accountsCardViewButton;
+
+
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
     }
@@ -30,6 +46,17 @@ public class Business_Dashboard {
     public void iAmInBusinessDashboardPortuguese() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessagePortuguese));
     }
+    public void viewNavigationBar(){
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sideNavigationBar));
+    }
 
+    public void viewAccountsListView(){
+        accountsListViewButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsListView));
+    }
 
+    public void viewAccountsCardsView(){
+        accountsCardViewButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsCardsView));
+    }
 }
