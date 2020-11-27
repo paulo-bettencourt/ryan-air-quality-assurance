@@ -1,6 +1,8 @@
 package Actions;
 
 import Steps.SharedDriver;
+import gherkin.lexer.Th;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -38,6 +40,12 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome//bb-accounts-overview-container/bb-accounts-overview-header/div/div[2]/div/div/button[2]/bb-icon-ui")
     WebElement accountsCardViewButton;
 
+    @FindBy(how = How.XPATH, using = "//button[contains(text(), ' See Details ')]")
+    WebElement kebabSeeDetailOption;
+
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(), ' General ')]")
+    WebElement generalLabelDetails;
+
 
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
@@ -58,5 +66,15 @@ public class Business_Dashboard {
     public void viewAccountsCardsView(){
         accountsCardViewButton.click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsCardsView));
+    }
+
+    public void iClickOnFirstAccountKebabMenu() {
+        sharedDriver.getDriver().findElements(By.className("dropdown-menu-toggle-button__content")).get(2).click();
+    }
+
+    public void iChooseSeeDetailsKebabMenu() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(kebabSeeDetailOption));
+        kebabSeeDetailOption.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
     }
 }

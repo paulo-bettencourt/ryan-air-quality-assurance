@@ -4,6 +4,7 @@ import Actions.Business_Dashboard;
 import Actions.SelectContext;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -45,6 +46,16 @@ public class steps_BusinessDashboard {
     @And("^i confirm i am on the business dashboard in portuguese$")
     public void i_am_in_business_dashboard_pt() {
         dashboard.iAmInBusinessDashboardPortuguese();
+    }
+
+    @Then("^i click on the kebab button of the first account$")
+    public void i_click_on_first_account_kebab_button() {
+        dashboard.iClickOnFirstAccountKebabMenu();
+    }
+
+    @Then("^i click to see details on the kebab$")
+    public void on_kebab_click_see_details() {
+        dashboard.iChooseSeeDetailsKebabMenu();
     }
 
 }
