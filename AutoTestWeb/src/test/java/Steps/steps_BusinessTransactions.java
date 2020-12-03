@@ -30,7 +30,7 @@ public class steps_BusinessTransactions {
     }
 
     @And("^i see and press the print button$")
-    public void i_press_transactions_print_button() {
+    public void i_press_transactions_print_button() throws Exception {
         business_transactions.iPressPrintButton();
     }
 }

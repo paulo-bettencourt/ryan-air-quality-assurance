@@ -47,9 +47,17 @@ public class Business_Transactions {
         transactionsTitle.click();
     }
 
-    public void iPressPrintButton() {
+    public void iPressPrintButton() throws Exception {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsPrintButton));
-        transactionsPrintButton.click();
+        // the only way to access the print dialog is to click the print button with JavascriptExecutor in a async way
+        JavascriptExecutor executor = (JavascriptExecutor) sharedDriver.getDriver();
+        try {
+            executor.executeScript("var elem=arguments[0]; setTimeout(function() {elem.click();}, 100)", transactionsPrintButton);
+        } catch(Exception e) {
+            throw new Exception("<<<<<<<<<<<<<< Print button could not be clicked >>>>>>>>>>>>>>");
+        }
+
+        sharedDriver.getDriver().quit();
 
     }
 
