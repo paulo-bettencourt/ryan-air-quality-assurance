@@ -58,4 +58,9 @@ public class steps_BusinessDashboard {
         dashboard.iChooseSeeDetailsKebabMenu();
     }
 
+    @And("^i print the account details$")
+    public void i_print_account_details() throws Exception {
+        dashboard.iPrintAccountDetails();
+    }
+
 }
