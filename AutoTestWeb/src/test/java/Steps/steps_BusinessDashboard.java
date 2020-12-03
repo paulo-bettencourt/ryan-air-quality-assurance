@@ -53,11 +53,25 @@ public class steps_BusinessDashboard {
         dashboard.iClickOnFirstAccountKebabMenu();
     }
 
+    @Then("^i click on the kebab menu of documentary collection account$")
+    public void i_click_on_kebab_menu_of_documentary_collection_account() {
+        dashboard.iClickOnDocumentaryCollectionAccountKebabMenu();
+    }
+
     @Then("^i click to see details on the kebab$")
     public void on_kebab_click_see_details() {
         dashboard.iChooseSeeDetailsKebabMenu();
     }
 
+    @Then("^i click to see details on the documentary collection kebab$")
+    public void on_documentary_collection_kebab_click_see_details() {
+        dashboard.iChooseSeeDocumentaryCollectionKebabMenuDetails();
+    }
+
+    @Then("^i can view account selector$")
+    public void i_can_view_account_selector() {
+        dashboard.viewAccountSelector();
+    }
     @And("^i print the account details$")
     public void i_print_account_details() throws Exception {
         dashboard.iPrintAccountDetails();
