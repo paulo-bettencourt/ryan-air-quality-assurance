@@ -41,6 +41,11 @@ public class steps_Context {
                 selectContext.verifyContextAndName(loggedInUser,context );
         }
 
+        @Then("i select the context \"([^\"]*)\" for portuguese user$")
+        public void i_select_portuguese_context(String serviceAgreement) {
+                selectContext.iSelectContextPortuguese(serviceAgreement);
+        }
+
 
 
 
