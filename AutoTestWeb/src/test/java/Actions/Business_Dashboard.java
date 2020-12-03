@@ -46,6 +46,15 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//h4[contains(text(), ' General ')]")
     WebElement generalLabelDetails;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//bb-product-summary-account-selector-widget/bb-account-selector-ui/ng-select/div")
+    WebElement accountSelector;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[2]/td[8]/bb-dropdown-menu-ui/div/button/div")
+    WebElement documentaryCollectionKebabMenu;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[2]/td[8]/bb-dropdown-menu-ui/div/div/button")
+    WebElement documentaryCollectionDetails;
+
 
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
@@ -70,11 +79,27 @@ public class Business_Dashboard {
 
     public void iClickOnFirstAccountKebabMenu() {
         sharedDriver.getDriver().findElements(By.className("dropdown-menu-toggle-button__content")).get(2).click();
+
+    }
+
+    public void iClickOnDocumentaryCollectionAccountKebabMenu() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(documentaryCollectionKebabMenu));
+        documentaryCollectionKebabMenu.click();
     }
 
     public void iChooseSeeDetailsKebabMenu() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(kebabSeeDetailOption));
         kebabSeeDetailOption.click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
+    }
+
+    public void iChooseSeeDocumentaryCollectionKebabMenuDetails() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(documentaryCollectionDetails));
+        documentaryCollectionDetails.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
+    }
+
+    public void viewAccountSelector() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountSelector));
     }
 }
