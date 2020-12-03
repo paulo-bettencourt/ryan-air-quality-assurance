@@ -28,6 +28,9 @@ public class SelectContext {
     @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Hi CompanyB User1 ')]")
     WebElement helloMessage;
 
+    @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Olá Denise Silva ')]")
+    WebElement helloMessagePortuguese;
+
     @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/button/div/div")
     WebElement contextDropdownButton;
 
@@ -46,6 +49,10 @@ public class SelectContext {
     public void iSelectContext(String serviceAgreementName) {
         sharedDriver.getDriver().findElement(By.xpath("//bb-service-agreement-item/div/div/div[text() = '"+serviceAgreementName+"']")).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
+    }
+    public void iSelectContextPortuguese(String serviceAgreementName) {
+        sharedDriver.getDriver().findElement(By.xpath("//bb-service-agreement-item/div/div/div[text() = '"+serviceAgreementName+"']")).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessagePortuguese));
     }
 
     public void selectContextDropdown(){
