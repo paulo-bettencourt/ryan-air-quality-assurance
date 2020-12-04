@@ -3,6 +3,7 @@ package Actions;
 import Steps.SharedDriver;
 import gherkin.lexer.Th;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -55,6 +56,9 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[2]/td[8]/bb-dropdown-menu-ui/div/div/button")
     WebElement documentaryCollectionDetails;
 
+    @FindBy(how = How.XPATH, using = "//bb-icon-ui[@name='print']")
+    WebElement accountDetailsPrint;
+
 
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
@@ -101,5 +105,19 @@ public class Business_Dashboard {
 
     public void viewAccountSelector() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountSelector));
+    }
+
+    public void iPrintAccountDetails() throws Exception {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountDetailsPrint));
+        // the only way to access the print dialog is to click the print button with JavascriptExecutor in a async way
+        JavascriptExecutor executor = (JavascriptExecutor) sharedDriver.getDriver();
+        try {
+            executor.executeScript("var elem=arguments[0]; setTimeout(function() {elem.click();}, 100)", accountDetailsPrint);
+        } catch(Exception e) {
+            throw new Exception("<<<<<<<<<<<<<< Print button could not be clicked >>>>>>>>>>>>>>");
+        }
+
+        sharedDriver.getDriver().quit();
+
     }
 }

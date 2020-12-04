@@ -1,10 +1,14 @@
 package Steps;
 
 import Actions.Business_Dashboard;
+import Actions.SelectContext;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class steps_BusinessDashboard {
 
@@ -68,4 +72,9 @@ public class steps_BusinessDashboard {
     public void i_can_view_account_selector() {
         dashboard.viewAccountSelector();
     }
+    @And("^i print the account details$")
+    public void i_print_account_details() throws Exception {
+        dashboard.iPrintAccountDetails();
+    }
+
 }

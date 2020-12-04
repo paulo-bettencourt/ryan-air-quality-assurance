@@ -7,4 +7,3 @@ Feature: Business - Transactions Account Selector
     And i select the context "sa_denise.silva" for portuguese user
     And i enter and confirm i am in transactions page
     Then i select an account in transactions
-    And i see and press the print button
