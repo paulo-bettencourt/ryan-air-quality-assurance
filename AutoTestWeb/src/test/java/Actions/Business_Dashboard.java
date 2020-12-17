@@ -56,8 +56,35 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[2]/td[8]/bb-dropdown-menu-ui/div/div/button")
     WebElement documentaryCollectionDetails;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[2]/td[8]/bb-dropdown-menu-ui/div/div/button")
+    WebElement LoanSeeDetailsButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[3]/td[8]/bb-dropdown-menu-ui/div/div/button")
+    WebElement DebitSeeDetailsButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[1]/td[8]/bb-dropdown-menu-ui/div/div/button")
+    WebElement BankGuaranteeDetailsButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[4]/td[8]/bb-dropdown-menu-ui/div/div/button")
+    WebElement LocSeeDetailsButton;
+
     @FindBy(how = How.XPATH, using = "//bb-icon-ui[@name='print']")
     WebElement accountDetailsPrint;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//tr/td[8]/bb-dropdown-menu-ui/div/button/div")
+    WebElement SavingsAccountKebabMenu;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//tr[2]/td[8]/bb-dropdown-menu-ui/div/button/div")
+    WebElement LoanAccountKebabMenu;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//tr[3]/td[8]/bb-dropdown-menu-ui/div/button/div")
+    WebElement DebitAccountKebabMenu;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//tr[1]/td[8]/bb-dropdown-menu-ui/div/button")
+    WebElement BankGuaranteeKebabMenu;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//tr[4]/td[8]/bb-dropdown-menu-ui/div/button")
+    WebElement LettersOfCreditKebabMenu;
 
 
     public void iAmInBusinessDashboard() {
@@ -119,5 +146,53 @@ public class Business_Dashboard {
 
         sharedDriver.getDriver().quit();
 
+    }
+    public void iClickOnSavingsAccountKebabMenu() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(SavingsAccountKebabMenu));
+        SavingsAccountKebabMenu.click();
+    }
+
+    public void iClickOnLoanAccountKebabMenu() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoanAccountKebabMenu));
+        LoanAccountKebabMenu.click();
+    }
+
+    public void iClickOnDebitAccountKebabMenu() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(DebitAccountKebabMenu));
+        DebitAccountKebabMenu.click();
+    }
+
+    public void iClickOnBankGuaranteeAccountKebabMenu() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(BankGuaranteeKebabMenu));
+        BankGuaranteeKebabMenu.click();
+    }
+
+    public void iClickOnLetterOfCreditAccountKebabMenu() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LettersOfCreditKebabMenu));
+        LettersOfCreditKebabMenu.click();
+    }
+
+    public void iChooseLoanKebabMenuDetails() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoanSeeDetailsButton));
+        LoanSeeDetailsButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
+    }
+
+    public void iChooseDebitKebabMenuDetails() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(DebitSeeDetailsButton));
+        DebitSeeDetailsButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
+    }
+
+    public void iChooseLetterOfCreditKebabMenuDetails() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LocSeeDetailsButton));
+        LocSeeDetailsButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
+    }
+
+    public void iChooseBankGuaranteeKebabMenuDetails() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(BankGuaranteeDetailsButton));
+        BankGuaranteeDetailsButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
     }
 }
