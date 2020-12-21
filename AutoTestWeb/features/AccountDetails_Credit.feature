@@ -4,10 +4,10 @@
 
     Scenario: Credit Account details
       Given i am in login page
-      Then want to change language
+      And i change the language to english
       And change language successfully
       Then i want to login with "luis.amorim" and "Password1*"
       And i logged in successfully
-      Then i can click on a Credit account
+      Then i can click on a "credit" account
       And click account details tab
-      And Credit card details are loaded
+      And Account details are loaded

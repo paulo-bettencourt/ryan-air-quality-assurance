@@ -4,13 +4,13 @@ Feature: Transfer - Other Accounts
 
   Scenario: Transfer Savings account to John Doe
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i can click on new transfer on the quick action button
     And i am redirected to the new transfer page
-    Then i select a savings account on the from selector
+#    Then i select a savings account on the from selector #Line commented because the account is selected by default
     And i select "Auto Tests" on the recipient name selector
     And i insert "3" on the amount input
     Then i click on next button
@@ -18,15 +18,15 @@ Feature: Transfer - Other Accounts
 
   Scenario: Transfer Savings account to invalid IBAN
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i can click on new transfer on the quick action button
     And i am redirected to the new transfer page
-    Then i select a savings account on the from selector
-    And i insert a recipients name "abc"
+    #    Then i select a savings account on the from selector #Line commented because the account is selected by default
     And i select IBAN tab
+    And i insert a recipients name "abc"
     And i insert "1111 1111 11111111111111111" on the IBAN input
     And i insert "25" on the amount input
     Then next button is disabled

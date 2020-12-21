@@ -4,5 +4,5 @@ Feature: Business Login Language Switcher
 
   Scenario: Change Language Business
     Given i am in the business login page
-    Then want to change language
+    And i change the language to english
     And change language successfully

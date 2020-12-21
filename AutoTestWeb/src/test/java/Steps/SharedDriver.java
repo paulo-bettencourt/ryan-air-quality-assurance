@@ -32,6 +32,7 @@ public class SharedDriver {
                 options.addArguments("--no-sandbox");
                 options.addArguments("--headless");
                 options.addArguments("--disable-gpu");
+                options.addArguments("window-size=1920x1080");
                 options.setBinary("/usr/bin/google-chrome");
 
                 System.setProperty("webdriver.chrome.driver", ReadPropFile.ReadConfig("chrome.driver"));

@@ -1,26 +1,41 @@
 package Actions;
 
+import Steps.SharedDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.concurrent.TimeUnit;
 
 public class Logout {
+    SharedDriver sharedDriver;
 
-    private static WebDriver driver;
-
-    public Logout(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    public Logout(SharedDriver sharedDriver) {
+        this.sharedDriver = sharedDriver;
+        PageFactory.initElements(sharedDriver.getDriver(), this);
     }
+
+    @FindBy(xpath = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/button/div/div")
+    WebElement userContextDropdown;
+
+    @FindBy(xpath = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/div/div/bb-user-context-menu-dropdown/button[2]")
+    WebElement logoutOption;
+
+    @FindBy(id = "username")
+    WebElement loginUsernameInput;
 
     public void findDropdownLogout() {
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/button/div/div/div/bb-icon-ui")).click();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/div/div/bb-user-context-menu-dropdown/button[2]")).click();
-
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(userContextDropdown)).click();
     }
 
+    public void ClickLogout() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(logoutOption)).click();
+    }
+
+    public void LogoutSuccessfully() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(loginUsernameInput));
+    }
 }

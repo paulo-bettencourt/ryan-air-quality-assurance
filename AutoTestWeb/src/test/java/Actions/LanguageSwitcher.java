@@ -37,11 +37,7 @@ public class LanguageSwitcher {
     }
 
     public boolean isEN() {
-        if (sharedDriver.getDriver().findElement((By) langSwitcher).getText().equalsIgnoreCase("English (UK)")) {
-            return true;
-        } else {
-            return false;
-        }
+        return langSwitcher.getText().equalsIgnoreCase("English (UK)");
     }
 
     public void changeLanguageDashboard() {

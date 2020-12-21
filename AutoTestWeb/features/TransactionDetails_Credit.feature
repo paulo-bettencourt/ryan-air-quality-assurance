@@ -4,11 +4,11 @@ Feature: Transaction Details - Credit Account
 
   Scenario: Credit Transaction Details
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
     Then i want to login with "angelo" and "Password1*"
     And i logged in successfully
-    Then i can click on a Credit account
-    And i am redirected to the Credit transactions page
+    Then i can click on a "credit" account
+    And i am redirected to the transactions page
     Then i can click on the first transaction
     And i can see the transaction details

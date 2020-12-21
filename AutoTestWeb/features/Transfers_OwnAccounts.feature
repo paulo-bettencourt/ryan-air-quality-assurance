@@ -4,13 +4,13 @@ Feature: Transfer - Own Accounts
 
   Scenario: Transfer Savings account to Current account
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i can click on new transfer on the quick action button
     And i am redirected to the new transfer page
-    Then i select a savings account on the from selector
+    #    Then i select a savings account on the from selector #Line commented because the account is selected by default
     And i select a current account on the to selector
     And i insert "1" on the amount input
     Then i click on next button

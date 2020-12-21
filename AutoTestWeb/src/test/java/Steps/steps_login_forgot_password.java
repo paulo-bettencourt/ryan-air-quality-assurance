@@ -1,32 +1,32 @@
 package Steps;
 
+import Actions.Login;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 public class steps_login_forgot_password {
-    WebDriver driver;
+
     SharedDriver sharedDriver;
+    Login login;
 
     public steps_login_forgot_password(SharedDriver sharedDriver) {
         this.sharedDriver = sharedDriver;
-        driver = sharedDriver.getDriver();
+        PageFactory.initElements(sharedDriver.getDriver(), this);
+        login = new Login(sharedDriver.getDriver(), sharedDriver);
     }
 
 
     @And("^i forgot my password, so i click on the link$")
     public void iForgotMyPasswordSoIClickOnTheLink() {
-
-        driver.findElement(By.linkText("Click Here")).click();
+    login.ClickForgotPassword();
     }
 
     @Then("^i am redirected to the forgot password page$")
     public void iAmRedirectedToTheForgotPasswordPage() {
-        String url = "login-actions/reset-credentials";
-        String x = driver.getCurrentUrl();
-
-        Assert.assertTrue(x.contains(url));
+ login.OnForgotPasswordPage();
     }
 }

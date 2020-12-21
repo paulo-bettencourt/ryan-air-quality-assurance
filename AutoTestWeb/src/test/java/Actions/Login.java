@@ -15,7 +15,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Login {
     private static WebDriver driver;
-    private WebDriverWait wait;
     private SharedDriver sharedDriver;
 
     public Login(WebDriver driver, SharedDriver sharedDriver) {
@@ -37,6 +36,14 @@ public class Login {
     @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Acesso encontra-se bloqueado por ter excedido o número máximo de tentativas de login. Por favor contacte-nos através dos números ')]")
     WebElement toManyWrongTriesErrorMessage;
 
+    @FindBy(how = How.ID, using = "banner-url")
+    WebElement retailBanner;
+
+    @FindBy(linkText = "Click Here")
+    WebElement forgotPasswordLink;
+
+    @FindBy(id = "kc-page-title")
+    WebElement forgotPasswordLabel;
 
     public void openBrowser() throws IOException, InterruptedException {
         String url = null;
@@ -84,15 +91,32 @@ public class Login {
     }
 
     public void FillIn(String user, String pass) {
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(txtBoxUsername)).sendKeys(user);
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(txtBoxPassword)).sendKeys(pass);
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoginButton)).click();
+    }
 
-        txtBoxUsername.sendKeys(user);
-        txtBoxPassword.sendKeys(pass);
-        LoginButton.click();
+    public boolean findBanner() {
+        return sharedDriver.getWait().until(ExpectedConditions.visibilityOf(retailBanner)).isDisplayed();
+    }
+
+    public void clickBanner(){
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(retailBanner)).click();
     }
 
     public void seeToManyWrongTriesErrorMessage() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(toManyWrongTriesErrorMessage));
     }
 
+    public boolean failedLogin() {
+        return sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoginButton)).isDisplayed();
+    }
+
+    public void ClickForgotPassword(){
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(forgotPasswordLink)).click();
+    }
+
+    public void OnForgotPasswordPage(){
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(forgotPasswordLabel));
+    }
 }

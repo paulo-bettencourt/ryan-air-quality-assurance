@@ -4,9 +4,9 @@ Feature: Transfer - My Transfers Details
 
   Scenario: See My Transfers Details
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
-    Then i want to login with "real1" and "Password1*"
+    Then i want to login with "luis.amorim" and "Password1*"
     Then i logged in successfully
     Then i can click on new transfer on the quick action button
     And i am redirected to the new transfer page

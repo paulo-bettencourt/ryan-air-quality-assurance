@@ -4,11 +4,11 @@ Feature: Bill Payments - Search
 
   Scenario: Bill Payments - Search
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
     Then i want to login with "real1" and "Password1*"
     And i logged in successfully
     Then i click on bill payments on the nav bar
     And i select the My Payments tab
-    Then i search for the "625" payment
-    And it shows only the 625 payments
+    Then i search for the "623" payment
+    And it shows the results for the search

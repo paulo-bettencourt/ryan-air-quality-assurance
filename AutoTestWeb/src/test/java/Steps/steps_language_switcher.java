@@ -10,14 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class steps_language_switcher {
 
-    WebDriver driver;
     LanguageSwitcher languageSwitcher;
     SharedDriver sharedDriver;
 
     public steps_language_switcher(SharedDriver sharedDriver) {
         this.sharedDriver = sharedDriver;
-        driver = sharedDriver.getDriver();
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(sharedDriver.getDriver(), this);
         languageSwitcher = new LanguageSwitcher(sharedDriver);
 
     }
@@ -28,10 +26,14 @@ public class steps_language_switcher {
 
     }
 
+    @And("^i change the language to english$")
+    public void iChangeTheLanguageToEnglish(){
+        languageSwitcher.ChangeLang();
+    }
+
     @And("^change language successfully$")
     public void changeLanguageSuccessfully() {
-        boolean x = languageSwitcher.isEN();
-        Assert.assertTrue(x);
+        Assert.assertTrue(languageSwitcher.isEN());
 
     }
 
