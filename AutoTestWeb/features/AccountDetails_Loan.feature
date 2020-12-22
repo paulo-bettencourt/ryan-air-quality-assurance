@@ -6,7 +6,7 @@ Feature: Account Details - Loan Account
     Given i am in login page
     And i change the language to english
     And change language successfully
-    Then i want to login with "luis.amorim" and "Password1*"
+    Then i want to login with "thiago.oliveira" and "Password1*"
     And i logged in successfully
     Then i can click on a "loans" account
     And click account details tab

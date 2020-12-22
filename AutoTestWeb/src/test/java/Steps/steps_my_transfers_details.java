@@ -18,13 +18,20 @@ public class steps_my_transfers_details {
     }
 
     @Then("^i click on My Transfers$")
-    public void i_click_on_My_Transfers()  {
-    transferDetails.ClickMyTransfers();
+    public void i_click_on_My_Transfers() {
+        transferDetails.ClickMyTransfers();
     }
 
 
     @Then("^i am on My Transfers Page$")
-    public void i_am_on_My_Transfers_Page()  {
+    public void i_am_on_My_Transfers_Page() {
         transferDetails.OnMyTransfers();
+    }
+
+
+    @Then("^i open a Transfers and see their details$")
+    public void iOpenATransfersAndSeeTheirDetails() {
+        transferDetails.ClickOnFirstTransfer();
+        transferDetails.SeeTransferDetails();
     }
 }
