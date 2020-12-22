@@ -31,6 +31,10 @@ public class LanguageSwitcher {
     @FindBy(how = How.CLASS_NAME, using = "pt-AO")
     WebElement langSwitcherDashboardPT;
 
+    @FindBy(how = How.XPATH, using = "/html/body/div[2]/div/div/div[4]/div/div/a")
+    WebElement englishLanguageSwitcher;
+
+
     public void ChangeLang() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(langSwitcher)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(english)).click();
@@ -43,6 +47,12 @@ public class LanguageSwitcher {
     public void changeLanguageDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(langSwitcherDashboard)).click();
         langSwitcherDashboardPT.click();
+    }
+
+    public void iChangeToEnglishLanguageSuccessfully(){
+        sharedDriver.getDriver().findElement(By.xpath("//*[@id=\"dropdownMenuButton\"]")).click();
+        englishLanguageSwitcher.click();
+        sharedDriver.getDriver().findElement(By.xpath("//*[@id=\"dropdownMenuButton\"]")).getText().equalsIgnoreCase("English (UK)");
     }
 
 }

@@ -1,4 +1,4 @@
-@testAll @ARD-11631
+@testAll @ARD-11631 @business
 Feature: Business - Account Details
 
   Scenario: Business - Bank Guarantee Account Details

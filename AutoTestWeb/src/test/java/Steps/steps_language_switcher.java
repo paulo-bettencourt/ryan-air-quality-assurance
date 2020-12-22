@@ -34,7 +34,11 @@ public class steps_language_switcher {
     @And("^change language successfully$")
     public void changeLanguageSuccessfully() {
         Assert.assertTrue(languageSwitcher.isEN());
+    }
 
+    @Then("^i change to english language successfully$")
+    public void i_select_english_language() {
+        languageSwitcher.iChangeToEnglishLanguageSuccessfully();
     }
 
     @And("^i press to change language in dashboard$")

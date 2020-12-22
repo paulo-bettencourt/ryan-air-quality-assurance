@@ -28,7 +28,7 @@ public class SelectContext {
     @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Hi CompanyB User1 ')]")
     WebElement helloMessage;
 
-    @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Olá Denise Silva ')]")
+    @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Hi Denise Silva ')]")
     WebElement helloMessagePortuguese;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/button/div/div")

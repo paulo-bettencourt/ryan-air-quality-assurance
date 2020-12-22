@@ -99,11 +99,13 @@ public class Business_Dashboard {
     }
 
     public void viewAccountsListView(){
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsListViewButton));
         accountsListViewButton.click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsListView));
     }
 
     public void viewAccountsCardsView(){
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsCardViewButton));
         accountsCardViewButton.click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsCardsView));
     }

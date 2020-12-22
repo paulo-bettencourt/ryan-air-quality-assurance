@@ -20,10 +20,10 @@ public class Business_Transactions {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Transacções')]")
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Transactions')]")
     WebElement transactionsNavBar;
 
-    @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Transacções ')]")
+    @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Transactions ')]")
     WebElement transactionsTitle;
 
     @FindBy(how = How.CLASS_NAME, using = "bb-account-selector-ui")
@@ -42,6 +42,7 @@ public class Business_Transactions {
     }
 
     public void iChooseAccount() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsSelector)).click();
         transactionsSelector.click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(firstAccountList)).click();
         transactionsTitle.click();
