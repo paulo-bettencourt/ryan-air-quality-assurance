@@ -57,7 +57,7 @@ public class SharedDriver {
     public void waitForElement(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-    
+
 
     public WebDriver getDriver() {
         return driver;
