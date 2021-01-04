@@ -4,10 +4,10 @@ Feature: Account Details - Current Account
 
   Scenario: Current Account Details
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
-    Then i want to login with "real1" and "Password1*"
+    Then i want to login with "luis.amorim" and "Password1*"
     And i logged in successfully
-    Then i can click on a current account
+    Then i can click on a "current" account
     And click account details tab
-    And current account details are loaded
+    And Account details are loaded

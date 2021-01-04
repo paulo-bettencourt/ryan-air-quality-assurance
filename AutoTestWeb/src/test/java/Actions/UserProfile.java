@@ -1,21 +1,35 @@
 package Actions;
 
+import Steps.SharedDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import java.util.concurrent.TimeUnit;
 
 public class UserProfile {
 
-    WebDriver driver;
+    SharedDriver sharedDriver;
 
-    public UserProfile(WebDriver driver) {
-        this.driver = driver;
-
+    public UserProfile(SharedDriver sharedDriver) {
+        this.sharedDriver = sharedDriver;
+        PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    public void clickonUS() {
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//*[@id=\"bb-page-layout-sidebar\"]/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul/li[2]/nav/ul/li/a/i")).click();
+    @FindBy(xpath = "//*[@id=\"bb-page-layout-sidebar\"]/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul/li[2]/nav/ul/li[1]/a/span")
+    WebElement userProfileMenu;
 
+    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-user-manage-profile-widget-extended/bb-user-manage-profile-widget/section/div/bb-header-ui/h4")
+    WebElement nameLabel;
+
+    public void clickonUS() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(userProfileMenu)).click();
+    }
+
+    public void OnProfilePage() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(nameLabel));
     }
 }

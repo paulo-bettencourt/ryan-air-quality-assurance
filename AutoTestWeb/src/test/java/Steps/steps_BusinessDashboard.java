@@ -77,4 +77,48 @@ public class steps_BusinessDashboard {
         dashboard.iPrintAccountDetails();
     }
 
+    @Then("^i click on the kebab menu of savings account$")
+    public void i_click_on_kebab_menu_of_savings_account() {
+        dashboard.iClickOnSavingsAccountKebabMenu();
+    }
+
+    @Then("^i click to see details on the loan kebab$")
+    public void on_loan_kebab_click_see_details() {
+        dashboard.iChooseLoanKebabMenuDetails();
+    }
+
+    @Then("^i click on the kebab menu of loan account$")
+    public void i_click_on_kebab_menu_of_loan_account() {
+        dashboard.iClickOnLoanAccountKebabMenu();
+    }
+
+    @Then("^i click to see details on the debit kebab$")
+    public void on_debit_kebab_click_see_details() {
+        dashboard.iChooseDebitKebabMenuDetails();
+    }
+
+    @Then("^i click on the kebab menu of debit account$")
+    public void i_click_on_kebab_menu_of_debit_account() {
+        dashboard.iClickOnDebitAccountKebabMenu();
+    }
+
+    @Then("^i click on the kebab menu of bank guarantee account$")
+    public void i_click_on_kebab_menu_of_bank_guarantee() {
+        dashboard.iClickOnBankGuaranteeAccountKebabMenu();
+    }
+
+    @Then("^i click to see details on the bank guarantee kebab$")
+    public void on_bank_guarantee_kebab_click_see_details() {
+        dashboard.iChooseBankGuaranteeKebabMenuDetails();
+    }
+
+    @Then("^i click on the kebab menu of letter of credit account$")
+    public void i_click_on_kebab_menu_of_letter_of_credit() {
+        dashboard.iClickOnLetterOfCreditAccountKebabMenu();
+    }
+
+    @Then("^i click to see details on the letter of credit kebab$")
+    public void on_bank_letters_of_Credit_kebab_click_see_details() {
+        dashboard.iChooseLetterOfCreditKebabMenuDetails();
+    }
 }

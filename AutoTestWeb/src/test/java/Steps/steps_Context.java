@@ -28,6 +28,7 @@ public class steps_Context {
         public void i_select_context(String serviceAgreement) {
                 selectContext.iSelectContext(serviceAgreement);
         }
+
         @And("^i want to change context$")
         public void i_want_to_change_context() {
                 selectContext.selectContextDropdown();

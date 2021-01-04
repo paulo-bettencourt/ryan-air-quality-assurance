@@ -4,9 +4,11 @@ import Actions.*;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.Date;
@@ -21,6 +23,7 @@ public class steps_login {
     public steps_login(SharedDriver sharedDriver) {
         this.sharedDriver = sharedDriver;
         driver = sharedDriver.getDriver();
+        PageFactory.initElements(driver, this);
         login = new Login(driver, sharedDriver);
     }
 
@@ -40,23 +43,15 @@ public class steps_login {
     }
 
     @And("^i logged in successfully$")
-    public void iLoggedInSuccessfully() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.findElement(By.id("banner-url"));
+    public void iLoggedInSuccessfully(){
+       login.findBanner();
     }
 
     @And("^my login failed$")
     public void myLoginFailed() {
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//*[@id=\"error-container\"]/span[2]"));
+       login.failedLogin();
     }
 
-    @And("^i change the language to english$")
-    public void iChangeTheLanguageToEnglish() throws InterruptedException {
-        driver.findElement(By.xpath("//*[@id=\"dropdownMenuButton\"]")).click();
-        driver.findElement(By.xpath("/html/body/div[2]/div/div/div[4]/div/div/a")).click();
-        Thread.sleep(3000);
-    }
 
     @And("^i see the error message of right password, but account still blocked$")
     public void iSeeErrorMessageOfRightInfoButAccountBlocked() {

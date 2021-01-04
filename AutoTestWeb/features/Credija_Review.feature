@@ -4,16 +4,11 @@ Feature: Credijá - Review
 
   Scenario: Credijá - Review
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
-    Then i want to login with "101409test" and "Password1*"
+    Then i want to login with "testmic" and "Password1*"
     And i logged in successfully
     Then i click on the credijá banner
-    And i change the monthly amount to "12345"
-    Then i click on the life insurance contract
-    And i am redirected to the life insurance contract
-    Then i click on the product sheet contracts
-    And i am redirected to the product sheet contract
     Then i click on the next button
     And i am on the credija review page
     Then i click on the request button

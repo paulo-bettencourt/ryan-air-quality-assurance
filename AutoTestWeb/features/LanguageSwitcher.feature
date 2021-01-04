@@ -4,5 +4,5 @@ Feature: Language Switcher
 
   Scenario: Change Language
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully

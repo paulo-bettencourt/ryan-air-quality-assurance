@@ -4,7 +4,7 @@ Feature: Login - Forgot Password
 
   Scenario: Do the login with correct credentials
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
     And i forgot my password, so i click on the link
     Then i am redirected to the forgot password page

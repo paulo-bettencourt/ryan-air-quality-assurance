@@ -4,9 +4,9 @@ Feature: Dashboard - Summary of Loans Account
 
   Scenario: Load Dashboard - Summary of Loans Account
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
-    Then i want to login with "luis.amorim" and "Password1*"
+    Then i want to login with "thiago.oliveira" and "Password1*"
     And i logged in successfully
-    Then i can click on a loans account
-    And i am redirected to the Loans transactions page
+    Then i can click on a "loans" account
+    And i am redirected to the transactions page

@@ -9,6 +9,7 @@ Feature: BEP - Audit
     And i click on My Categories dropdown
     Then i select Contacts option
     And i click on the continue button
+    And i can see the list with results
 
   Scenario: BEP - Audit - Transfers
     Given i am in the BEP login page
@@ -16,8 +17,10 @@ Feature: BEP - Audit
     Then i click on the Audit menu
     And i click on My Categories dropdown
     Then i select Payments option
-    And i select Payments on Type dropdown
+    And i click on Type dropdown
+    And i select Payments option Type dropdown
     And i click on the continue button
+    And i can see the list with results
 
   Scenario: BEP - Audit - Bill Payments
     Given i am in the BEP login page
@@ -27,3 +30,4 @@ Feature: BEP - Audit
     Then i select Payments option
     And i select Bill Payments on Type dropdown
     And i click on the continue button
+    And i can see the list with results

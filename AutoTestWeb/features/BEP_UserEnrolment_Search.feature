@@ -7,7 +7,7 @@ Feature: BEP - New User Enrolment - Search
     Then i want to login with "employee1" and "Password1*"
     Then i click on the User Enrolment menu
     And i click on the dropdown and select Client Number
-    Then i insert the client number "101148"
+    Then i insert the client number "298731"
     Then Click on the Find Customer button
     And i click on the customer
     And i click on the cancel button

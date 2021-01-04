@@ -15,4 +15,4 @@ Feature: Self Enrolment
     Then I click on the Register button
     And i choose a client number from the dropdown
     Then i insert "12013" as a client number
-    And i click the next button error
+    And next button is disabled on SE

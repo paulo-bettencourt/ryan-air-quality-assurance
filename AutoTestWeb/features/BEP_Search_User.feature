@@ -6,4 +6,4 @@ Feature: BEP - Search User
     Given i am in the BEP login page
     Then i want to login with "employee1" and "Password1*"
     Then i search for "ana.camara"
-    And i click on the user "ana.camara"
+    And i click on the user first user

@@ -4,7 +4,7 @@ Feature: See user profile
 
   Scenario: I want to see the User Profile of login Client
     Given i am in login page
-    Then want to change language
+    And i change the language to english
     And change language successfully
     Then i want to login with "ana.camara" and "Password1*"
     And i logged in successfully
