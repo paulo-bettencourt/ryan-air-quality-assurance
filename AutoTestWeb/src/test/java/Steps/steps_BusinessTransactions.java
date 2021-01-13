@@ -33,4 +33,23 @@ public class steps_BusinessTransactions {
     public void i_press_transactions_print_button() throws Exception {
         business_transactions.iPressPrintButton();
     }
-}
+
+    @And("^i see and click the filter button$")
+    public void i_click_transactions_filter_button() throws Exception {
+        business_transactions.iClickFilterButton();
+    }
+
+    @And("^i see and search the transactions$")
+    public void i_see_and_search_transactions() throws Exception {
+        business_transactions.iSearchTransactions();
+    }
+
+    @And("^i see and click the export to CSV button$")
+    public void i_see_and_click_csv_button() throws Exception {
+        business_transactions.iSeeAndClickCSVExportButton();
+    }
+
+    @And("^i select a transaction and see details modal$")
+    public void i_select_a_transaction() throws Exception {
+        business_transactions.iSelectATransaction();
+    }}
