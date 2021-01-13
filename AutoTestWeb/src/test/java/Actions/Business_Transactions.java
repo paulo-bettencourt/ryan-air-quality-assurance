@@ -3,6 +3,7 @@ package Actions;
 import Steps.SharedDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -35,6 +36,29 @@ public class Business_Transactions {
     @FindBy(how = How.CLASS_NAME, using = "print-button")
     WebElement transactionsPrintButton;
 
+    @FindBy(how = How.CLASS_NAME, using = "filter-button")
+    WebElement transactionsFilterButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb_input_6\"]")
+    WebElement transactionsSearchField;
+
+    @FindBy(how = How.CLASS_NAME, using = "transactions-table")
+    WebElement transactionsTable;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route//bb-transactions-controls/div/div[2]/div[3]/bb-dropdown-menu-ui/div/button")
+    WebElement transactionsExportButton;
+
+    @FindBy(how = How.XPATH, using = "/html/body/div[2]/div/a")
+    WebElement transactionsExportCSVButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome//bb-transactions-table/div[1]/div/div/table/tbody/tr[1]/td[2]")
+    WebElement firstTransactionRow;
+
+    @FindBy(how = How.CLASS_NAME, using = "modal-content")
+    WebElement transactionsModal;
+
+
+
     public void iAmInTransactions() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsNavBar));
         transactionsNavBar.click();
@@ -59,8 +83,25 @@ public class Business_Transactions {
         }
 
         sharedDriver.getDriver().quit();
-
     }
 
+    public void iClickFilterButton() throws Exception {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsFilterButton)).click();
+    }
 
+    public void iSearchTransactions() throws Exception {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsSearchField)).sendKeys("TEST ACCOUNT");
+        transactionsSearchField.sendKeys(Keys.ENTER);
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsTable));
+    }
+
+    public void iSeeAndClickCSVExportButton() throws Exception {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsExportButton)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsExportCSVButton));
+    }
+
+    public void iSelectATransaction() throws Exception {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(firstTransactionRow)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsModal));
+    }
 }
