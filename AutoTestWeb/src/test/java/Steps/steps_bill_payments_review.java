@@ -104,6 +104,17 @@ public class steps_bill_payments_review {
     public void iInsertAnAmountForStateStandard(String amount) {
         billPaymentsReview.InsertAmountStateStandard(amount);
     }
+
+    @And("^in business search for the \"([^\"]*)\" entity on the search bar$")
+    public void businessSearchForTheEntityOnTheSearchBar(String entity) {
+        billPaymentsReview.inputSearchBarBusiness(entity);
+        billPaymentsReview.businessSelectFirstEntity();
+    }
+
+    @And("^i enter and confirm i am in bill payments page$")
+    public void i_am_in_transactions_page() {
+        billPaymentsReview.iAmInBillPayments();
+    }
 }
 
 

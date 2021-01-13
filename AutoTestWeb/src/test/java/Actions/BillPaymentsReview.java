@@ -4,6 +4,7 @@ package Actions;
 import Steps.SharedDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -16,7 +17,7 @@ public class BillPaymentsReview {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(xpath = "/html/body/div/div/div/div/div/div/div/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[2]/div/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/nav/ul/li[1]/nav/ul/li[2]/a/span")
+    @FindBy(xpath = "//span[contains(text(), 'Payments' ) ]")
     WebElement billPaymentsMenu;
 
     @FindBy(id = "bb_input_0")
@@ -49,7 +50,7 @@ public class BillPaymentsReview {
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-recharge/form/div[2]/bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button")
     WebElement nextBtnRechargeable;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-reference-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button")
+    @FindBy(xpath = "//button[contains(text(), ' Next ')]")
     WebElement nextBtnReference;
 
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-state-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[7]/bb-button-ui/button")
@@ -58,8 +59,17 @@ public class BillPaymentsReview {
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-state-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button")
     WebElement nextBtnStateStandard;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-review/div/div[2]/div[1]/div")
+    @FindBy(xpath = "//div[contains(text(), 'Payment Data')]")
     WebElement paymentDetailsString;
+
+    @FindBy(id = "bb_input_1")
+    WebElement searchBarBusiness;
+
+    @FindBy(className = "searched-entity-container")
+    WebElement firstEntityBusiness;
+
+    @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Bill Payments ')]")
+    WebElement billPaymentsTitle;
 
 
     public void ClickBillPaymentsMenu() {
@@ -115,4 +125,18 @@ public class BillPaymentsReview {
     public void InsertAmountStateStandard(String amount) {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(amountInputStateStandard)).sendKeys(amount);
     }
+
+    public void inputSearchBarBusiness(String entity) {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(searchBarBusiness)).sendKeys(entity);
+    }
+
+    public void businessSelectFirstEntity() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(firstEntityBusiness)).click();
+    }
+
+    public void iAmInBillPayments() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billPaymentsMenu)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billPaymentsTitle));
+    }
+
 }
