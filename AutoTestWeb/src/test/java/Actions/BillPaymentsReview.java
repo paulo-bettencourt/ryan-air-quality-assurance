@@ -20,10 +20,10 @@ public class BillPaymentsReview {
     @FindBy(xpath = "//span[contains(text(), 'Payments' ) ]")
     WebElement billPaymentsMenu;
 
-    @FindBy(id = "bb_input_0")
+    @FindBy(css = "form>bb-search-box-ui>div>input")
     WebElement searchBar;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-home/div/div/div[2]/div/div/button")
+    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//div/div/div[2]/div/div[1]/button")
     WebElement firstEntity;
 
     @FindBy(id = "reference")
@@ -35,7 +35,7 @@ public class BillPaymentsReview {
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-state-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[4]/div/sba-dropdown-ui/div/div")
     WebElement getAmountDropdownStateConfig;
 
-    @FindBy(id = "bb_element_8")
+    @FindBy(css = "bb-currency-input-ui>div>div>div.bb-currency-input__integer>input")
     WebElement amountInputReference;
 
     @FindBy(id = "bb_element_9")
