@@ -115,6 +115,11 @@ public class steps_bill_payments_review {
     public void i_am_in_transactions_page() {
         billPaymentsReview.iAmInBillPayments();
     }
+
+    @Then("^i confirm i see \"([^\"]*)\" after inserting the entity number$")
+    public void i_see_my_entity_search_results(String entitySearchResults) {
+        billPaymentsReview.iSeeResultsForEntitySearch(entitySearchResults);
+    }
 }
 
 
