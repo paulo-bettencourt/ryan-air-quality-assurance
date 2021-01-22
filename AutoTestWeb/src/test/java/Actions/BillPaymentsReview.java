@@ -2,6 +2,7 @@ package Actions;
 
 
 import Steps.SharedDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;
@@ -137,6 +138,10 @@ public class BillPaymentsReview {
     public void iAmInBillPayments() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billPaymentsMenu)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billPaymentsTitle));
+    }
+
+    public void iSeeResultsForEntitySearch(String entitySearchResult) {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ entitySearchResult +"')]"))));
     }
 
 }
