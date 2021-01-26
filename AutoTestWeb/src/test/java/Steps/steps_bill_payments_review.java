@@ -120,6 +120,17 @@ public class steps_bill_payments_review {
     public void i_see_my_entity_search_results(String entitySearchResults) {
         billPaymentsReview.iSeeResultsForEntitySearch(entitySearchResults);
     }
+
+    @And("^i select \"([^\"]*)\" the debit account for bills")
+    public void iSelectDebitAccountBills(String account) {
+        billPaymentsReview.iSelectBillDebitAccount(account);
+    }
+
+    @Then("^i confirm the details of the selected account are displaying well, the name \"([^\"]*)\" and the account \"([^\"]*)\"$")
+    public void billDebitDisplayingCorrectly(String accountName, String accountNumber) {
+        billPaymentsReview.iConfirmBillDebitAccountSelectedWithSuccess(accountName, accountNumber);
+    }
+
 }
 
 

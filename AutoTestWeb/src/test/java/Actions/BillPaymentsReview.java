@@ -3,6 +3,7 @@ package Actions;
 
 import Steps.SharedDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.How;
@@ -72,6 +73,8 @@ public class BillPaymentsReview {
     @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Bill Payments ')]")
     WebElement billPaymentsTitle;
 
+    @FindBy(className = "bb-product-selector-ui")
+    WebElement billAccountSelector;
 
     public void ClickBillPaymentsMenu() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billPaymentsMenu)).click();
@@ -142,6 +145,21 @@ public class BillPaymentsReview {
 
     public void iSeeResultsForEntitySearch(String entitySearchResult) {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ entitySearchResult +"')]"))));
+    }
+
+    public void iSelectBillDebitAccount(String accountName) {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billAccountSelector));
+        billAccountSelector.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.id("debitAccounts"))));
+
+        billAccountSelector.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]"))));
+        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]")).click();
+    }
+
+    public void iConfirmBillDebitAccountSelectedWithSuccess(String accountName, String accountNumber) {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ accountName +"')]"))));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ accountNumber +"')]"))));
     }
 
 }
