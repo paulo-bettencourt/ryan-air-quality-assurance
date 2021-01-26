@@ -1,14 +1,8 @@
 package Steps;
 
 import Actions.CreditCardDetails;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.concurrent.TimeUnit;
 
 public class steps_card_details_credit_card {
 

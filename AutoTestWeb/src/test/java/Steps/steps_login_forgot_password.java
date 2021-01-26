@@ -3,9 +3,6 @@ package Steps;
 import Actions.Login;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class steps_login_forgot_password {

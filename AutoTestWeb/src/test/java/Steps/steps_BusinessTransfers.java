@@ -2,7 +2,6 @@ package Steps;
 
 import Actions.Business_Transfers;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 

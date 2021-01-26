@@ -4,7 +4,6 @@ package Steps;
 import Actions.BEPUserEnrolment;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class steps_BEP_UserEnrolment_Search {

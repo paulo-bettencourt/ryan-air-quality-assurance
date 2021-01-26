@@ -2,9 +2,6 @@ package Steps;
 
 import Actions.TransferDetails;
 import cucumber.api.java.en.Then;
-import gherkin.lexer.Sr_cyrl;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class steps_my_transfers_details {

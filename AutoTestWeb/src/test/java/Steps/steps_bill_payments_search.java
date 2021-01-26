@@ -2,12 +2,8 @@ package Steps;
 
 import Actions.BillPaymentsFilter;
 import Actions.BillPaymentsSearch;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class steps_bill_payments_search {
