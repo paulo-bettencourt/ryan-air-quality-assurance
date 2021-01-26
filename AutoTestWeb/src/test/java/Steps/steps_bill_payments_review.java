@@ -1,12 +1,8 @@
 package Steps;
 
 import Actions.BillPaymentsReview;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class steps_bill_payments_review {
@@ -115,22 +111,6 @@ public class steps_bill_payments_review {
     public void i_am_in_transactions_page() {
         billPaymentsReview.iAmInBillPayments();
     }
-
-    @Then("^i confirm i see \"([^\"]*)\" after inserting the entity number$")
-    public void i_see_my_entity_search_results(String entitySearchResults) {
-        billPaymentsReview.iSeeResultsForEntitySearch(entitySearchResults);
-    }
-
-    @And("^i select \"([^\"]*)\" the debit account for bills")
-    public void iSelectDebitAccountBills(String account) {
-        billPaymentsReview.iSelectBillDebitAccount(account);
-    }
-
-    @Then("^i confirm the details of the selected account are displaying well, the name \"([^\"]*)\" and the account \"([^\"]*)\"$")
-    public void billDebitDisplayingCorrectly(String accountName, String accountNumber) {
-        billPaymentsReview.iConfirmBillDebitAccountSelectedWithSuccess(accountName, accountNumber);
-    }
-
 }
 
 

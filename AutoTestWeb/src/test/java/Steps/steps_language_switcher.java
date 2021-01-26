@@ -1,11 +1,9 @@
 package Steps;
 
 import Actions.LanguageSwitcher;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class steps_language_switcher {

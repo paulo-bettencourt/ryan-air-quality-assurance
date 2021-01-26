@@ -2,8 +2,6 @@ package Steps;
 
 import Actions.AccountDetails;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en_old.Ac;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class steps_account_details {

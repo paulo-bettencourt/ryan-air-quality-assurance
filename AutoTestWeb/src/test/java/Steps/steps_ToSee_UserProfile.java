@@ -3,14 +3,7 @@ package Steps;
 
 import Actions.UserProfile;
 import cucumber.api.java.en.Then;
-import gherkin.lexer.Th;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.concurrent.TimeUnit;
 
 public class steps_ToSee_UserProfile {
 

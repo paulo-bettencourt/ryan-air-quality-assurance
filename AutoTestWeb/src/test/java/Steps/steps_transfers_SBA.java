@@ -1,18 +1,10 @@
 package Steps;
 
-import Actions.TransferDetails;
 import Actions.TransfersOther;
-import Actions.TransfersOwn;
 import Actions.TransfersSBA;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.concurrent.TimeUnit;
 
 public class steps_transfers_SBA {
 

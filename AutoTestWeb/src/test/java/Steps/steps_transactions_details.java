@@ -3,13 +3,7 @@ package Steps;
 import Actions.Transactions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import gherkin.lexer.Tr;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.concurrent.TimeUnit;
 
 public class steps_transactions_details {
 
