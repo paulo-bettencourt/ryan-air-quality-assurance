@@ -74,6 +74,9 @@ public class BillPaymentsReview {
     @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Bill Payments ')]")
     WebElement billPaymentsTitle;
 
+    @FindBy(className = "bb-product-selector-ui")
+    WebElement billAccountSelector;
+
 
     public void ClickBillPaymentsMenu() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billPaymentsMenu)).click();
@@ -141,5 +144,21 @@ public class BillPaymentsReview {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billPaymentsMenu)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billPaymentsTitle));
     }
+
+    public void iSelectBillDebitAccount(String accountName) {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billAccountSelector));
+        billAccountSelector.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.id("debitAccounts"))));
+
+        billAccountSelector.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]"))));
+        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]")).click();
+    }
+
+    public void iConfirmBillDebitAccountSelectedWithSuccess(String accountName, String accountNumber) {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ accountName +"')]"))));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ accountNumber +"')]"))));
+    }
+
 
 }
