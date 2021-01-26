@@ -77,6 +77,9 @@ public class BillPaymentsReview {
     @FindBy(className = "bb-product-selector-ui")
     WebElement billAccountSelector;
 
+    @FindBy(className = "bb-loading-indicator")
+    WebElement accountLoaderSpinner;
+
 
     public void ClickBillPaymentsMenu() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billPaymentsMenu)).click();
@@ -149,8 +152,8 @@ public class BillPaymentsReview {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(billAccountSelector));
         billAccountSelector.click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.id("debitAccounts"))));
-
-        billAccountSelector.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.className("bb-loading-indicator"))));
+        sharedDriver.getWait().until(ExpectedConditions.invisibilityOf(sharedDriver.getDriver().findElement(By.className("bb-loading-indicator"))));
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]"))));
         sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]")).click();
     }

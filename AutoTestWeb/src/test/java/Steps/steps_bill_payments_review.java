@@ -113,12 +113,12 @@ public class steps_bill_payments_review {
     }
 
     @And("^i select \"([^\"]*)\" the debit account for bills")
-    public void iSelectDebitAccountBills(String account) {
+    public void i_select_debit_account_bills(String account) {
         billPaymentsReview.iSelectBillDebitAccount(account);
     }
 
     @Then("^i confirm the details of the selected account are displaying well, the name \"([^\"]*)\" and the account \"([^\"]*)\"$")
-    public void billDebitDisplayingCorrectly(String accountName, String accountNumber) {
+    public void bill_debit_displaying_correctly(String accountName, String accountNumber) {
         billPaymentsReview.iConfirmBillDebitAccountSelectedWithSuccess(accountName, accountNumber);
     }
 }
