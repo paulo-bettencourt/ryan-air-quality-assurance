@@ -121,6 +121,12 @@ public class steps_bill_payments_review {
     public void bill_debit_displaying_correctly(String accountName, String accountNumber) {
         billPaymentsReview.iConfirmBillDebitAccountSelectedWithSuccess(accountName, accountNumber);
     }
+
+    @Then("^i confirm i see \"([^\"]*)\" after inserting the entity number$")
+    public void i_see_my_entity_search_results(String entitySearchResults) {
+        billPaymentsReview.iSeeResultsForEntitySearch(entitySearchResults);
+    }
+
 }
 
 

@@ -164,4 +164,9 @@ public class BillPaymentsReview {
     }
 
 
+    public void iSeeResultsForEntitySearch(String entitySearchResult) {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ entitySearchResult +"')]"))));
+    }
+
+
 }
