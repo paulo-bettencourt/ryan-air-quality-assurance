@@ -58,8 +58,7 @@ public class Business_Transactions {
 
 
     public void iAmInTransactions() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsNavBar));
-        transactionsNavBar.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsNavBar)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsTitle));
     }
 
