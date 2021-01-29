@@ -62,7 +62,7 @@ public class BillPaymentsReview {
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-state-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button")
     WebElement nextBtnStateStandard;
 
-    @FindBy(xpath = "//div[contains(text(), 'Payment Data')]")
+    @FindBy(xpath = "//div[contains(text(), 'Payment Details')]")
     WebElement paymentDetailsString;
 
     @FindBy(id = "bb_input_1")
