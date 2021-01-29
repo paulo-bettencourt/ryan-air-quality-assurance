@@ -111,23 +111,19 @@ public class Business_Dashboard {
 
     public void iClickOnFirstAccountKebabMenu() {
         sharedDriver.getDriver().findElements(By.className("dropdown-menu-toggle-button__content")).get(2).click();
-
     }
 
     public void iClickOnDocumentaryCollectionAccountKebabMenu() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(documentaryCollectionKebabMenu));
-        documentaryCollectionKebabMenu.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(documentaryCollectionKebabMenu)).click();
     }
 
     public void iChooseSeeDetailsKebabMenu() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(kebabSeeDetailOption));
-        kebabSeeDetailOption.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(kebabSeeDetailOption)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
     }
 
     public void iChooseSeeDocumentaryCollectionKebabMenuDetails() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(documentaryCollectionDetails));
-        documentaryCollectionDetails.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(documentaryCollectionDetails)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
     }
 
@@ -144,56 +140,46 @@ public class Business_Dashboard {
         } catch(Exception e) {
             throw new Exception("<<<<<<<<<<<<<< Print button could not be clicked >>>>>>>>>>>>>>");
         }
-
         sharedDriver.getDriver().quit();
-
     }
+
     public void iClickOnSavingsAccountKebabMenu() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(SavingsAccountKebabMenu));
-        SavingsAccountKebabMenu.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(SavingsAccountKebabMenu)).click();
     }
 
     public void iClickOnLoanAccountKebabMenu() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoanAccountKebabMenu));
-        LoanAccountKebabMenu.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoanAccountKebabMenu)).click();
     }
 
     public void iClickOnDebitAccountKebabMenu() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(DebitAccountKebabMenu));
-        DebitAccountKebabMenu.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(DebitAccountKebabMenu)).click();
     }
 
     public void iClickOnBankGuaranteeAccountKebabMenu() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(BankGuaranteeKebabMenu));
-        BankGuaranteeKebabMenu.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(BankGuaranteeKebabMenu)).click();
     }
 
     public void iClickOnLetterOfCreditAccountKebabMenu() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LettersOfCreditKebabMenu));
-        LettersOfCreditKebabMenu.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LettersOfCreditKebabMenu)).click();
     }
 
     public void iChooseLoanKebabMenuDetails() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoanSeeDetailsButton));
-        LoanSeeDetailsButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoanSeeDetailsButton)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
     }
 
     public void iChooseDebitKebabMenuDetails() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(DebitSeeDetailsButton));
-        DebitSeeDetailsButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(DebitSeeDetailsButton)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
     }
 
     public void iChooseLetterOfCreditKebabMenuDetails() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LocSeeDetailsButton));
-        LocSeeDetailsButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LocSeeDetailsButton)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
     }
 
     public void iChooseBankGuaranteeKebabMenuDetails() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(BankGuaranteeDetailsButton));
-        BankGuaranteeDetailsButton.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(BankGuaranteeDetailsButton)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
     }
 }

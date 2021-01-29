@@ -146,7 +146,6 @@ $RECYCLE.BIN/
 *.lnk
 
 AutoTestWeb/target/
-AutoTestWeb/drivers/
 AutoTestWeb/src/test/java/config/config.local.properties
 
 

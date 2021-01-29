@@ -153,6 +153,7 @@ public class Business_Transfers {
     public void clickCancelButton() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(cancelButton)).click();
     }
+
     public void confirmCancelTransfer() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(cancelButtonModalConfirmation)).click();
     }
