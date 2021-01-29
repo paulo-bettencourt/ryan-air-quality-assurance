@@ -1,5 +1,6 @@
 package Steps;
 
+import config.OSConfiguration;
 import config.ReadPropFile;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -33,7 +34,12 @@ public class SharedDriver {
                 options.addArguments("--headless");
                 options.addArguments("--disable-gpu");
                 options.addArguments("window-size=1920x1080");
-                options.setBinary("/usr/bin/google-chrome");
+
+                if (OSConfiguration.getOS() == OSConfiguration.OS.LINUX) {
+                    options.setBinary("/usr/bin/google-chrome");
+                } else {
+                    options.setBinary("");
+                }
 
                 System.setProperty("webdriver.chrome.driver", ReadPropFile.ReadConfig("chrome.driver"));
                 driver = new ChromeDriver(options);
@@ -69,6 +75,4 @@ public class SharedDriver {
         initialized = false;
         driver.quit();
     }
-
-
 }
