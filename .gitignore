@@ -145,7 +145,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-AutoTestWeb/target/
+AutoTestWeb/target*/
 AutoTestWeb/src/test/java/config/config.local.properties
 
 

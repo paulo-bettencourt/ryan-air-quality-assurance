@@ -2,9 +2,7 @@
 
 Feature: Business - Bill Payments Page
 
-
   Scenario: Business - Bill Payments - Navigation
-
     Given i am in the business login page
     Then i want to login with "denise.silva" and "Password1*"
     And i confirm i am in select context page
@@ -48,4 +46,3 @@ Feature: Business - Bill Payments Page
     Then i insert an amount "123" for Reference
     And i am able to click on Next button for Reference
     Then i am on the review page
-
