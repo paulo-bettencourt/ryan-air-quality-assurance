@@ -10,7 +10,11 @@ import org.junit.runner.RunWith;
         glue = {"Steps", "Steps/business"},
         tags = {"@testAll"},
         plugin = {
-        "json:target/cucumber.json", "rerun:target/failed_scenarios.txt"}
+                "pretty",
+                "json:target/cucumber.json",
+                "html:target/cucumber-reports/cucumber-html-report",
+                "rerun:target/failed_scenarios.txt"
+        }
 )
 
 public class TestRunner {

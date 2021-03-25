@@ -100,6 +100,7 @@
                     <includes>
                         <include>**/TestRunner*.class</include>
                     </includes>
+                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
             <plugin>
@@ -115,7 +116,7 @@
                         </goals>
                         <configuration>
                             <projectName>IM Automation Project</projectName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>
                     </execution>

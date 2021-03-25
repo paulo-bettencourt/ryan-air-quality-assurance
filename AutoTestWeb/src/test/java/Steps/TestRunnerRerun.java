@@ -10,8 +10,9 @@ import org.junit.runner.RunWith;
         monochrome = true,
         glue = {"Steps", "Steps/business"},
         plugin = {
-                "html:target1/cucumber-html-report",
+                "pretty",
                 "json:target1/cucumber.json",
+                "html:target1/cucumber-reports/cucumber-html-report",
                 "rerun:target1/failed_scenarios.txt"
         })
 public class TestRunnerRerun {
