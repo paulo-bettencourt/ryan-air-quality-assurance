@@ -1,4 +1,4 @@
-package config;
+package Config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,10 +11,15 @@ public class ReadPropFile {
 
     public static String ReadConfig(String value) throws IOException {
         String OSConfiguration = getOSProp();
-        InputStream input = new FileInputStream((System.getProperty("user.dir") + "/src/test/java/config/" + OSConfiguration));
-        prop.load(input);
-        value = prop.getProperty(value);
+        InputStream osProperties = new FileInputStream((System.getProperty("user.dir") + "/src/test/resources/" + OSConfiguration));
+        Properties prop = ReadPropFile.loadPropertiesFile("config.properties");
 
+        // Prints out configuration properties for the environment
+        prop.forEach((k, v) -> System.out.println(k + ":" + v));
+
+        // Loads OS properties of either mac, windows, linux
+        prop.load(osProperties);
+        value = prop.getProperty(value);
         return value;
     }
 
@@ -27,7 +32,19 @@ public class ReadPropFile {
             case MAC:
                 return "config.mac.properties";
             default:
-               return "config.properties";
+               return "config.local.properties";
         }
+    }
+
+    public static Properties loadPropertiesFile(String filePath) {
+
+        try (InputStream resourceAsStream = ReadPropFile.class.getClassLoader().getResourceAsStream(filePath)) {
+            prop.load(resourceAsStream);
+        } catch (IOException e) {
+            System.err.println("Unable to load properties file : " + filePath);
+        }
+
+        return prop;
+
     }
 }

@@ -19,7 +19,7 @@ public class Business_Dashboard {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Hi CompanyB User1 ')]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Hi CompanyB User1')] | //*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Patricia Domingos')]")
     WebElement helloMessage;
 
     @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Olá CompanyB User1 ')]")
@@ -31,22 +31,22 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = " //*[@id=\"bb-main-content\"]/bb-panel-container//bb-accounts-overview-cards/div")
     WebElement accountsCardsView;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-accounts-overview-container/bb-accounts-overview-table/table/tbody")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//bb-accounts-overview-widget/bb-accounts-overview-container/bb-accounts-overview-table/table")
     WebElement accountsListView;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-accounts-overview-container/bb-accounts-overview-header/div/div[2]/div/div/button[1]/bb-icon-ui")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//bb-accounts-overview-widget/bb-accounts-overview-container/bb-accounts-overview-header/div/div[2]/div/div/button[1]")
     WebElement accountsListViewButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome//bb-accounts-overview-container/bb-accounts-overview-header/div/div[2]/div/div/button[2]/bb-icon-ui")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//bb-accounts-overview-widget/bb-accounts-overview-container/bb-accounts-overview-header/div/div[2]/div/div/button[2]")
     WebElement accountsCardViewButton;
 
-    @FindBy(how = How.XPATH, using = "//button[contains(text(), ' See Details ')]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//table/tbody/tr[3]/td[8]/bb-dropdown-menu-ui/div/div/button[contains(text(), 'Ver Detalhes')] | //*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//table/tbody/tr[3]/td[8]/bb-dropdown-menu-ui/div/div/button[contains(text(), 'See Details')]")
     WebElement kebabSeeDetailOption;
 
-    @FindBy(how = How.XPATH, using = "//h4[contains(text(), ' General ')]")
+    @FindBy(how = How.XPATH, using = "//h4[contains(text(), ' General ')] | //h4[contains(text(), 'Informação Geral')]")
     WebElement generalLabelDetails;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//bb-product-summary-account-selector-widget/bb-account-selector-ui/ng-select/div")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//bb-account-selector-ui/ng-select/div")
     WebElement accountSelector;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[2]/td[8]/bb-dropdown-menu-ui/div/button/div")
@@ -110,7 +110,7 @@ public class Business_Dashboard {
     }
 
     public void iClickOnFirstAccountKebabMenu() {
-        sharedDriver.getDriver().findElements(By.className("dropdown-menu-toggle-button__content")).get(2).click();
+        sharedDriver.getDriver().findElements(By.className("dropdown-menu-toggle-button__content")).get(4).click();
     }
 
     public void iClickOnDocumentaryCollectionAccountKebabMenu() {

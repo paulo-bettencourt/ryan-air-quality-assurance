@@ -8,12 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "features",
         monochrome = true,
         glue = {"Steps", "Steps/business"},
-        tags = {"@testAll"},
+        tags = {"@uxt"},
         plugin = {
-                "pretty",
-                "json:target/cucumber.json",
-                "html:target/cucumber-reports/cucumber-html-report",
-                "rerun:target/failed_scenarios.txt"
+        "json:target/cucumber.json",
+        "html:target/cucumber-html-report",
+        "rerun:target/failed_scenarios.txt"
         }
 )
 
