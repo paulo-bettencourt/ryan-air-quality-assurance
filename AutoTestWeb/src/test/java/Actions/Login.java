@@ -1,7 +1,7 @@
 package Actions;
 
 import Steps.SharedDriver;
-import config.ReadPropFile;
+import Config.ReadPropFile;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -44,7 +44,7 @@ public class Login {
 
     public void openBrowser() throws IOException, InterruptedException {
         String url = null;
-        url = ReadPropFile.ReadConfig("urlTest");
+        url = ReadPropFile.ReadConfig("url.retailPortal");
         driver.get(url);
         //change locale cookie to EN
         driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
@@ -59,14 +59,16 @@ public class Login {
 
     public void openBrowser_BEP() throws IOException, InterruptedException {
         String url = null;
-        url = ReadPropFile.ReadConfig("urlTestBEP");
+        String domain = null;
+        domain = ReadPropFile.ReadConfig("url.identityDomain");
+        url = ReadPropFile.ReadConfig("url.employeePortal");
         driver.get(url);
         //change locale cookie to EN
         driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
         Thread.sleep(2000);
         driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE",
                 "en",
-                "identity-test.sbados.com",
+                domain,
                 "/auth/realms/sbapb/",
                 new Date(2020, 12, 30)));
 
@@ -74,14 +76,16 @@ public class Login {
 
     public void openBrowser_business() throws IOException, InterruptedException {
         String url = null;
-        url = ReadPropFile.ReadConfig("urlTestBusiness");
+        String domain = null;
+        url = ReadPropFile.ReadConfig("url.businessPortal");
+        domain = ReadPropFile.ReadConfig("url.identityDomain");
         driver.get(url);
         //change locale cookie to EN
         driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
         Thread.sleep(2000);
         driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE",
                 "en",
-                "identity-test.sbados.com",
+                domain,
                 "/auth/realms/sbapb/",
                 new Date(2020, 12, 30)));
 

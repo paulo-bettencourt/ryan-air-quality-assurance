@@ -6,7 +6,7 @@ Feature: Login with email
     Given i am in login page
     And i change the language to english
     And change language successfully
-    Then i want to login with "jose.correia@bringglobal.com" and "Password1*"
+    Then i want to login with "ana.rita.camara@bringglobal.com" and "Password1*"
     And i logged in successfully
 
 

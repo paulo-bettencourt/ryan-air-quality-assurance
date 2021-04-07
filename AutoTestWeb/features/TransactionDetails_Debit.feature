@@ -6,7 +6,7 @@ Feature: Transaction Details - Debit Account
     Given i am in login page
     And i change the language to english
     And change language successfully
-    Then i want to login with "angelo" and "Password1*"
+    Then i want to login with "luis.amorim" and "Password1*"
     And i logged in successfully
     Then i can click on a "debit" account
     And i am redirected to the transactions page

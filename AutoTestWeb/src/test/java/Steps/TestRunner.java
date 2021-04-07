@@ -8,8 +8,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "features",
         monochrome = true,
         glue = {"Steps", "Steps/business"},
-        plugin = {"json:target/cucumber.json"},
-        tags = {"@testAll"}
+        tags = {"@uxt"},
+        plugin = {
+        "json:target/cucumber.json",
+        "html:target/cucumber-html-report",
+        "rerun:target/failed_scenarios.txt"
+        }
 )
 
 public class TestRunner {

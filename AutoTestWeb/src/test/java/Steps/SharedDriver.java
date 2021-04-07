@@ -1,7 +1,7 @@
 package Steps;
 
-import config.OSConfiguration;
-import config.ReadPropFile;
+import Config.OSConfiguration;
+import Config.ReadPropFile;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;

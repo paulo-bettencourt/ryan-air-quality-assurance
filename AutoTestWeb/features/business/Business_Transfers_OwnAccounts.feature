@@ -5,12 +5,10 @@ Feature: Business Transfer - Own Accounts
   Scenario: Business Transfer Savings account to Current account
     Given i am in the business login page
     Then i want to login with "denise.silva" and "Password1*"
+    And i confirm i am in select context page
     And i select the context "sa_denise.silva" for portuguese user
-    And i logged in successfully
-    Then i can click on new transfer on the quick action button
-    And i am redirected to the new transfer page
-    Then i select a savings account on the from selector
-    And i select a current account on the to selector
-    And i insert "1" on the amount input
-    Then i click on next button
-    And i am redirected to the review page
+    And i enter and confirm i am in transfers page
+    Then i enter a beneficiary name "own account" and account "1002483581"
+    And i enter the amount "100" to transfer
+    And i see and click the continue button
+    And i confirm the transfer

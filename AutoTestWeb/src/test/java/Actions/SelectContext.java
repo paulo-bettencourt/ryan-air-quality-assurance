@@ -18,13 +18,13 @@ public class SelectContext {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Select context ')]")
+    @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Select context ')] | //h3[contains(text(), ' Selecionar Contexto ')]")
     WebElement selectContextTitle;
 
     @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Select context ')]")
     WebElement changeContextTitle;
 
-    @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Hi CompanyB User1 ')]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Hi CompanyB User1')] | //*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Patricia Domingos')]")
     WebElement helloMessage;
 
     @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Hi Denise Silva ')]")
@@ -68,7 +68,7 @@ public class SelectContext {
     }
 
     public void verifyContextAndName(String loggedInUser, String context){
-        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), 'Hi CompanyB "+ loggedInUser +"')]"));
+        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), 'Hi CompanyB "+ loggedInUser +"')] | //div[contains(text(), 'Olá "+ loggedInUser +"')]"));
         this.verifySelectedContext(context);
     }
 }
