@@ -27,11 +27,11 @@ public class Logout {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(userContextDropdown)).click();
     }
 
-    public void ClickLogout() {
+    public void clickLogout() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(logoutOption)).click();
     }
 
-    public void LogoutSuccessfully() {
+    public void logoutSuccessfully() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(loginUsernameInput));
     }
 }

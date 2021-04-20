@@ -22,11 +22,11 @@ public class steps_logout {
     @And("^want to logout$")
     public void want_to_logout() {
         logout.findDropdownLogout();
-        logout.ClickLogout();
+        logout.clickLogout();
     }
 
     @And("^logout successfully$")
     public void logoutSuccessfully() {
-        logout.LogoutSuccessfully();
+        logout.logoutSuccessfully();
     }
 }
