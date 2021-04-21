@@ -44,14 +44,16 @@ public class Login {
 
     public void openBrowser() throws IOException, InterruptedException {
         String url = null;
+        String domain = null;
         url = ReadPropFile.ReadConfig("url.retailPortal");
+        domain = ReadPropFile.ReadConfig("url.identityDomain");
         driver.get(url);
         //change locale cookie to EN
         driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
         Thread.sleep(2000);
         driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE",
                 "en",
-                "identity-test.sbados.com",
+                domain,
                 "/auth/realms/sbapb/",
                 new Date(2020, 12, 30)));
 

@@ -14,7 +14,7 @@ public class BillPaymentsSearch {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(id = "bb_input_1")
+    @FindBy(xpath = "//div/div/div[2]/form/bb-search-box-ui/div/input")
     WebElement searchInput;
 
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-sba-payment-history-widget/sba-filter-form-ui/div/div/div[1]/div/bb-search-box-ui/div/div/button")

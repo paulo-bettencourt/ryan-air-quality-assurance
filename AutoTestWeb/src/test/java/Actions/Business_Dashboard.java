@@ -19,7 +19,7 @@ public class Business_Dashboard {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Hi CompanyB User1')] | //*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Patricia Domingos')]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Hi')] | //*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Olá')]")
     WebElement helloMessage;
 
     @FindBy(how = How.XPATH, using = "//div[contains(text(), ' Olá CompanyB User1 ')]")
@@ -43,6 +43,9 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//table/tbody/tr[3]/td[8]/bb-dropdown-menu-ui/div/div/button[contains(text(), 'Ver Detalhes')] | //*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//table/tbody/tr[3]/td[8]/bb-dropdown-menu-ui/div/div/button[contains(text(), 'See Details')]")
     WebElement kebabSeeDetailOption;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//bb-navigation-link-widget-ang/ul/li[3]/ul/li[1]/a")
+    WebElement accountOverviewButton;
+
     @FindBy(how = How.XPATH, using = "//h4[contains(text(), ' General ')] | //h4[contains(text(), 'Informação Geral')]")
     WebElement generalLabelDetails;
 
@@ -51,6 +54,9 @@ public class Business_Dashboard {
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[2]/td[8]/bb-dropdown-menu-ui/div/button/div")
     WebElement documentaryCollectionKebabMenu;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//table/tbody/tr[3]/td[8]/bb-dropdown-menu-ui/div/button/div")
+    WebElement currentAccountKebabMenu;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[2]/td[8]/bb-dropdown-menu-ui/div/div/button")
     WebElement documentaryCollectionDetails;
@@ -64,7 +70,7 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[1]/td[8]/bb-dropdown-menu-ui/div/div/button")
     WebElement BankGuaranteeDetailsButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]//table/tbody/tr[4]/td[8]/bb-dropdown-menu-ui/div/div/button")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app//bb-accounts-overview-table/table/tbody/tr[1]/td[8]/bb-dropdown-menu-ui/div/div/button")
     WebElement LocSeeDetailsButton;
 
     @FindBy(how = How.XPATH, using = "//bb-icon-ui[@name='print']")
@@ -82,7 +88,7 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//tr[1]/td[8]/bb-dropdown-menu-ui/div/button")
     WebElement BankGuaranteeKebabMenu;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//tr[4]/td[8]/bb-dropdown-menu-ui/div/button")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//table/tbody/tr[1]/td[8]/bb-dropdown-menu-ui/div/button/div")
     WebElement LettersOfCreditKebabMenu;
 
 
@@ -90,6 +96,10 @@ public class Business_Dashboard {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
     }
 
+    public void iAmInAccountsPage() {
+        this.iAmInBusinessDashboard();
+        accountOverviewButton.click();
+    }
     public void iAmInBusinessDashboardPortuguese() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessagePortuguese));
     }
@@ -109,8 +119,8 @@ public class Business_Dashboard {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountsCardsView));
     }
 
-    public void iClickOnFirstAccountKebabMenu() {
-        sharedDriver.getDriver().findElements(By.className("dropdown-menu-toggle-button__content")).get(4).click();
+    public void iClickOnCurrentAccountKebabMenu() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(currentAccountKebabMenu)).click();
     }
 
     public void iClickOnDocumentaryCollectionAccountKebabMenu() {
