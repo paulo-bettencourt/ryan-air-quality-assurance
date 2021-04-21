@@ -14,8 +14,8 @@ public class ReadPropFile {
         InputStream osProperties = new FileInputStream((System.getProperty("user.dir") + "/src/test/resources/" + OSConfiguration));
         Properties prop = ReadPropFile.loadPropertiesFile("config.properties");
 
-        // Prints out configuration properties for the environment
-        prop.forEach((k, v) -> System.out.println(k + ":" + v));
+        // Prints out configuration properties for the environment [ uncomment only for debugging]
+        // prop.forEach((k, v) -> System.out.println(k + ":" + v));
 
         // Loads OS properties of either mac, windows, linux
         prop.load(osProperties);

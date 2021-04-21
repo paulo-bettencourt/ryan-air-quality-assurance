@@ -24,6 +24,11 @@ public class steps_BusinessDashboard {
         dashboard.iAmInBusinessDashboard();
     }
 
+    @And("^i am on the accounts page$")
+    public void i_am_in_accounts_page() {
+        dashboard.iAmInAccountsPage();
+    }
+
     @And("^i can see the navigation bar$")
     public void i_can_see_the_navigation_bar() {
         dashboard.viewNavigationBar();
@@ -44,9 +49,9 @@ public class steps_BusinessDashboard {
         dashboard.iAmInBusinessDashboardPortuguese();
     }
 
-    @Then("^i click on the kebab button of the first account$")
-    public void i_click_on_first_account_kebab_button() {
-        dashboard.iClickOnFirstAccountKebabMenu();
+    @Then("^i click on the kebab button of the current account$")
+    public void i_click_on_current_account_kebab_button() {
+        dashboard.iClickOnCurrentAccountKebabMenu();
     }
 
     @Then("^i click on the kebab menu of documentary collection account$")

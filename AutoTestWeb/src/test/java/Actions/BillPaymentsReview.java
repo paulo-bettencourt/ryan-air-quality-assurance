@@ -20,19 +20,19 @@ public class BillPaymentsReview {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//span[contains(text(), 'Payments' ) ]")
+    @FindBy(xpath = "//span[contains(text(), 'Payments' ) ] | //span[contains(text(), 'Criar Pagamento' ) ] | //*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app//bb-navigation-link-widget-ang/ul/li[4]/ul/li[2]/a/bb-icon-ui")
     WebElement billPaymentsMenu;
 
     @FindBy(css = "form>bb-search-box-ui>div>input")
     WebElement searchBar;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//div/div/div[2]/div/div[1]/button")
+    @FindBy(xpath = "//bb-route/bb-chrome//sba-sba-bill-payments-home/div/div/div[2]/div/div/button")
     WebElement firstEntity;
 
     @FindBy(id = "reference")
     WebElement reference;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-recharge/form/div[2]/bb-fieldset-ui/fieldset/div/div[3]/div/sba-dropdown-ui/div/div")
+    @FindBy(xpath = "//bb-fieldset-ui/fieldset/div/div[3]/div/sba-dropdown-ui/div/div[1]/button/div/span[2]")
     WebElement amountDropdownRechargeable;
 
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-state-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[4]/div/sba-dropdown-ui/div/div")
@@ -44,13 +44,13 @@ public class BillPaymentsReview {
     @FindBy(id = "bb_element_9")
     WebElement amountInputStateStandard;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-recharge/form/div[2]/bb-fieldset-ui/fieldset/div/div[3]/div/sba-dropdown-ui/div/div[2]/button[1]")
+    @FindBy(xpath = "//bb-fieldset-ui/fieldset/div/div[3]/div/sba-dropdown-ui/div/div[2]/button[1]")
     WebElement firstAmountRechargeable;
 
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-state-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[4]/div/sba-dropdown-ui/div/div[2]/button[1]")
     WebElement firstAmountStateConfig;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-recharge/form/div[2]/bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button")
+    @FindBy(xpath = "//bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button")
     WebElement nextBtnRechargeable;
 
     @FindBy(xpath = "//button[contains(text(), ' Next ')]")
@@ -62,7 +62,7 @@ public class BillPaymentsReview {
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-state-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button")
     WebElement nextBtnStateStandard;
 
-    @FindBy(xpath = "//div[contains(text(), 'Payment Details')]")
+    @FindBy(xpath = "//div[contains(text(), 'Payment Details')] | //div[contains(text(), 'Dados do Pagamento')]")
     WebElement paymentDetailsString;
 
     @FindBy(id = "bb_input_1")
@@ -71,7 +71,7 @@ public class BillPaymentsReview {
     @FindBy(className = "searched-entity-container")
     WebElement firstEntityBusiness;
 
-    @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Bill Payments ')]")
+    @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Bill Payments ')] | //h3[contains(text(), ' Pagamentos ')]")
     WebElement billPaymentsTitle;
 
     @FindBy(className = "bb-product-selector-ui")
@@ -163,10 +163,7 @@ public class BillPaymentsReview {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ accountNumber +"')]"))));
     }
 
-
     public void iSeeResultsForEntitySearch(String entitySearchResult) {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ entitySearchResult +"')]"))));
     }
-
-
 }
