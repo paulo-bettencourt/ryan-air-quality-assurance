@@ -20,9 +20,6 @@ public class Business_Dashboard {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Últimas Transacções ')]")
-    WebElement dashboardLatestTransactionsTitle;
-
     @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Home' )]")
     WebElement sideNavigationBarTitle;
 
@@ -104,13 +101,11 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Contas Favoritas ')]")
     WebElement dashboardFavoriteTitle;
 
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Últimas Transacções ')]")
+    WebElement dashboardLatestTransactionsTitle;
+
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardTitle));
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     public void iAmInAccountsPage() {
