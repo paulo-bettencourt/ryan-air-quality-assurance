@@ -100,6 +100,9 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Últimas Transacções ')]")
     WebElement dashboardLatestTransactionsTitle;
 
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Home' )]")
+    WebElement sideNavigationBarTitle;
+
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardTitle));
     }
@@ -112,7 +115,7 @@ public class Business_Dashboard {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessagePortuguese));
     }
     public void viewNavigationBar(){
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sideNavigationBar));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sideNavigationBarTitle));
     }
 
     public void viewAccountsListView(){
@@ -199,5 +202,13 @@ public class Business_Dashboard {
     public void iChooseBankGuaranteeKebabMenuDetails() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(BankGuaranteeDetailsButton)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabelDetails));
+    }
+
+    public void iSeeFavAccounts() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardFavoriteTitle));
+    }
+
+    public void iSeeLatestTransactions(){
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardLatestTransactionsTitle));
     }
 }
