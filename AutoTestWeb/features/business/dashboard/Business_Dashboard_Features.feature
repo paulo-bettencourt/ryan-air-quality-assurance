@@ -10,10 +10,10 @@ Feature: Business - Dashboard Features - Latest Transactions and Favorite Accoun
     And i can see the favorite accounts
 
   #not working on test, SA selection error that will be fixed when UXT is imported to TEST
-  #@test-[skipped]
-    #Examples:
-      #| username | password | context |
-      #| patricia.company | Password1* | sa_patricia.company |
+  @test-[skipped]
+    Examples:
+      | username | password | context |
+      | patricia.company | Password1* | sa_patricia.company |
 
   @uxt
     Examples:
@@ -29,10 +29,10 @@ Feature: Business - Dashboard Features - Latest Transactions and Favorite Accoun
     And i can see the latest transactions
 
   #not working on test, SA selection error that will be fixed when UXT is imported to TEST
-  #@test-[skipped]
-    #Examples:
-      #| username | password | context |
-      #| patricia.company | Password1* | sa_patricia.company |
+  @test-[skipped]
+    Examples:
+      | username | password | context |
+      | patricia.company | Password1* | sa_patricia.company |
 
     @uxt
     Examples:
