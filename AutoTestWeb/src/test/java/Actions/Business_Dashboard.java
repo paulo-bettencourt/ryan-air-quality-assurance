@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.w3c.dom.ls.LSOutput;
 
 public class Business_Dashboard {
 
@@ -102,9 +103,15 @@ public class Business_Dashboard {
 
     @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Home' )]")
     WebElement sideNavigationBarTitle;
-    
+
+
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardTitle));
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void iAmInAccountsPage() {
