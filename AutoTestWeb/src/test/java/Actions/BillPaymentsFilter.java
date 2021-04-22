@@ -32,7 +32,7 @@ public class BillPaymentsFilter {
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-sba-payment-history-widget/div[1]/div/div[2]")
     WebElement results;
 
-    public void ClickMyPaymentsTab() {
+    public void clickMyPaymentsTab() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(myPaymentsTab)).click();
     }
 

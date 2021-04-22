@@ -22,7 +22,7 @@ public class steps_bill_payments_search {
 
     @And("^i select the My Payments tab$")
     public void iSelectTheMyPaymentsTab() {
-        billPaymentsFilter.ClickMyPaymentsTab();
+        billPaymentsFilter.clickMyPaymentsTab();
 
     }
 
