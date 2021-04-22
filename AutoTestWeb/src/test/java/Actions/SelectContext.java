@@ -21,7 +21,7 @@ public class SelectContext {
     @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Select context ')] | //h3[contains(text(), ' Selecionar Contexto ')]")
     WebElement selectContextTitle;
 
-    @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Select context ')]")
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Select context ')] | //h2[contains(text(), ' Selecionar Contexto ')]")
     WebElement changeContextTitle;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Hi')] | //*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Olá')]")
@@ -68,7 +68,7 @@ public class SelectContext {
     }
 
     public void verifyContextAndName(String loggedInUser, String context){
-        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), 'Hi CompanyB "+ loggedInUser +"')] | //div[contains(text(), 'Olá "+ loggedInUser +"')]"));
+        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ loggedInUser +"')] | //div[contains(text(), 'Olá "+ loggedInUser +"')]"));
         this.verifySelectedContext(context);
     }
 }
