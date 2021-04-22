@@ -97,6 +97,12 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Contas Favoritas ')]")
     WebElement dashboardFavoriteTitle;
 
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Últimas Transacções ')]")
+    WebElement dashboardLatestTransactionsTitle;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Home' )]")
+    WebElement sideNavigationBarTitle;
+
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardTitle));
     }
