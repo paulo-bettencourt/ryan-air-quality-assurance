@@ -20,6 +20,12 @@ public class Business_Dashboard {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
+    @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Últimas Transacções ')]")
+    WebElement dashboardLatestTransactionsTitle;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Home' )]")
+    WebElement sideNavigationBarTitle;
+
     @FindBy(how = How.XPATH, using = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Hi')] | //*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui//div[contains(text(), 'Olá')]")
     WebElement helloMessage;
 
@@ -98,12 +104,6 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Contas Favoritas ')]")
     WebElement dashboardFavoriteTitle;
 
-    @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Últimas Transacções ')]")
-    WebElement dashboardLatestTransactionsTitle;
-
-    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Home' )]")
-    WebElement sideNavigationBarTitle;
-    
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardTitle));
         try {
