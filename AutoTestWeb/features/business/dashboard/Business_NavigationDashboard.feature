@@ -28,11 +28,11 @@ Feature: Business - Dashboard Navigation bar
     And i am on the business dashboard
     And i can view username "<username>" and context "<context>"
 
-                  #not working on test, SA selection error that will be fixed when UXT is imported to TEST
+      #not working on test, SA selection error that will be fixed when UXT is imported to TEST
   @test-[skipped]
     Examples:
-      | username | password | context | context2 |
-      | patricia.company | Password1* | sa_patricia.company | sa_patricia.company_2 |
+      | username | password | context |
+      | patricia.company | Password1* | sa_patricia.company |
 
   @uxt
     Examples:
