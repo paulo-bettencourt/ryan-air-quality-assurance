@@ -108,16 +108,22 @@ public class steps_bill_payments_review {
     }
 
     @And("^i enter and confirm i am in bill payments page$")
-    public void i_am_in_transactions_page() {
+    public void i_am_in_bill_payments_page() {
         billPaymentsReview.iAmInBillPayments();
     }
+
+    @And("^i select a current account from selector dropdown$")
+    public void i_select_a_current_account_from_dropdown() {
+        billPaymentsReview.selectCurrentAccount();
+    }
+
 
     @And("^i select \"([^\"]*)\" the debit account for bills")
     public void i_select_debit_account_bills(String account) {
         billPaymentsReview.iSelectBillDebitAccount(account);
     }
 
-    @Then("^i confirm the details of the selected account are displaying well, the name \"([^\"]*)\" and the account \"([^\"]*)\"$")
+    @Then("^i confirm account name \"([^\"]*)\" and the account number \"([^\"]*)\" are displayed$")
     public void bill_debit_displaying_correctly(String accountName, String accountNumber) {
         billPaymentsReview.iConfirmBillDebitAccountSelectedWithSuccess(accountName, accountNumber);
     }

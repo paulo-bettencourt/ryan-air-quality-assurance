@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.w3c.dom.ls.LSOutput;
 
 public class Business_Dashboard {
 
@@ -95,17 +94,15 @@ public class Business_Dashboard {
     @FindBy(how = How.XPATH, using = "//*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app/bb-root/bb-area/bb-chrome//table/tbody/tr[1]/td[8]/bb-dropdown-menu-ui/div/button/div")
     WebElement LettersOfCreditKebabMenu;
 
-    @FindBy(how = How.XPATH, using = "//h3[contains(text(), 'Dashboard')]")
-    WebElement dashboardTitle;
 
     @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Contas Favoritas ')]")
     WebElement dashboardFavoriteTitle;
 
     @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Últimas Transacções ')]")
     WebElement dashboardLatestTransactionsTitle;
-    
+
     public void iAmInBusinessDashboard() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardTitle));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessage));
     }
 
     public void iAmInAccountsPage() {
@@ -116,7 +113,7 @@ public class Business_Dashboard {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(helloMessagePortuguese));
     }
     public void viewNavigationBar(){
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sideNavigationBarTitle));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sideNavigationBar));
     }
 
     public void viewAccountsListView(){

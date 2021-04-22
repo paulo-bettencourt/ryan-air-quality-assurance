@@ -53,7 +53,7 @@ public class BillPaymentsReview {
     @FindBy(xpath = "//bb-fieldset-ui/fieldset/div/div[6]/bb-button-ui/button")
     WebElement nextBtnRechargeable;
 
-    @FindBy(xpath = "//button[contains(text(), ' Next ')]")
+    @FindBy(xpath = "//button[contains(text(), ' Next ')] | //button[contains(text(), 'Seguinte')]")
     WebElement nextBtnReference;
 
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-bill-payments-widget/sba-sba-bill-payments-state-payment/form/div[2]/bb-fieldset-ui/fieldset/div/div[7]/bb-button-ui/button")
@@ -79,6 +79,13 @@ public class BillPaymentsReview {
 
     @FindBy(className = "bb-loading-indicator")
     WebElement accountLoaderSpinner;
+
+    @FindBy(how = How.XPATH, using = "//form/div[1]/bb-fieldset-ui/fieldset/sba-billpay-account-selector-ui/bb-product-selector-ui/div/div/button")
+    WebElement currentAccountDropdown;
+
+    @FindBy(how = How.XPATH, using = "//form/div[1]/bb-fieldset-ui/fieldset/sba-billpay-account-selector-ui/bb-product-selector-ui/div/div/div/button")
+    WebElement firstCurrentAccountItem;
+
 
 
     public void ClickBillPaymentsMenu() {
@@ -159,11 +166,16 @@ public class BillPaymentsReview {
     }
 
     public void iConfirmBillDebitAccountSelectedWithSuccess(String accountName, String accountNumber) {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ accountName +"')]"))));
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ accountNumber +"')]"))));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]"))));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountNumber +"')]"))));
     }
 
     public void iSeeResultsForEntitySearch(String entitySearchResult) {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ entitySearchResult +"')]"))));
+    }
+
+    public void selectCurrentAccount() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(currentAccountDropdown)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(firstCurrentAccountItem)).click();
     }
 }
