@@ -103,6 +103,7 @@ public class Business_Dashboard {
 
     @FindBy(how = How.XPATH, using = "//h2[contains(text(), ' Últimas Transacções ')]")
     WebElement dashboardLatestTransactionsTitle;
+    
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardTitle));
     }
