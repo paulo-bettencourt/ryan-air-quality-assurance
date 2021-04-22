@@ -102,8 +102,7 @@ public class Business_Dashboard {
 
     @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Home' )]")
     WebElement sideNavigationBarTitle;
-
-
+    
     public void iAmInBusinessDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(dashboardTitle));
     }
