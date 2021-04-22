@@ -39,6 +39,11 @@ public class steps_BusinessDashboard {
         dashboard.viewAccountsListView();
     }
 
+    @And("^i can see the favorite accounts$")
+    public void i_can_see_the_fav_accounts() {
+        dashboard.iSeeFavAccounts();
+    }
+
     @And("^i can view the accounts cards view$")
     public void i_can_see_the_accounts_cards_view() {
         dashboard.viewAccountsCardsView();
@@ -122,4 +127,10 @@ public class steps_BusinessDashboard {
     public void on_bank_letters_of_Credit_kebab_click_see_details() {
         dashboard.iChooseLetterOfCreditKebabMenuDetails();
     }
+
+    @And("^i can see the latest transactions$")
+    public void i_can_see_the_latest_transaction_area() {
+        dashboard.iSeeLatestTransactions();
+    }
+
 }
