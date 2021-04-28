@@ -1,10 +1,18 @@
 @testAll @ARD-11464
 Feature: Business - Select Context
 
-  Scenario: Business - Select Context
+  Scenario Outline: Business - Select Context
     Given i am in the business login page
-    And i change the language to english
-    And change language successfully
-    Then i want to login with "companyb1" and "Password1*"
+    Then i want to login with "<username>" and "<password>"
     And i confirm i am in select context page
-    Then i select the context "sa_companyB1"
+    And i select the context "<context>"
+
+    @test
+    Examples:
+      | username  | password   | context      |
+      | companyb1 | Password1* | sa_companyB1 |
+
+    @uxt
+    Examples:
+      | username         | password   | context             |
+      | patricia.company | Password1* | sa_patricia.company |
