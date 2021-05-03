@@ -43,7 +43,7 @@ public class LanguageSwitcher {
 
     public void changeLanguageDashboard() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(langSwitcherDashboard)).click();
-        langSwitcherDashboardPT.click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(langSwitcherDashboardPT)).click();
     }
 
     public void iChangeToEnglishLanguageSuccessfully(){

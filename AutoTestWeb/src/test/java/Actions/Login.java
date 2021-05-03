@@ -30,6 +30,10 @@ public class Login {
     @FindBy(how = How.ID, using = "kc-login")
     WebElement LoginButton;
 
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), \"Credenciais Inválidas!\")] | //span[contains(text(), \"Invalid Credentials!\")]")
+    WebElement LoginError;
+
+
     @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Acesso encontra-se bloqueado por ter excedido o número máximo de tentativas de login. Por favor contacte-nos através dos números ')]")
     WebElement toManyWrongTriesErrorMessage;
 
@@ -112,7 +116,7 @@ public class Login {
     }
 
     public boolean failedLogin() {
-        return sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoginButton)).isDisplayed();
+        return sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoginError)).isDisplayed();
     }
 
     public void ClickForgotPassword(){
