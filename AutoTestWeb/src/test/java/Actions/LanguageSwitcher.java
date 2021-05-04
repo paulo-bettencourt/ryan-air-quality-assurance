@@ -22,6 +22,9 @@ public class LanguageSwitcher {
     @FindBy(how = How.LINK_TEXT, using = "English (UK)")
     WebElement english;
 
+    @FindBy(xpath = "//*[@id=\"kc-form-login\"]/div[1]/label")
+    WebElement usernameString;
+
     @FindBy(how = How.ID, using = "dropdownManual")
     WebElement langSwitcherDashboard;
 
@@ -38,7 +41,11 @@ public class LanguageSwitcher {
     }
 
     public boolean isEN() {
-        return langSwitcher.getText().equalsIgnoreCase("English (UK)");
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(usernameString));
+        if (usernameString.getText().contains("Username"))
+            return true;
+        else
+            return false;
     }
 
     public void changeLanguageDashboard() {
@@ -46,7 +53,7 @@ public class LanguageSwitcher {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(langSwitcherDashboardPT)).click();
     }
 
-    public void iChangeToEnglishLanguageSuccessfully(){
+    public void iChangeToEnglishLanguageSuccessfully() {
         sharedDriver.getDriver().findElement(By.xpath("//*[@id=\"dropdownMenuButton\"]")).click();
         englishLanguageSwitcher.click();
         sharedDriver.getDriver().findElement(By.xpath("//*[@id=\"dropdownMenuButton\"]")).getText().equalsIgnoreCase("English (UK)");

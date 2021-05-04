@@ -26,7 +26,7 @@ public class steps_language_switcher {
 
     @Then("^i change the language to \"([^\"]*)\"$")
     @And("^i change the language to english$")
-    public void iChangeTheLanguageToEnglish(){
+    public void iChangeTheLanguageToEnglish() {
         languageSwitcher.ChangeLang();
     }
 

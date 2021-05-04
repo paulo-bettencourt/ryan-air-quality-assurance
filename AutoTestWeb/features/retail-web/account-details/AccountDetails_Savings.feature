@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Account Details - Savings Account
   As a user i want to be able to see my Savings Account details
 

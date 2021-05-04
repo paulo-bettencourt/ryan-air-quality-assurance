@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Account Selector
   As a user i want to be able to change account on the transactions account selector and click on the Account details tab to see the Loan account details
 

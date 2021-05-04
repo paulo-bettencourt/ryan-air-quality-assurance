@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Account Details - Loan Account
   As a user i want to be able to see my Loan Account details
 
