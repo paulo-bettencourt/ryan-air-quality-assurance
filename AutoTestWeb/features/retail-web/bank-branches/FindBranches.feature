@@ -1,4 +1,4 @@
-@testAll @retail
+#@testAll @retail
 
   # Feature commented because there's no longer the "Find Branches" on UXT env
 #Feature: Find Branches
