@@ -16,7 +16,7 @@ public class AccountDetails {
 
     }
 
-    @FindBy(how = How.XPATH, using = "//a[contains(text(), ' Account Info' ) ]")
+    @FindBy(how = How.ID, using = "tab_bb-tab-container-ang-_-b69b3259f929_1")
     WebElement accountDetailsTab;
 
     @FindBy(how = How.XPATH, using = "//h4[contains(text(), ' General' ) ]")

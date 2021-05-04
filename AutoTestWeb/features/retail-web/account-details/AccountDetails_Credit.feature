@@ -8,7 +8,7 @@
       #And change language successfully
       Then i want to login with "<username>" and "<password>"
       And i logged in successfully
-      Then i can click on a "<card>>" account
+      Then i can click on a "<card>" account
       And click account details tab
       And Account details are loaded
 

@@ -2,31 +2,41 @@
 Feature: Transfer - Other Accounts
   As a user i want to be able to do transfers to other banks accounts
 
-  Scenario: Transfer Savings account to John Doe
+  Scenario Outline: Transfer Savings account to John Doe
     Given i am in login page
     And i change the language to english
     And change language successfully
-    Then i want to login with "real1" and "Password1*"
+    Then i want to login with "<username>" and "<password>"
     And i logged in successfully
     Then i can click on new transfer on the quick action button
     And i am redirected to the new transfer page
 #    Then i select a savings account on the from selector #Line commented because the account is selected by default
-    And i select "Auto Tests" on the recipient name selector
-    And i insert "3" on the amount input
+    And i select "<recipient>" on the recipient name selector
+    And i insert "<amount>" on the amount input
     Then i click on next button
     And i am redirected to the review page
 
-  Scenario: Transfer Savings account to invalid IBAN
+  @uxt
+    Examples:
+      | username | password | recipient | amount |
+      | real1 | Password1* | Auto Tests | 3      |
+
+  Scenario Outline: Transfer Savings account to invalid IBAN
     Given i am in login page
     And i change the language to english
     And change language successfully
-    Then i want to login with "real1" and "Password1*"
+    Then i want to login with "<username>" and "<password>"
     And i logged in successfully
     Then i can click on new transfer on the quick action button
     And i am redirected to the new transfer page
     #    Then i select a savings account on the from selector #Line commented because the account is selected by default
     And i select IBAN tab
-    And i insert a recipients name "abc"
-    And i insert "1111 1111 11111111111111111" on the IBAN input
-    And i insert "25" on the amount input
+    And i insert a recipients name "<recipient>"
+    And i insert "<iban>" on the IBAN input
+    And i insert "<amount>" on the amount input
     Then next button is disabled
+
+  @uxt
+    Examples:
+      | username | password | recipient | iban| amount |
+      | real1 | Password1* | abc | 1111 1111 11111111111111111 | 25 |

@@ -14,7 +14,7 @@ public class BEPAudit {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(xpath = "/html/body/div/div/div/div/div/div/div/sba-sba-employee-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-theme1-ui/div/div[2]/div/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-navigation-spa-widget-ang/div/ul/li[2]/a/div/span")
+    @FindBy(linkText = "Audit")
     WebElement auditMenu;
 
     @FindBy(id = "bb_input_3")
@@ -74,7 +74,7 @@ public class BEPAudit {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(continueBtn)).click();
     }
 
-    public void seeResults(){
+    public void seeResults() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(results));
     }
 }
