@@ -89,5 +89,15 @@ public class steps_BusinessTransfers {
     public void i_verifiy_transfer_description(String description) {
         business_transfers.verifyDescription(description);
     }
+
+    @Then("^i select my own account \"([^\"]*)\"$")
+    public void i_select_own_account(String ownAccount) {
+        business_transfers.iSelectOtherOwnAccount(ownAccount);
+    }
+
+    @And("^i confirm the transfer and see the success submitted message$")
+    public void i_confirm_the_transfer_submited() {
+        business_transfers.clickTransferConfirmationButtonAndSubmitedSuccess();
+    }
 }
 

@@ -1,29 +1,34 @@
 # README #
+#SBA Web Automated Tests
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This project of automated tests assist in verifying the stability of the environments and also help us understand what features
+are not working as expected. The tests are ready run in different environments and that every environment has a unique 
+set of data for every specification that has been defined.
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+#Installation:
+You will need to install from in your development enviroment: Cucumber For Java, Gherkin, Substeps InteliJ Plugin to get
+the tests to properly run
 
-### Contribution guidelines ###
+#OS and Driver:
+The project should be able to auto-detect your OS and the necessary WebDrivers
 
-* Writing tests
-* Code review
-* Other guidelines
+#Running the tests for the different enviroments:
 
-### Who do I talk to? ###
+In the test automation project, we use maven profiles to determine which environment to run our tests.
 
-* Repo owner or admin
-* Other community or team contact
+An example of a command to run only UXT environment tests is as shown below:
+
+mvn clean verify -Puxt -Dcucumber.options="--tags @uxt" -f AutoTestWeb/pom.xml
+
+This example would only run the TEST enviroment tests:
+
+mvn clean verify -Ptest -Dcucumber.options="--tags @test" -f AutoTestWeb/pom.xml
+
+
+### Need further help? ###
+
+SBA Business QAs - Diogo Brandão and Josphat Waweru
+SBA Retail QAs - Ana Rita Câmara and José Diogo Correia
