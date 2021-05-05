@@ -1,6 +1,7 @@
 package Actions;
 
 import Steps.SharedDriver;
+import gherkin.lexer.Th;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -111,6 +112,12 @@ public class Business_Transfers {
     @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Autorizar')] | //button[contains(text(), ' Authorize ')]")
     WebElement reviewPageAuthorizeButton;
 
+    @FindBy(how = How.XPATH, using = "//*[contains(@data-role, 'open-beneficiary-dropdown-list-button')]")
+    WebElement beneficiaryButton;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), ' Your payment is accepted ')] | //span[contains(text(), 'Transferência submetida com sucesso!')]")
+    WebElement transferSubmitedWithSuccess;
+
     public void iAmInTransfers() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transfersNavBar)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transfersTitle));
@@ -154,7 +161,7 @@ public class Business_Transfers {
     }
 
     public void clickTransferConfirmationButton() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transfersConfirmationButton)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(reviewPageAuthorizeButton)).click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transfersSuccessAlert));
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transfersCompletionPage));
     }
@@ -194,7 +201,7 @@ public class Business_Transfers {
         accountSelectorSearch.sendKeys(accountName);
         //avoids multi-thread problems, while this is active, no others threads get active
         synchronized (sharedDriver.getDriver()) {
-                  sharedDriver.getDriver().wait(5000);
+                  sharedDriver.getDriver().wait(7000);
          }
          sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//*[contains(@data-role, 'card-title')]"))));
         //sharedDriver.getWait().until(ExpectedConditions.invisibilityOf(loadingSpinner));
@@ -207,6 +214,18 @@ public class Business_Transfers {
     public void verifyDescription(String description) {
         //error on html, on the html the tax field also has the data role of description
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElements(By.xpath("//*[contains(@data-role, 'description')]")).get(1))).getText().equals(description);
+    }
+
+    public void iSelectOtherOwnAccount(String ownAccount) {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(beneficiaryButton)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(beneficiaryName)).click();
+        beneficiaryName.sendKeys(ownAccount);
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//*[contains(@data-role, 'beneficiary-account-name-list-item')]")))).click();
+    }
+
+    public void clickTransferConfirmationButtonAndSubmitedSuccess() {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(reviewPageAuthorizeButton)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transferSubmitedWithSuccess));
     }
 
 }
