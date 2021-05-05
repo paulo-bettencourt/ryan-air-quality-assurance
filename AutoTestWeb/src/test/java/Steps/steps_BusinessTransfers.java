@@ -2,6 +2,7 @@ package Steps;
 
 import Actions.Business_Transfers;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -29,7 +30,7 @@ public class steps_BusinessTransfers {
     }
 
     @And("^i enter other bank beneficiary name \"([^\"]*)\" and account \"([^\"]*)\"$")
-    public void i_enter_other_bank_beneficiary_name_and_account(String benefactorName, String account) {
+    public void i_enter_other_bank_beneficiary_name_and_account(String benefactorName, String account) throws InterruptedException {
         business_transfers.fillInNameAndAccountOtherBank(benefactorName, account);
     }
 
@@ -44,7 +45,7 @@ public class steps_BusinessTransfers {
     }
 
     @And("^i enter the transfer description \"([^\"]*)\"$")
-    public void i_enter_transfer_description(String description) {
+    public void i_enter_transfer_description(String description) throws InterruptedException {
         business_transfers.fillDescription(description);
     }
 
@@ -77,6 +78,16 @@ public class steps_BusinessTransfers {
     public void i_see_and_click_cancel_button() {
         business_transfers.clickCancelButton();
         business_transfers.confirmCancelTransfer();
+    }
+
+    @Then("^i search and select the account \"([^\"]*)\"$")
+    public void i_search_and_select_account(String accountName) throws InterruptedException {
+        business_transfers.searchAndSelectAccount(accountName);
+    }
+
+    @And("^i verify transfer description \"([^\"]*)\"$")
+    public void i_verifiy_transfer_description(String description) {
+        business_transfers.verifyDescription(description);
     }
 }
 

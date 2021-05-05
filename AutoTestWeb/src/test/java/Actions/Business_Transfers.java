@@ -1,11 +1,15 @@
 package Actions;
 
 import Steps.SharedDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.awt.event.KeyEvent;
 
 public class Business_Transfers {
 
@@ -17,28 +21,28 @@ public class Business_Transfers {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Transfers')]")
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Create a Transfer')] | //span[contains(text(), 'Criar Transferência')]")
     WebElement transfersNavBar;
 
-    @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Transfers ')]")
+    @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Transfers ')] | //h3[contains(text(), ' Transferências ')]")
     WebElement transfersTitle;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"beneficiaryName\"]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"bb_input_4\"]")
     WebElement beneficiaryName;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"accountNumber\"]")
+    @FindBy(how = How.XPATH, using = "//*[contains(@data-role, 'beneficiary-account-number')]")
     WebElement beneficiaryAccount;
 
-    @FindBy(how = How.CSS, using = ".account-input-wrapper>bb-input-text-ui>input")
+    @FindBy(how = How.XPATH, using = "//*[contains(@data-role, 'beneficiary-account-number')]")
     WebElement beneficiaryAccountOtherBank;
 
-    @FindBy(how = How.CSS, using = ".bb-currency-input__integer > input")
+    @FindBy(how = How.XPATH, using = "//*[contains(@formcontrolname, 'amount')]")
     WebElement amountTransferInput;
 
-    @FindBy(how = How.CSS, using = ".payment-details-fieldset>fieldset>.payment-details-subcontainer>bb-textarea-ui>div>textarea")
+    @FindBy(how = How.XPATH, using = "//*[contains(@data-role, 'textarea-text-field')]")
     WebElement amountDescriptionInput;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-fieldset-ui/fieldset/div/div[2]/bb-button-ui/button")
+    @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Seguinte')] | //button[contains(text(), 'Next')]")
     WebElement transfersContinueButton;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container//sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-review-container/bb-payment-review/div[1]")
@@ -53,7 +57,7 @@ public class Business_Transfers {
     @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-payment-status-container/bb-payment-status/div[1]")
     WebElement transfersCompletionPage;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-payment-form-container/bb-payment-form/div/div/form/div[2]/bb-fieldset-ui/fieldset/div/div[2]/div/button[2]")
+    @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Outro Banco')] | //button[contains(text(), 'Other Bank')]")
     WebElement toOtherBankButton;
 
     @FindBy(how = How.XPATH, using = "/html/body/ngb-modal-window/div/div/div[2]/div[2]")
@@ -83,14 +87,29 @@ public class Business_Transfers {
     @FindBy(how = How.XPATH, using = "/html/body/ngb-modal-window/div/div/div[2]/div[3]/div/button[1]")
     WebElement otpResendCodeButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-payment-review-container/bb-payment-review/div[2]/bb-button-ui[2]/button")
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Editar')] | //span[contains(text(), 'Edit')]")
     WebElement editButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area//bb-payment-review-container/bb-payment-review/div[2]/bb-button-ui[1]/button")
+    @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Cancelar')] | //button[contains(text(), ' Cancel ')]")
     WebElement cancelButton;
 
     @FindBy(how = How.XPATH, using = "/html/body/ngb-modal-window/div/div/div[2]/div/button[2]")
     WebElement cancelButtonModalConfirmation;
+
+    @FindBy(className = "bb-product-selector__icon")
+    WebElement accountSelectorArrow;
+
+    @FindBy(how = How.XPATH, using = "//*[contains(@data-role, 'search-input')]")
+    WebElement accountSelectorSearch;
+
+    @FindBy(className = "bb-loading-indicator__circle")
+    WebElement loadingSpinner;
+
+    @FindBy(how = How.XPATH, using = "//*[contains(@formcontrolname, 'decimal')]")
+    WebElement decimalAmountTransferInput;
+
+    @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Autorizar')] | //button[contains(text(), ' Authorize ')]")
+    WebElement reviewPageAuthorizeButton;
 
     public void iAmInTransfers() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transfersNavBar)).click();
@@ -98,29 +117,40 @@ public class Business_Transfers {
     }
 
     public void fillInNameAndAccount(String beneficiaryFullName, String account) {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(beneficiaryName)).sendKeys(beneficiaryFullName);
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(beneficiaryAccount)).sendKeys(account);
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(beneficiaryName)).click();
+        beneficiaryName.sendKeys(beneficiaryFullName);
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(beneficiaryAccount)).click();
+        beneficiaryAccount.sendKeys(account);
     }
 
-    public void fillInNameAndAccountOtherBank(String beneficiaryFullName, String account) {
+    public void fillInNameAndAccountOtherBank(String beneficiaryFullName, String account) throws InterruptedException {
+        synchronized (sharedDriver.getDriver()) {
+            sharedDriver.getDriver().wait(5000);
+        }
+        toOtherBankButton.click();
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(beneficiaryName)).sendKeys(beneficiaryFullName);
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(beneficiaryAccountOtherBank)).sendKeys(account);
     }
 
     public void fillAmount(String amount) {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(amountTransferInput)).sendKeys(amount);
+        decimalAmountTransferInput.click();
     }
 
     public void fillAmountAndDescription(String amount, String description) {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(amountTransferInput)).sendKeys(amount);
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(amountDescriptionInput)).sendKeys(description);
     }
-    public void fillDescription(String description) {
+    public void fillDescription(String description) throws InterruptedException {
+        //there's a bug where if the contact field takes long to load (when the services are slow) the description gets deleted
+        synchronized (sharedDriver.getDriver()) {
+            sharedDriver.getDriver().wait(5000);
+        }
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(amountDescriptionInput)).sendKeys(description);
     }
     public void clickContinueButton() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transfersContinueButton)).click();
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transfersReviewPage));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(reviewPageAuthorizeButton));
     }
 
     public void clickTransferConfirmationButton() {
@@ -156,6 +186,27 @@ public class Business_Transfers {
 
     public void confirmCancelTransfer() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(cancelButtonModalConfirmation)).click();
+    }
+
+    public void searchAndSelectAccount(String accountName) throws InterruptedException {
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountSelectorArrow)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(accountSelectorSearch)).click();
+        accountSelectorSearch.sendKeys(accountName);
+        //avoids multi-thread problems, while this is active, no others threads get active
+        synchronized (sharedDriver.getDriver()) {
+                  sharedDriver.getDriver().wait(5000);
+         }
+         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//*[contains(@data-role, 'card-title')]"))));
+        //sharedDriver.getWait().until(ExpectedConditions.invisibilityOf(loadingSpinner));
+        accountSelectorSearch.click();
+        accountSelectorSearch.sendKeys(Keys.BACK_SPACE);
+        //click first card
+        sharedDriver.getDriver().findElement(By.className("bb-account-info")).click();
+    }
+
+    public void verifyDescription(String description) {
+        //error on html, on the html the tax field also has the data role of description
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElements(By.xpath("//*[contains(@data-role, 'description')]")).get(1))).getText().equals(description);
     }
 
 }
