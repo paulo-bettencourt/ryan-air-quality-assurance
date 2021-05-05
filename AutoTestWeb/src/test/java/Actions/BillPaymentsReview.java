@@ -20,7 +20,7 @@ public class BillPaymentsReview {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//span[contains(text(), 'Payments' ) ] | //span[contains(text(), 'Criar Pagamento' ) ] | //*[@id=\"e49fd830-de81-4e49-b54f-39ff13a230fb\"]/sba-sba-business-app//bb-navigation-link-widget-ang/ul/li[4]/ul/li[2]/a/bb-icon-ui")
+    @FindBy(xpath = "//span[contains(text(), ' Bill Payments' ) ]")
     WebElement billPaymentsMenu;
 
     @FindBy(css = "form>bb-search-box-ui>div>input")

@@ -27,7 +27,7 @@ public class steps_dashboard {
                 dashboard.clickSavingsDashboard();
                 break;
             case "loans":
-                dashboard.clickLoanDashboard();
+                    dashboard.clickLoanDashboard();
                 break;
             case "credit":
                 dashboard.clickCreditCardDashboard();
