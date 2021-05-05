@@ -15,4 +15,4 @@
     @uxt
       Examples:
         | username | password | account |
-        | luis.amorim | Password1* | debit |
+        | real1 | Password1* | debit |
