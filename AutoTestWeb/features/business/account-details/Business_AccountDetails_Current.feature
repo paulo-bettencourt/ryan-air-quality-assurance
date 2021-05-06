@@ -10,7 +10,7 @@ Feature: Business - Account Details
     And i can view the accounts list view
     Then i click on the kebab button of the current account
     Then i click to see details on the kebab
-    Then i can view account selector
+#    Then i can view account selector
 
   @test
     Examples:
@@ -31,7 +31,7 @@ Feature: Business - Account Details
     And i can view the accounts list view
     Then i click on the kebab button of the current account
     Then i click to see details on the kebab
-    Then i can view account selector
+#    Then i can view account selector
     Then business current account details are loaded
 
   @test
