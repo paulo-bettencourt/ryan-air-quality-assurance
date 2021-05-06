@@ -1,4 +1,4 @@
-@testAll
+@testAll @business
 Feature: Business Transfer - Own Accounts
   As a user i want to be able to do transfers between my own SBA account
 

@@ -1,4 +1,5 @@
-@testAll @ARD-13126
+@testAll @business
+
 Feature: Bill Payments - Search Entity
   As a user i want to be able to search for the entities to pay my bills
 

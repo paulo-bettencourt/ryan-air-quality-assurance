@@ -1,4 +1,4 @@
-@testAll @ARD-11450
+@testAll @business
 Feature: Business Login Error Handling
   As a user i want to be able to see error messages on login when i make mistakes
 

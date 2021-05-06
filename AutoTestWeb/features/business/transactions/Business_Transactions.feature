@@ -1,4 +1,4 @@
-@testAll @ARD-11625 @ARD-11891 @ARD-11889 @ARD-11892 @ARD-11667 @ARD-11670
+@testAll @business
 Feature: Business - Transactions
 
   Scenario Outline: Business - Transactions Print

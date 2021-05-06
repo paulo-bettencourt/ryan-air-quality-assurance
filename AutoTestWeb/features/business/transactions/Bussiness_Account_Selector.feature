@@ -1,4 +1,4 @@
-@testAll @ARD-11893
+@testAll @business
 Feature: Business - Transactions Account Selector
 
   Scenario Outline: Business - Transactions Account Selector

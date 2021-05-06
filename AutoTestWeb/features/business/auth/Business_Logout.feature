@@ -1,4 +1,4 @@
-@testAll @ARD-11465
+@testAll @business
 Feature: Logout
   As a user i want to be able to logout
 

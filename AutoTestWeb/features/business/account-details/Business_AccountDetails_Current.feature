@@ -1,4 +1,4 @@
-@testAll @ARD-12117 @ARD-11630 @business
+@testAll @business
 Feature: Business - Account Details
 
   Scenario Outline: Business - Account Details - Account Selector

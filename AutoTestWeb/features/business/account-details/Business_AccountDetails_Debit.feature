@@ -1,4 +1,4 @@
-@testAll @ARD-11626
+@testAll @business
 Feature: Business - Account Details
 
  Scenario Outline: Business - Debit Account Details

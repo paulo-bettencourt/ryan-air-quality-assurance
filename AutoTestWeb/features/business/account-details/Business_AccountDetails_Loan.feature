@@ -1,4 +1,4 @@
-@testAll @ARD-11628
+@testAll @business
 Feature: Business - Account Details
 
   Scenario Outline: Business - Loan Account Details

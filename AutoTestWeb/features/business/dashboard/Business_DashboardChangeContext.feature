@@ -1,4 +1,4 @@
-@testAll @ARD-11466
+@testAll @business
 Feature: Business - Dashboard Change Context
 
   Scenario Outline: Business - Change Context

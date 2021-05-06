@@ -1,4 +1,4 @@
-@testAll @ARD-11467  @ARD-11463
+@testAll @business
 Feature: Business - Dashboard Navigation bar
 
   Scenario Outline: Business - Navigation Bar

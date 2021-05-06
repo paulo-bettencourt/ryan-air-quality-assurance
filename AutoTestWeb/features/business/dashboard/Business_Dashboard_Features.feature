@@ -1,4 +1,5 @@
-@testAll @ARD-15661 @ARD-15663
+@testAll @business
+
 Feature: Business - Dashboard Features - Latest Transactions and Favorite Accounts
 
   Scenario Outline: Business - Favorite Accounts
