@@ -22,7 +22,7 @@ public class Business_Transfers {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Create a Transfer')] | //span[contains(text(), 'Criar Transferência')]")
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Create a Transfer')] | //span[contains(text(), 'Criar Transferência')] | //bb-chrome/bb-navigation-link-widget-ang/ul/li[4]/ul/li[1]/a")
     WebElement transfersNavBar;
 
     @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Transfers ')] | //h3[contains(text(), ' Transferências ')]")

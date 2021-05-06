@@ -19,7 +19,7 @@ public class Business_Transactions {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Transactions')] | //span[contains(text(), 'Transacções')]")
+    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Transactions')] | //span[contains(text(), 'Transacções')] | //bb-navigation-link-widget-ang/ul/li[3]/ul/li[2]/a")
     WebElement transactionsNavBar;
 
     @FindBy(how = How.XPATH, using = "//h3[contains(text(), ' Transactions ')] | //h3[contains(text(), ' Transacções ')]")
@@ -37,7 +37,7 @@ public class Business_Transactions {
     @FindBy(how = How.CLASS_NAME, using = "filter-button")
     WebElement transactionsFilterButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"bb_input_6\"]")
+    @FindBy(how = How.CSS, using = "input[type='search']")
     WebElement transactionsSearchField;
 
     @FindBy(how = How.CLASS_NAME, using = "transactions-table")
@@ -90,14 +90,14 @@ public class Business_Transactions {
     }
 
     public void iSearchTransactions() throws Exception {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsSearchField)).sendKeys("TEST ACCOUNT");
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsSearchField)).sendKeys("100");
         transactionsSearchField.sendKeys(Keys.ENTER);
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsTable));
     }
 
     public void iSeeAndClickCSVExportButton() throws Exception {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsExportButton)).click();
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsExportCSVButton));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transactionsExportCSVButton)).click();
     }
 
     public void iSelectATransaction() throws Exception {

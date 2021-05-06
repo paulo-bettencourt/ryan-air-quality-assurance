@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Bill Payments - Search
   As a user i want to be able to search for my bill payments successfully made
 
@@ -11,7 +11,7 @@ Feature: Bill Payments - Search
     Then i click on bill payments on the nav bar
     And i select the My Payments tab
     Then i search for the "<payment>" payment
-    And it shows the results for the search
+   And it shows the results
 
   @uxt
     Examples:

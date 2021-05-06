@@ -1,4 +1,4 @@
-@testAll @ARD-11913
+@testAll @business
 Feature: Business - Account Details
 
   Scenario Outline: Business - Documentary Collection Account Details

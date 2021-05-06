@@ -20,4 +20,4 @@ Feature: Credijá - Review
   @uxt
     Examples:
       | username | password |
-      | testmic | Password1* |
+      | credijauxt | Password1* |

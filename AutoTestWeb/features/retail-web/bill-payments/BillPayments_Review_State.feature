@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Bill Payments - Review State Payment
   As a user i want to be able to see the review page, after I fill in the bill payment form
 

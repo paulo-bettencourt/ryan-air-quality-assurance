@@ -33,7 +33,6 @@ public class Login {
     @FindBy(how = How.XPATH, using = "//span[contains(text(), \"Credenciais Inválidas!\")] | //span[contains(text(), \"Invalid Credentials!\")]")
     WebElement LoginError;
 
-
     @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Acesso encontra-se bloqueado por ter excedido o número máximo de tentativas de login. Por favor contacte-nos através dos números ')]")
     WebElement toManyWrongTriesErrorMessage;
 

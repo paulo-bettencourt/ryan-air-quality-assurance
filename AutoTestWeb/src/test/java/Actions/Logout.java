@@ -14,7 +14,7 @@ public class Logout {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/button/div/div")
+    @FindBy(xpath = "//div[contains(text(), ' Hi ')] | //div[contains(text(), ' Olá ')]")
     WebElement userContextDropdown;
 
     @FindBy(xpath = "//*[@id=\"context-menu-dropdown\"]/bb-dropdown-menu-ui/div/div/div/bb-user-context-menu-dropdown/button[2]")

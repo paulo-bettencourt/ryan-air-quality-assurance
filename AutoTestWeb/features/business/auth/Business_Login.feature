@@ -1,4 +1,4 @@
-@testAll @ARD-11425
+@testAll @business
 Feature: Business Login
   As a user i want to be able to login into business portal
 

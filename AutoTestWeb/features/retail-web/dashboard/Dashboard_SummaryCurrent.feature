@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Dashboard - Summary of Current Account
   As a user i want to be able to see the summary of Current Account on the Dashboard
 
@@ -14,4 +14,4 @@ Feature: Dashboard - Summary of Current Account
   @uxt
     Examples:
       | username | password | account |
-      | real1 | Password1* | current   |
+      | luis.amorim | Password1* | current   |

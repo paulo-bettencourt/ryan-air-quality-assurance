@@ -1,4 +1,4 @@
-@testAll @ARD-11464
+@testAll @business
 Feature: Business - Select Context
 
   Scenario Outline: Business - Select Context

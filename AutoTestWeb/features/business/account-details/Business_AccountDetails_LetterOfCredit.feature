@@ -1,4 +1,4 @@
-@testAll @ARD-11905
+@testAll @business
 Feature: Business - Account Details
 
  Scenario Outline: Business - Letter of Credit Account Details

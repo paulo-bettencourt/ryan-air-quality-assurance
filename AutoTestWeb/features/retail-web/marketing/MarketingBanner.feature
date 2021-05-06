@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Marketing Banner
   As a user i want to be able to click on the marketing banner and be redirected to the "herois de azul" page
 

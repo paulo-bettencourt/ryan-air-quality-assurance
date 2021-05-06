@@ -1,4 +1,4 @@
-@testAll @ARD-11975 @ARD-11976 @ARD-11978 @ARD-11979 @ARD-11980 @ARD-11983
+@testAll @business
 Feature: Business - Transfers
 
   Scenario Outline: Business - Transfers - To Same Bank

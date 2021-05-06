@@ -1,5 +1,4 @@
-@testAll
-
+@testAll @business
 Feature: Business - Bill Payments Page
 
  Scenario Outline: Business - Bill Payments - Navigation

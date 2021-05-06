@@ -31,8 +31,4 @@ public class steps_bill_payments_search {
         billPaymentsSearch.SearchEntity(entity);
     }
 
-    @And("^it shows the results for the search$")
-    public void itShowsTheResultsForTheSearch() {
-        billPaymentsSearch.SeeSearchResults();
-    }
 }

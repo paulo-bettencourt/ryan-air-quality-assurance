@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Dashboard - Summary of Loans Account
   As a user i want to be able to see the summary of Loans Account on the Dashboard
 
@@ -9,9 +9,9 @@ Feature: Dashboard - Summary of Loans Account
     Then i want to login with "<username>" and "<password>"
     And i logged in successfully
     Then i can click on a "<account>" account
-    And i am redirected to the transactions page
+    And i am redirected to the empty transactions page
 
   @uxt
     Examples:
       | username | password | account |
-      | thiago.oliveira | Password1* | loans |
+      | luis.amorim | Password1* | loans |

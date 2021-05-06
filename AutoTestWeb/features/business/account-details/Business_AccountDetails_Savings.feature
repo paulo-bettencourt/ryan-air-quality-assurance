@@ -1,4 +1,4 @@
-@testAll @ARD-11629
+@testAll @business
 Feature: Business - Account Details
 
   Scenario Outline: Business - Savings Account Details

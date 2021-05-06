@@ -1,4 +1,5 @@
-@testAll @ARD-13127
+@testAll @business
+
 Feature: Business Bill Payments - Select Debit Account
 
   Scenario Outline: Business Bill - Select Debit
