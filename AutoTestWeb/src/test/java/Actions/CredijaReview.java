@@ -18,7 +18,7 @@ public class CredijaReview {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[3]/bb-column-container/div/bb-column[2]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-campaign-space-widget-ang/div/a")
+    @FindBy(xpath = "//*[@id=\"048c95c6-a194-4cc1-8168-6f180cd40924\"]/sba-sba-retail-app/bb-root/bb-area/bb-chrome/bb-layout-container/bb-layout-rendering-container-ui/bb-page-layout-ui/div/div[2]/div[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-navigation-link-widget-ang/ul/li[1]/ul/li[5]/a/span")
     WebElement credijaBanner;
 
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-sba-loans-widget/sba-sba-loans-dashboard/div/div[2]/div[2]/sba-loans-simulator/div/div[4]/bb-button-ui/button")
@@ -81,7 +81,7 @@ public class CredijaReview {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(authorizeBtn)).isEnabled();
     }
 
-    public void ClickCancelBtn()  {
+    public void ClickCancelBtn() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(cancelBtn)).click();
     }
 

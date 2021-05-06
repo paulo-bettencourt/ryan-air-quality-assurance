@@ -5,7 +5,7 @@
     Scenario Outline: Credit Account details
       Given i am in login page
       And i change the language to english
-      #And change language successfully
+      And change language successfully
       Then i want to login with "<username>" and "<password>"
       And i logged in successfully
       Then i can click on a "<card>" account

@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Card Details - Debit
   As a user i want to be able to see the details of my debit card
 
@@ -15,4 +15,4 @@ Feature: Card Details - Debit
   @uxt
     Examples:
       | username | password |
-      | creditcard | Password1* |
+      | carduxt | Password1* |

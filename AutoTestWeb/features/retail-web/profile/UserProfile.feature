@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: See user profile
   As a user i want to see my profile
 

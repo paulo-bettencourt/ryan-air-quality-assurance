@@ -17,13 +17,13 @@ public class BEPAudit {
     @FindBy(linkText = "Audit")
     WebElement auditMenu;
 
-    @FindBy(id = "bb_input_3")
+    @FindBy(id = "bb_input_2")
     WebElement categoriesDropdown;
 
-    @FindBy(xpath = "//*[@id=\"bb_input_3\"]/option[6]")
+    @FindBy(xpath = "//*[@id=\"bb_input_2\"]/option[6]")
     WebElement contactOption;
 
-    @FindBy(xpath = "//*[@id=\"bb_input_3\"]/option[11]")
+    @FindBy(xpath = "//*[@id=\"bb_input_2\"]/option[11]")
     WebElement paymentOption;
 
     @FindBy(id = "bb_input_4")

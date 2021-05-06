@@ -14,7 +14,7 @@ Feature: BEP - Audit
     @uxt
     Examples:
       | username | password |
-      | employee-retail-support | Password1* |
+      | employee-manager | Password1* |
 
   Scenario Outline: BEP - Audit - Transfers
     Given i am in the BEP login page
@@ -30,7 +30,7 @@ Feature: BEP - Audit
   @uxt
     Examples:
       | username | password |
-      | employee1 | Password1* |
+      | employee-manager | Password1* |
 
 
   Scenario Outline: BEP - Audit - Bill Payments
@@ -46,4 +46,4 @@ Feature: BEP - Audit
   @uxt
     Examples:
       | username | password |
-      | employee1 | Password1* |
+      | employee-manager | Password1* |

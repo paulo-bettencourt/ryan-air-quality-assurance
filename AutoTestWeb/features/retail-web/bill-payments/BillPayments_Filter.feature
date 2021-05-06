@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Bill Payments - Filter
   As a user i want to be able to filter my bill payments successfully made
 
@@ -17,4 +17,4 @@ Feature: Bill Payments - Filter
     @uxt
     Examples:
       | username | password |
-      | real1 | Password1* |
+      | luis.amorim | Password1* |

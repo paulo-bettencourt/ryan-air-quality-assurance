@@ -4,6 +4,8 @@ Feature: Logout
 
   Scenario Outline: Do logout
     Given i am in login page
+    And i change the language to english
+    And change language successfully
     Then i want to login with "<username>" and "<password>"
     And i logged in successfully
     And want to logout

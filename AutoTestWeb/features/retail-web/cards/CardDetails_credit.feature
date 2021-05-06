@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Card Details - Credit
   As a user i want to be able to see the details of my credit card
 
@@ -16,4 +16,4 @@ Feature: Card Details - Credit
   @uxt
     Examples:
       | username | password |
-      | creditcard | Password1* |
+      | luis.amorim | Password1* |

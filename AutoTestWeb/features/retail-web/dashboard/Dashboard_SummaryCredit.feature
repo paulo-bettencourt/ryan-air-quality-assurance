@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Dashboard - Summary of Credit Account
   As a user i want to be able to see the summary of Credit Account on the Dashboard
 
@@ -14,4 +14,4 @@ Feature: Dashboard - Summary of Credit Account
   @uxt
     Examples:
       | username | password | account |
-      | real1 | Password1* | credit   |
+      | luis.amorim | Password1* | credit   |

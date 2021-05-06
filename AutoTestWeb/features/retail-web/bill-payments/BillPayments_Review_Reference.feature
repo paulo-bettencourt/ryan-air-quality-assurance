@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Bill Payments - Review Reference Payment
   As a user i want to be able to see the review page, after I fill in the bill payment form
 
@@ -19,4 +19,4 @@ Feature: Bill Payments - Review Reference Payment
   @uxt
     Examples:
       | username | password | entity | reference | amount |
-      | real1 | Password1* | 102 | 123456789 | 123 |
+      | luis.amorim | Password1* | 102 | 123456789 | 123 |
