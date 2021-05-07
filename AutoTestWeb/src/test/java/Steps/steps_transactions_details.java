@@ -17,10 +17,33 @@ public class steps_transactions_details {
         transactions = new Transactions(sharedDriver);
     }
 
+    @Then("^i can click on the \"([^\"]*)\" transaction$")
+    public void i_can_click_on_the_transaction(String transaction)  {
+        switch (transaction){
+            case "current":
+               transactions.ClickFirstCurrentTransaction();
+               break;
+            case "credit":
+                transactions.ClickFirstCreditTransaction();
+                break;
+            case "savings":
+                transactions.ClickFirstSavingTransaction();
+                break;
+            case "loan":
+                transactions.ClickFirstLoanTransaction();
+                break;
+            case "debit":
+                transactions.ClickFirstDebitTransaction();
+                break;
+            default:
 
+        }
+
+
+    }
     @Then("^i can click on the first transaction$")
-    public void iCanClickOnTheFirstTransaction() {
-  transactions.ClickFirstTransaction();
+    public void iCanClickOnTheFirstcreditTransaction() {
+  transactions.ClickFirstCreditTransaction();
     }
 
     @And("^i can see the transaction details$")

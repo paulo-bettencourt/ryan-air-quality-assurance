@@ -1,4 +1,4 @@
-@testAll
+@testAll @retail
 Feature: Transaction Details - Credit Account
   As a user i want to be able to see my Credit Account transaction details
 
@@ -10,10 +10,10 @@ Feature: Transaction Details - Credit Account
     And i logged in successfully
     Then i can click on a "<account>" account
     And i am redirected to the transactions page
-    Then i can click on the first transaction
+    Then i can click on the "<first>" transaction
     And i can see the transaction details
 
   @uxt
     Examples:
-      | username | password | account |
-      | real1 | Password1* | credit |
+      | username | password | account | first|
+      | luis.amorim | Password1* | credit | credit|

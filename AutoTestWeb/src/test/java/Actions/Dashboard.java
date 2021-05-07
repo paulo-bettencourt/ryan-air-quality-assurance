@@ -17,19 +17,19 @@ public class Dashboard {
 
     }
 
-    @FindBy(how = How.XPATH, using = "//div[contains(text(), 'Conta Staff')]")
+    @FindBy(how = How.XPATH, using = "//div[contains(text(), '1004111008')]")
     WebElement currentAcc;
 
     @FindBy(how = How.XPATH, using = "//div[contains(text(), '1000873773')]")
     WebElement savings;
 
-    @FindBy(how = How.XPATH, using = "//div[contains (text(), 'LD2008050000')]")
+    @FindBy(how = How.XPATH, using = "//div[contains (text(), 'LD1923308750')]")
     WebElement loans;
 
     @FindBy(how = How.XPATH, using = "//div[contains (text(), '**** **** ****  2415')]")
     WebElement creditCard;
 
-    @FindBy(how = How.XPATH, using = "//div[contains(text(), '**** **** ****  0082')]")
+    @FindBy(how = How.XPATH, using = "//div[contains(text(), '**** **** ****  8330')]")
     WebElement debitCard;
 
 
