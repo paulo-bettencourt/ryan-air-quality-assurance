@@ -61,15 +61,6 @@ public class TransfersOwn {
             sharedDriver.getDriver().quit();
             System.exit(111);
         }
-
-
-        /*if (sharedDriver.getWait().until(ExpectedConditions.visibilityOf(nextBtn)).isEnabled()) {
-            nextBtn.click();
-            return true;
-        } else {
-
-            return false;
-        }*/
     }
 
     public void nextButtonIsDisabled() {
