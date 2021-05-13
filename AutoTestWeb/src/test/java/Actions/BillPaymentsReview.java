@@ -20,7 +20,7 @@ public class BillPaymentsReview {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//span[contains(text(), ' Bill Payments' ) ]")
+    @FindBy(xpath = "//span[contains(text(), 'Bill Payments' ) ]")
     WebElement billPaymentsMenu;
 
     @FindBy(css = "form>bb-search-box-ui>div>input")
@@ -85,7 +85,6 @@ public class BillPaymentsReview {
 
     @FindBy(how = How.XPATH, using = "//form/div[1]/bb-fieldset-ui/fieldset/sba-billpay-account-selector-ui/bb-product-selector-ui/div/div/div/button")
     WebElement firstCurrentAccountItem;
-
 
 
     public void ClickBillPaymentsMenu() {
@@ -161,17 +160,17 @@ public class BillPaymentsReview {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.id("debitAccounts"))));
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.className("bb-loading-indicator"))));
         sharedDriver.getWait().until(ExpectedConditions.invisibilityOf(sharedDriver.getDriver().findElement(By.className("bb-loading-indicator"))));
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]"))));
-        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]")).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '" + accountName + "')]"))));
+        sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '" + accountName + "')]")).click();
     }
 
     public void iConfirmBillDebitAccountSelectedWithSuccess(String accountName, String accountNumber) {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountName +"')]"))));
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '"+ accountNumber +"')]"))));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '" + accountName + "')]"))));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//div[contains(text(), '" + accountNumber + "')]"))));
     }
 
     public void iSeeResultsForEntitySearch(String entitySearchResult) {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '"+ entitySearchResult +"')]"))));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(sharedDriver.getDriver().findElement(By.xpath("//span[contains(text(), '" + entitySearchResult + "')]"))));
     }
 
     public void selectCurrentAccount() {

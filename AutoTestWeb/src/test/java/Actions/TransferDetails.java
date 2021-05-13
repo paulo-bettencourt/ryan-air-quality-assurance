@@ -14,10 +14,10 @@ public class TransferDetails {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/sba-heading-widget-extended/div/div[2]/div/div/a")
+    @FindBy(xpath = "//span[contains(text(), 'New Transfer' ) ]")
     WebElement transfersQuickActions;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-form-container/bb-payment-form/div/div/form/div[1]/bb-fieldset-ui/fieldset/legend")
+    @FindBy(xpath = "//legend[contains(text(), 'From' ) ]")
     WebElement fromLabel;
 
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[1]/div[2]/a")
@@ -32,26 +32,27 @@ public class TransferDetails {
     @FindBy(xpath = "/html/body/ngb-modal-window/div/div/div[2]/div/div[2]/div[1]")
     WebElement generalLabel;
 
-    public void ClickTransfersQuickActions(){
+    public void ClickTransfersQuickActions() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(transfersQuickActions)).click();
     }
 
-    public void OnNewTransferPage(){
+    public void OnNewTransferPage() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(fromLabel));
     }
 
-    public void ClickMyTransfers(){
+    public void ClickMyTransfers() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(myTransfersTab)).click();
     }
 
-    public void OnMyTransfers(){
+    public void OnMyTransfers() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(myTransfersHeader));
     }
 
-    public void ClickOnFirstTransfer(){
+    public void ClickOnFirstTransfer() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(firstTransfer)).click();
     }
-    public void SeeTransferDetails(){
+
+    public void SeeTransferDetails() {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(generalLabel));
     }
 }

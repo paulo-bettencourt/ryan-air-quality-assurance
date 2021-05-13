@@ -14,16 +14,16 @@ public class TransfersOther {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(id = "beneficiaryName")
+    @FindBy(id = "bb_input_4")
     WebElement recipientInput;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-form-container/bb-payment-form/div/div/form/div[2]/bb-fieldset-ui/fieldset/div/div[2]/div/button[2]")
-    WebElement otherBankTab;
+    @FindBy(xpath = "//button[contains(text(), ' Other Bank ')]")
+     WebElement otherBankTab;
 
-    @FindBy(xpath = "//*[@id=\"credit-item\"]")
+    @FindBy(xpath = "//span[contains(text(), ' retail test ')]")
     WebElement firstRecipient;
 
-    @FindBy(id = "bb_input_8")
+    @FindBy(xpath = "//*[@id=\"tabPanel_bb-tab-container-ang-_-edfeb05757aa\"]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget/sba-form/sba-recipient/form/bb-fieldset-ui/fieldset/div/div/div/div/sba-recipient-account-number/div/div/div/input")
     WebElement ibanInput;
 
     public void InsertRecipientName(String name) {

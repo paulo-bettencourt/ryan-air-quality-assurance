@@ -15,4 +15,4 @@ Feature: Account Details - Loan Account
   @uxt
     Examples:
       | username | password | account |
-      | luis.amorim | Password1* | loans |
+      | real2 | Password1* | loans |

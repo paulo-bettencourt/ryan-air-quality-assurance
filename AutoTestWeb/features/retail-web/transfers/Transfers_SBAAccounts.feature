@@ -2,7 +2,7 @@
 Feature: Transfer - SBA Accounts
   As a user i want to be able to do transfers for another SBA account
 
-  Scenario Outline: Transfer Savings account to Jane Doe contact
+  Scenario Outline: Transfer to an SBA contact
     Given i am in login page
     And i change the language to english
     And change language successfully
@@ -21,7 +21,7 @@ Feature: Transfer - SBA Accounts
       | username | password | recipient | amount |
       | real1 | Password1* | Test123 | 73 |
 
-  Scenario Outline: Transfer Savings account to wrong BBAN
+  Scenario Outline: Transfer to wrong SBA BBAN
     Given i am in login page
     Then want to change language
     And change language successfully

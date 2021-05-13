@@ -2,7 +2,7 @@
 Feature: Transfer - Other Accounts
   As a user i want to be able to do transfers to other banks accounts
 
-  Scenario Outline: Transfer Savings account to John Doe
+  Scenario Outline: Transfer to valid IBAN
     Given i am in login page
     And i change the language to english
     And change language successfully
@@ -19,9 +19,9 @@ Feature: Transfer - Other Accounts
   @uxt
     Examples:
       | username | password | recipient | amount |
-      | real1 | Password1* | Auto Tests | 3      |
+      | real1 | Password1* | retail test | 3      |
 
-  Scenario Outline: Transfer Savings account to invalid IBAN
+  Scenario Outline: Transfer to invalid IBAN
     Given i am in login page
     And i change the language to english
     And change language successfully

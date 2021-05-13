@@ -32,7 +32,7 @@ public class steps_transfers_other {
 
     @Then("^next button is disabled$")
     public void nextButtonIsDisabled() {
-     Assert.assertFalse(transfersOwn.ClickNextBtn());
+     transfersOwn.nextButtonIsDisabled();
     }
 
 

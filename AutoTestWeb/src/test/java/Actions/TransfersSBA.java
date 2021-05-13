@@ -14,7 +14,7 @@ public class TransfersSBA {
         PageFactory.initElements(sharedDriver.getDriver(), this);
     }
 
-    @FindBy(id = "accountNumber")
+    @FindBy(xpath = "//*[@id=\"tabPanel_bb-tab-container-ang-_-edfeb05757aa\"]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget/sba-form/sba-recipient/form/bb-fieldset-ui/fieldset/div/div/div/div/sba-recipient-account-number/div/div/div/input")
     WebElement bbanInput;
 
     @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-initiate-payment-widget-extended/bb-payord-initiate-payment-widget/bb-payment-review-container/bb-payment-review/div[1]/div[1]/div[1]/bb-alert-ui/ngb-alert")

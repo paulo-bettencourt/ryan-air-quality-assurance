@@ -26,15 +26,8 @@ public class steps_transfer_own {
 
 
     @And("^i am redirected to the new transfer page$")
-    public void iAmRedirectedToTheNewTransferPage() throws InterruptedException {
+    public void iAmRedirectedToTheNewTransferPage(){
         transferDetails.OnNewTransferPage();
-    }
-
-
-    @And("^i select a current account on the to selector$")
-    public void iSelectACurrentAccountOnTheToSelector() {
-        transfersOwn.SelectRecipientList();
-        transfersOwn.SelectCurrentAcc();
     }
 
     @And("^i insert \"([^\"]*)\" on the amount input$")
@@ -43,7 +36,7 @@ public class steps_transfer_own {
     }
 
     @Then("^i click on next button$")
-    public void iClickOnNextButton() {
+    public void iClickOnNextButton() throws InterruptedException {
         transfersOwn.ClickNextBtn();
     }
 
@@ -65,4 +58,9 @@ public class steps_transfer_own {
     }
 
 
+    @And("^i select the first account on the to selector$")
+    public void iSelectTheFirstAccountOnTheToSelector() {
+        transfersOwn.SelectRecipientList();
+        transfersOwn.SelectCurrentAcc();
+    }
 }
