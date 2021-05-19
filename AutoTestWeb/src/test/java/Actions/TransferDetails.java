@@ -20,16 +20,16 @@ public class TransferDetails {
     @FindBy(xpath = "//legend[contains(text(), 'From' ) ]")
     WebElement fromLabel;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[1]/div[2]/a")
+    @FindBy(id = "tab_bb-tab-container-ang-_-edfeb05757aa_1")
     WebElement myTransfersTab;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-history-widget/div[2]/header")
+    @FindBy(xpath = "//div[contains(text(), 'Status')]")
     WebElement myTransfersHeader;
 
-    @FindBy(xpath = "//*[@id=\"bb-main-content\"]/bb-panel-container/bb-area/bb-chrome/bb-deck-container/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome[2]/bb-column-container/div/bb-column[1]/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-panel-container/bb-area/bb-chrome/bb-tab-container/div[2]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-history-widget/div[2]/bb-collapsible-accordion-ui/bb-collapsible-card-ui[1]/bb-collapsible-ui/div[2]/div/div/div")
+    @FindBy(xpath = "//*[@id=\"tabPanel_bb-tab-container-ang-_-edfeb05757aa\"]/bb-route/bb-chrome/bb-panel-container/bb-area/bb-chrome/sba-payord-history-widget/div[2]/bb-collapsible-accordion-ui/bb-collapsible-card-ui[1]/bb-collapsible-ui/div[2]/div/div/div[1]")
     WebElement firstTransfer;
 
-    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/div[2]/div/div[2]/div[1]")
+    @FindBy(xpath = "//div[contains(text(), 'General')]")
     WebElement generalLabel;
 
     public void ClickTransfersQuickActions() {
