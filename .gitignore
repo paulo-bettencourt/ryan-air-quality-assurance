@@ -143,8 +143,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-AutoTestWeb/target*/
-AutoTestWeb/src/test/java/config/config.local.properties
-
+target*/
 
 # End of https://www.gitignore.io/api/macos,windows,intellij+all
