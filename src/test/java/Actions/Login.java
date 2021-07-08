@@ -21,108 +21,39 @@ public class Login {
     }
 
 
-    @FindBy(how = How.ID, using = "username")
+    @FindBy(how = How.ID, using = "email")
     WebElement txtBoxUsername;
 
-    @FindBy(how = How.ID, using = "password")
+    @FindBy(how = How.ID, using = "pass")
     WebElement txtBoxPassword;
 
-    @FindBy(how = How.ID, using = "kc-login")
-    WebElement LoginButton;
+    @FindBy(how = How.ID, using = "u_0_j_9M")
+    WebElement acceptAllButton;
 
-    @FindBy(how = How.XPATH, using = "//span[contains(text(), \"Credenciais Inválidas!\")] | //span[contains(text(), \"Invalid Credentials!\")]")
-    WebElement LoginError;
-
-    @FindBy(how = How.XPATH, using = "//span[contains(text(), 'Acesso encontra-se bloqueado por ter excedido o número máximo de tentativas de login. Por favor contacte-nos através dos números ')]")
-    WebElement toManyWrongTriesErrorMessage;
-
-    @FindBy(how = How.ID, using = "banner-url")
-    WebElement retailBanner;
-
-    @FindBy(linkText = "Click Here")
-    WebElement forgotPasswordLink;
-
-    @FindBy(id = "kc-page-title")
-    WebElement forgotPasswordLabel;
+    @FindBy(how = How.ID, using = "u_0_d_+A")
+    WebElement loginButton;
 
     public void openBrowser() throws IOException, InterruptedException {
         String url = null;
         String domain = null;
-        url = ReadPropFile.ReadConfig("url.retailPortal");
+        url = ReadPropFile.ReadConfig("url.mainPortal");
         domain = ReadPropFile.ReadConfig("url.identityDomain");
         driver.get(url);
-        //change locale cookie to EN
-        driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
-        Thread.sleep(2000);
-        driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE",
-                "en",
-                domain,
-                "/auth/realms/sbapb/",
-                new Date(2020, 12, 30)));
-
     }
 
+    //in this way we can set opening browsers in other realms (Bank Employee, Identity, etc.)
     public void openBrowser_BEP() throws IOException, InterruptedException {
         String url = null;
         String domain = null;
         domain = ReadPropFile.ReadConfig("url.identityDomain");
         url = ReadPropFile.ReadConfig("url.employeePortal");
         driver.get(url);
-        //change locale cookie to EN
-        driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
-        Thread.sleep(2000);
-        driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE",
-                "en",
-                domain,
-                "/auth/realms/sbapb/",
-                new Date(2020, 12, 30)));
-
     }
 
-    public void openBrowser_business() throws IOException, InterruptedException {
-        String url = null;
-        String domain = null;
-        url = ReadPropFile.ReadConfig("url.businessPortal");
-        domain = ReadPropFile.ReadConfig("url.identityDomain");
-        driver.get(url);
-        //change locale cookie to EN
-        driver.manage().deleteCookieNamed("KEYCLOAK_LOCALE");
-        Thread.sleep(2000);
-        driver.manage().addCookie(new Cookie("KEYCLOAK_LOCALE",
-                "en",
-                domain,
-                "/auth/realms/sbapb/",
-                new Date(2020, 12, 30)));
-
-    }
-
-    public void FillIn(String user, String pass) {
+    public void fillIn(String user, String pass) {
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(txtBoxUsername)).sendKeys(user);
         sharedDriver.getWait().until(ExpectedConditions.visibilityOf(txtBoxPassword)).sendKeys(pass);
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoginButton)).click();
-    }
-
-    public boolean findBanner() {
-        return sharedDriver.getWait().until(ExpectedConditions.visibilityOf(retailBanner)).isDisplayed();
-    }
-
-    public void clickBanner(){
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(retailBanner)).click();
-    }
-
-    public void seeToManyWrongTriesErrorMessage() {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(toManyWrongTriesErrorMessage));
-    }
-
-    public boolean failedLogin() {
-        return sharedDriver.getWait().until(ExpectedConditions.visibilityOf(LoginError)).isDisplayed();
-    }
-
-    public void ClickForgotPassword(){
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(forgotPasswordLink)).click();
-    }
-
-    public void OnForgotPasswordPage(){
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(forgotPasswordLabel));
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(acceptAllButton)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(loginButton)).click();
     }
 }

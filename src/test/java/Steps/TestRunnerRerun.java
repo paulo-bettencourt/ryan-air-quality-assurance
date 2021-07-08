@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "@target/failed_scenarios.txt",
         monochrome = true,
-        glue = {"Steps", "Steps/business"},
+        glue = {"Steps"},
         plugin = {
                 "pretty",
                 "json:target1/cucumber.json",

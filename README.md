@@ -1,7 +1,7 @@
 
-# SBA Web Automated Tests
+# Web Automated Tests
 
-This project contains tests for the Web platform, both for the retail and business pllatforms. The tests assist in verifying the stability of the environments and also help us understand what features
+This project is a template to create tests for the Web platforms. The tests assist in verifying the stability of the environments and also help us understand what features
 are not working as expected. By default, Maven is used to execute all the commands for this repository. 
 
 ## Setting up the application
@@ -120,5 +120,4 @@ Before creating a pull request, make sure you run your tests locally and ensure 
 
 ### Need further help? ###
 
-SBA Business QAs - Diogo Brandão and Josphat Waweru
-SBA Retail QAs - Ana Rita Câmara and José Diogo Correia
+Feel free to contact Diogo Brandão (Bring's Automation Web Specialist) or Pedro Silveira (The QA team leader)
