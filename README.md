@@ -8,9 +8,9 @@ are not working as expected. By default, Maven is used to execute all the comman
 Clone the respository from bitbucket with the following command
 
 ```bash 
-git clone git@bitbucket.org:bring-ados/ados-web-automation.git
+git clone git@github.com:diogo-brandao1/web-automation-template.git
 
-cd ados-web-automation
+cd web-automation-template
 ```
 
 ## Install the dependencies 
@@ -81,17 +81,17 @@ Scenario Outline: Business - Do the login with correct credentials
   @test
     Examples:
       | username | password |
-      | business.aa | Password1* |
+      | business.company | Password1* |
 
   @uxt
     Examples:
       | username | password |
-      | patricia.company | Password1* |
+      | uxt.company | Password1* |
 
   @uat
     Examples:
       | username | password |
-      | patricia.company | Password1* |
+      | uat.company | Password1* |
 
 ```
 

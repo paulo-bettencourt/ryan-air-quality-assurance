@@ -16,12 +16,12 @@ Feature: Login with different username in different envs
   @uxt
     Examples:
       | username | password |
-      | patricia.company | Fake_Password_UXT |
+      | uxt.company | Fake_Password_UXT |
 
   @uat
     Examples:
       | username | password |
-      | patricia.company | Fake_Password_UAT |
+      | uat.company | Fake_Password_UAT |
 
   Scenario Outline: Do the login with wrong credentials
     Given i am in the login page
