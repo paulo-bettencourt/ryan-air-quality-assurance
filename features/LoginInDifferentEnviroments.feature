@@ -13,31 +13,31 @@ Feature: Login with different username in different envs
       | username | password |
       | Fake_Password | Fake_Password |
 
-  @uxt
-    Examples:
-      | username | password |
-      | uxt.company | Fake_Password_UXT |
+  #@uxt
+    #Examples:
+      #| username | password |
+      #| uxt.company | Fake_Password_UXT |
 
-  @uat
-    Examples:
-      | username | password |
-      | uat.company | Fake_Password_UAT |
+  #@uat
+    #Examples:
+      #| username | password |
+      #| uat.company | Fake_Password_UAT |
 
-  Scenario Outline: Do the login with wrong credentials
-    Given i am in the login page
-    Then i want to login with "<username>" and "<password>"
+  #Scenario Outline: Do the login with wrong credentials
+    #Given i am in the login page
+    #Then i want to login with "<username>" and "<password>"
 
-  @test
-    Examples:
-      | username | password |
-      | real1 | Password1* |
+  #@test
+    #Examples:
+      #| username | password |
+      #| real1 | Password1* |
 
-  @uxt
-    Examples:
-      | username | password |
-      | real1 | Password1* |
+  #@uxt
+    #Examples:
+      #| username | password |
+      #| real1 | Password1* |
 
-  @uat
-    Examples:
-      | username | password |
-      | real1 | Password1* |
+  #@uat
+    #Examples:
+      #| username | password |
+      #| real1 | Password1* |

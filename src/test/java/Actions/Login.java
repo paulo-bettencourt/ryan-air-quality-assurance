@@ -24,14 +24,7 @@ public class Login {
     @FindBy(how = How.ID, using = "email")
     WebElement txtBoxUsername;
 
-    @FindBy(how = How.ID, using = "pass")
-    WebElement txtBoxPassword;
 
-    @FindBy(how = How.ID, using = "u_0_j_9M")
-    WebElement acceptAllButton;
-
-    @FindBy(how = How.ID, using = "u_0_d_+A")
-    WebElement loginButton;
 
     public void openBrowser() throws IOException, InterruptedException {
         String url = null;
@@ -51,9 +44,7 @@ public class Login {
     }
 
     public void fillIn(String user, String pass) {
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(txtBoxUsername)).sendKeys(user);
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(txtBoxPassword)).sendKeys(pass);
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(acceptAllButton)).click();
-        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(loginButton)).click();
+        sharedDriver.getWait().until(ExpectedConditions.visibilityOf(txtBoxUsername));
+        txtBoxUsername.click();
     }
 }
